@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | LocalLLM: Private AI Client</title>
+    <style>
+        :root {
+            --primary-bg: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --accent: #007AFF; /* Apple Blue */
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+            --border: #333333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        h2 { color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 40px; }
+        h3 { color: var(--text-main); margin-top: 25px; }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .answer {
+            color: var(--text-dim);
+            display: block;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        code {
+            background: #2a2a2a;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>LocalLLM Support Center</h1>
+            <p>Technical documentation and troubleshooting for the Pro AI Client.</p>
+        </header>
+
+        <!-- Section 1: Technical Overview -->
+        <section>
+            <h2>Technical Documentation</h2>
+            <div class="card">
+                <span class="badge">Engine Specs</span>
+                <h3>Multi-Backend Architecture</h3>
+                <p>LocalLLM is built for maximum performance on Apple Silicon. It supports two primary execution paths:</p>
+                <ul>
+                    <li><strong>MLX Optimized:</strong> Utilizes Apple’s MLX framework for hardware-accelerated inference. This is recommended for users seeking the highest efficiency on M1/M2/M3/M4 chips.</li>
+                    <li><strong>Llama.cpp Support:</strong> Provides robust C++ interop for maximum compatibility with a wider range of GGUF models and community-driven weights.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <span class="badge">Developer Tools</span>
+                <h3>Advanced Features</h3>
+                <p>For power users and researchers, LocalLLM includes specialized tools:</p>
+                <ul>
+                    <li><strong>Smart Tool Calling:</strong> Automate function loops and agentic workflows.</li>
+                                        <li><strong>Memory Efficiency:</strong> Uses advanced KV-cache quantization to maximize context window without crashing system memory.</li>
+                    <li><strong>Jinja-Powered:</strong> Full support for Jinja2-based prompt templating to ensure accurate chat formatting.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 2: FAQ -->
+        <section>
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <span class="question">Is my data safe?</span>
+                <span class="answer">Yes. LocalLLM is built with a <strong>Privacy First</strong> philosophy. All execution is 100% local. No data is sent to the cloud, no tracking is enabled, and no internet connection is required for core functionality.</span>
+            </div>
+
+            <div class="faq-item">
+                <span class="question">Why am I seeing memory usage spikes?</span>
+                <span class="answer">Large Language Models are resource-intensive. We use advanced KV-cache management to prevent crashes, but high RAM usage is expected when running large models. Ensure you are using quantized models (e.g., 4-bit or 8-bit) to optimize performance on your specific device.</span>
+            </div>
+
+            <div class="faq-item">
+                <span class="question">Is this ready for Apple Intelligence?</span>
+                <span class="answer">LocalLLM is built to be "Apple Intelligence Ready," ensuring seamless integration with future macOS/iOS system-level AI features.</span>
+            </div>
+        </section>
+
+        <!-- Section 3: Support/Contact -->
+        <section>
+            <h2>Get Help</h2>
+            <div class="card" style="text-align: center;">
+                <p>Are you encountering a bug or looking to contribute?</p>
+                <p><strong>Support the Bonsai LFM2.5</strong> to help us continue building the future of private, local intelligence.</p>
+                <p style="font-size: 0.9rem; color: var(--text-dim);">For developer-level support, please submit issues via our official repository.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2023 LocalLLM: Private AI Client. Optimized for Apple Silicon.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
