@@ -1,134 +1,1705 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - LocalGemmaChat</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            background-color: #fff;
-        }
-        h1 {
-            font-size: 2em;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            color: #000;
-        }
-        h2 {
-            font-size: 1.5em;
-            margin-top: 30px;
-            color: #222;
-            border-left: 4px solid #007AFF;
-            padding-left: 15px;
-        }
-        p, ul {
-            font-size: 1.1em;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .meta-info {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 40px;
-        }
-        .highlight-box {
-            background-color: #f8f9fa;
-            border: 1px solid #e9ecef;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        .contact-section {
-            background-color: #f0f7ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 40px;
-        }
-        @media (max-width: 600px) {
-            body { margin: 20px auto; }
-            h1 { font-size: 1.6em; }
-            h2 { font-size: 1.3em; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy · LocalLLMClient</title>
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --accent: #0071e3;
+      --border: #d2d2d7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-text-size-adjust: 100%;
+      padding: 0 16px 60px;
+    }
+    .container { max-width: 760px; margin: 0 auto; }
+    header {
+      text-align: center;
+      padding: 48px 0 28px;
+    }
+    header .logo {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+    header .updated {
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 24px 0 12px;
+      color: var(--text);
+    }
+    .card h2:first-child { margin-top: 0; }
+    h3 { font-size: 16px; font-weight: 600; margin: 16px 0 8px; }
+    p { margin-bottom: 12px; }
+    ul, ol { margin-bottom: 12px; padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.9em;
+      background: #f0f0f2;
+      padding: 2px 6px;
+      border-radius: 5px;
+      word-break: break-all;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .notice {
+      background: #eef4ff;
+      border: 1px solid #c7d9ff;
+      color: #24478f;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 16px 0;
+      font-size: 15px;
+    }
+    .notice.warn {
+      background: #fff8e6;
+      border-color: #f0dca8;
+      color: #6b4e00;
+    }
+    .summary {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+    .summary p:last-child { margin-bottom: 0; }
+    .table-wrap { overflow-x: auto; margin: 0 0 12px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+      min-width: 480px;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    th { font-weight: 600; color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.4px; }
+    tr:last-child td { border-bottom: none; }
+    footer {
+      max-width: 760px;
+      margin: 32px auto 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); }
+
+    /* language switcher */
+    .langbar {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 16px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .langbar select {
+      font: inherit;
+      color: var(--text);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+    section.lang { display: none; }
+    section.lang.active { display: block; }
+    h2, h3 { scroll-margin-top: 12px; }
+  </style>
 </head>
 <body>
+  <div class="langbar" id="langbar">
+    <label id="langLabel" for="langSelect">Language</label>
+    <select id="langSelect" aria-label="Language"></select>
+  </div>
+  <section class="lang active" id="lang-en" lang="en">
+    <div class="container">
+      <header>
+        <div class="logo">LocalLLMClient</div>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: September 17, 2026 &middot; Effective date: September 17, 2026</p>
+      </header>
 
-    <h1>Privacy Policy</h1>
-    <div class="meta-info">
-        Last Updated: September 17, 2026
+      <div class="summary">
+        <p><strong>In short:</strong> LocalLLMClient runs language models entirely on your device and has no accounts, no analytics, and no crash reporting. Your prompts, conversations, and model outputs are never transmitted to us.</p>
+        <p>The app makes network requests in exactly one situation: downloading model files. Those requests go to the model host you select in the app's <em>HF Source</em> menu — <code>hf-mirror.com</code> by default, or <code>huggingface.co</code> if you switch it. Whoever operates that host receives your IP address and standard request metadata, and is an independent party to us. Details in <a href="#network-en">What Leaves Your Device</a> and <a href="#hosts-en">Model Hosts and Third-Party Recipients</a>.</p>
+      </div>
+
+      <section class="card">
+        <h2>1. Overview</h2>
+        <p>LocalLLMClient is a local-first LLM chat app for iPhone, iPad, and Mac. Model inference — the computation that turns your prompt into a response — runs on your device using Apple MLX, the bundled llama.cpp engine, or Apple's on-device Foundation Models framework.</p>
+        <p>Your privacy is our top priority. This policy explains what data the app handles, what leaves your device, and what we do with it.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="collect-en">2. Data We Collect</h2>
+        <p><strong>We do not collect any personal data.</strong> There is no server-side component to this app: we operate no accounts, no backend, and no user database, so there is nothing for us to hold.</p>
+        <ul>
+          <li>All model inference runs <strong>entirely on your device</strong>.</li>
+          <li>No prompts, conversation history, images you attach, or model outputs leave your device.</li>
+          <li>No analytics, telemetry, or crash reporting is sent to any server.</li>
+          <li>No advertising or cross-app tracking.</li>
+          <li>No user accounts, authentication, or identity tracking.</li>
+          <li>We do not use third-party advertising or data-broker SDKs.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 id="network-en">3. What Leaves Your Device</h2>
+        <p>The app makes network requests for one purpose only: obtaining model weights from a model host. Once a model is downloaded, the app is fully functional offline and makes no further requests.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Request</th><th>When</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>GET /api/models/{repo}/revision/main</code></td>
+                <td>Before a download</td>
+                <td>List the model repository's files and sizes, so the app can show a download size and confirm the model exists.</td>
+              </tr>
+              <tr>
+                <td><code>HEAD /{repo}/resolve/main/{file}</code></td>
+                <td>Before a download</td>
+                <td>Read file size, ETag, and commit hash to skip files already present and resume partial downloads.</td>
+              </tr>
+              <tr>
+                <td><code>GET /{repo}/resolve/main/{file}</code></td>
+                <td>During a download</td>
+                <td>Download the model weight file itself.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Downloads may continue after you leave the app, using the operating system's background transfer facility. No other network activity occurs.</p>
+
+        <h3>What the model host receives</h3>
+        <p>Because the app must identify what to download, the request necessarily contains:</p>
+        <ul>
+          <li>Your IP address, as visible to any web server you connect to.</li>
+          <li>Standard HTTP request metadata sent by the operating system's networking stack, such as the User-Agent string and requested file paths.</li>
+          <li>The repository and file names being requested — for example, <code>LiquidAI/LFM2.5-1.2B-Instruct-MLX-4bit</code>. These are public model identifiers, chosen by us, not information about you.</li>
+        </ul>
+
+        <h3>What the model host never receives</h3>
+        <ul>
+          <li>Your prompts, conversations, or model outputs.</li>
+          <li>Images you attach to a message.</li>
+          <li>A Hugging Face account or access token — the app does not authenticate, and sends no credentials.</li>
+          <li>Any identifier we assign to you, because we do not create any.</li>
+        </ul>
+
+        <h3>Offline use</h3>
+        <p>After the models you want are downloaded, you can disable network access entirely — for example by turning off Wi-Fi and cellular data, or by putting the device in airplane mode. Chat, tool calling, and history all continue to work.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="hosts-en">4. Model Hosts and Third-Party Recipients</h2>
+        <p>This section is provided for transparency about regulatory obligations and data flows.</p>
+
+        <p>The app lets you choose which host serves model files, via the <em>HF Source</em> menu in the app's toolbar:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Selection</th><th>Host contacted</th><th>Who operates it</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Default</strong></td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>A third-party mirror operator, not Hugging Face.</strong> It is a separate, independently operated service that proxies requests to model repositories.</td>
+              </tr>
+              <tr>
+                <td>Optional</td>
+                <td><code>huggingface.co</code></td>
+                <td>Hugging Face, the model hub operator.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="notice">
+          <p><strong>Who acts as a data controller for downloads.</strong> The operator of the host you select receives your IP address and request metadata and acts as an <strong>independent data controller</strong> for that request. With the default setting, that party is the operator of <code>hf-mirror.com</code>, which is a third party and is <em>not</em> Hugging Face; if you switch the source to <code>huggingface.co</code>, it is Hugging Face. We do not control, own, or store any of this data, and we have no access to it. Those hosts process it under their own terms and privacy policies.</p>
+        </div>
+
+        <p>We do not send any personal data to a model host beyond what an ordinary file download requires. We do not use a model host as an analytics provider, and we have no visibility into what it logs.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="storage-en">5. Data Stored on Your Device</h2>
+        <p>The app writes the following to your device, all inside its own sandboxed container. None of it is uploaded by the app.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>What</th><th>Where</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Conversation history</td>
+                <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> and <code>&lt;model&gt;.md</code></td>
+                <td>One file per model, holding <strong>text messages only</strong>. Messages containing an attached image are not persisted. The <code>.md</code> file is a human-readable copy of the same content.</td>
+              </tr>
+              <tr>
+                <td>Downloaded model weights</td>
+                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code> on iOS and iPadOS; <code>~/.localllmclient/…</code> on macOS</td>
+                <td>Public model files fetched from the selected host. Can be several gigabytes. The app asks the system to exclude this directory from device backups.</td>
+              </tr>
+              <tr>
+                <td>Diagnostics log</td>
+                <td><code>Documents/diagnostics.log</code> (iOS and iPadOS only)</td>
+                <td>A capped file (512&nbsp;KB, then rotated) of timestamps, memory usage, and the active model identifier, used to diagnose app termination. It contains <strong>no prompt or response text</strong> and is never transmitted.</td>
+              </tr>
+              <tr>
+                <td>Exported conversations</td>
+                <td>Location you choose when using <em>Export…</em></td>
+                <td>Written only at your request, as a Markdown file in the Files app or via a save panel.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Conversation history is retained until you delete it or uninstall the app.</p>
+
+        <div class="notice warn">
+          <p><strong>Device backups are separate.</strong> This app does not transmit your data, but if you have iCloud or Finder/iTunes device backup enabled, your operating system may include app data in that device backup. That transfer is performed by Apple under your Apple account settings, is governed by Apple's privacy policy, and is controlled by your backup settings — not by this app. You can review and change it in your device's backup settings.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 id="delete-en">6. Deleting Your Data</h2>
+        <p>You are in control, and deletion is immediate and local:</p>
+        <ul>
+          <li><strong>Clear Chat</strong> in the app's menu clears the current conversation from memory and deletes its stored history files for that model.</li>
+          <li>Removing a model's data deletes that model's downloaded weights and its conversation history.</li>
+          <li>Deleting individual messages clears them from the conversation; press and hold a bubble to select and remove.</li>
+          <li><strong>Uninstalling the app</strong> removes its entire container, including history, model weights, and the diagnostics log.</li>
+        </ul>
+        <p>Because we hold no data, there is nothing to request from us. Once data is deleted from your device, it cannot be recovered by us.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="components-en">7. Third-Party Components</h2>
+        <p>The app bundles or depends on the following open-source and platform components. All inference components run locally and none of them transmit your conversations:</p>
+        <ul>
+          <li><code>llama.cpp</code> — a C++ inference engine, bundled in the app.</li>
+          <li><code>MLX</code> and <code>mlx-swift</code> — Apple's machine learning framework for Apple silicon.</li>
+          <li><code>FoundationModels</code> — Apple's on-device large language model framework (iOS&nbsp;26 / macOS&nbsp;26 and later, with Apple Intelligence enabled).</li>
+        </ul>
+        <p>These are local software components; including a library does not send any data to its maintainers. No data is sent to them.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="rights-en">8. Your Rights</h2>
+        <p>We do not collect data, so there is nothing for us to access, correct, export, or delete on our end. All of your data stays on your device, under your control, and can be deleted at any time as described above.</p>
+        <p>If you have a question about this policy or the app's data handling, contact us using the details in <a href="#contact-en">Contact</a>.</p>
+      </section>
+
+      <section class="card">
+        <h2>9. Children's Privacy</h2>
+        <p>LocalLLMClient is intended for a general audience and is not directed at children under 13. We do not knowingly collect personal information from children. Because the app collects no personal information from anyone, no special handling applies.</p>
+      </section>
+
+      <section class="card">
+        <h2>10. Security</h2>
+        <p>Model inference and conversation data stay within the app's sandboxed container on your device. The app uses the operating system's TLS-protected networking for downloads and does not implement its own cryptography or store credentials. We recommend keeping your device protected with a passcode and current software.</p>
+      </section>
+
+      <section class="card">
+        <h2>11. Policy Updates</h2>
+        <p>If we change this policy, we will update the "Last updated" date at the top of this page and, where appropriate, notify you in the app. Continuing to use the app after an update means the revised policy applies.</p>
+      </section>
+
+      <section class="card" id="contact-en">
+        <h2>12. Contact</h2>
+        <p>If you have questions or concerns about this privacy policy, please contact us:</p>
+        <p><strong>Email:</strong> <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+      </section>
+
+      <footer>
+        <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
+        <p><a href="support.html">Support</a></p>
+      </footer>
     </div>
+  </section>
+  <section class="lang" id="lang-fr" lang="fr" hidden>
+  <div class="container">
+      <header>
+        <div class="logo">LocalLLMClient</div>
+        <h1>Politique de confidentialité</h1>
+        <p class="updated">Dernière mise à jour : 17 septembre 2026 &middot; Date d'entrée en vigueur : 17 septembre 2026</p>
+      </header>
 
-    <section>
-        <h2>Overview</h2>
-        <p>LocalGemmaChat is a local-first LLM chat application. Your privacy is our top priority. This policy outlines how we handle information and the technical nature of our application.</p>
-    </section>
+      <div class="summary">
+        <p><strong>En bref :</strong> LocalLLMClient exécute les modèles de langage entièrement sur votre appareil et ne propose ni comptes, ni analyse d'usage, ni rapport d'incident. Vos invites, vos conversations et les réponses du modèle ne nous sont jamais transmises.</p>
+        <p>L'application effectue des requêtes réseau dans une seule situation : le téléchargement de fichiers de modèle. Ces requêtes sont adressées à l'hôte de modèle que vous sélectionnez dans le menu <em>HF Source</em> de l'application — <code>hf-mirror.com</code> par défaut, ou <code>huggingface.co</code> si vous le changez. L'exploitant de cet hôte reçoit votre adresse IP et les métadonnées standard de la requête, et constitue une partie indépendante de nous. Les détails figurent dans <a href="#network-fr">Ce qui quitte votre appareil</a> et <a href="#hosts-fr">Hôtes de modèles et tiers destinataires</a>.</p>
+      </div>
 
-    <section class="highlight-box">
-        <h2>1. Data Collection & Privacy</h2>
-        <p><strong>We do not collect, store, or transmit any personal data to our servers.</strong></p>
+      <section class="card">
+        <h2>1. Aperçu</h2>
+        <p>LocalLLMClient est une application de chat LLM privilégiant le local, pour iPhone, iPad et Mac. L'inférence des modèles — le calcul qui transforme votre invite en réponse — s'exécute sur votre appareil à l'aide d'Apple MLX, du moteur llama.cpp intégré, ou du framework FoundationModels d'Apple.</p>
+        <p>Votre confidentialité est notre priorité absolue. Cette politique explique les données que l'application traite, ce qui quitte votre appareil, et ce que nous en faisons.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="collect-fr">2. Données que nous collectons</h2>
+        <p><strong>Nous ne collectons aucune donnée personnelle.</strong> L'application ne comporte aucun composant côté serveur : nous n'exploitons ni comptes, ni backend, ni base de données d'utilisateurs, et n'avons donc rien à conserver.</p>
         <ul>
-            <li><strong>On-Device Inference:</strong> All Large Language Model (LLM) inference runs entirely on your local device.</li>
-            <li><strong>Zero Data Leakage:</strong> No conversation history, prompts, or model outputs leave your device.</li>
-            <li><strong>No Tracking:</strong> We do not use analytics, telemetry, crash reporting, user accounts, or any form of tracking.</li>
+          <li>Toute l'inférence des modèles s'exécute <strong>intégralement sur votre appareil</strong>.</li>
+          <li>Aucune invite, aucun historique de conversation, aucune image jointe et aucune réponse de modèle ne quitte votre appareil.</li>
+          <li>Aucune analyse d'usage, télémétrie ou rapport d'incident n'est envoyé à un serveur.</li>
+          <li>Aucune publicité ni pistage inter-applications.</li>
+          <li>Aucun compte utilisateur, aucune authentification, aucun suivi d'identité.</li>
+          <li>Nous n'utilisons aucun SDK publicitaire ni aucun SDK de courtier de données tiers.</li>
         </ul>
-    </section>
+      </section>
 
-    <section>
-        <h2>2. Network Access & Data Flow</h2>
-        <p>The app only makes network requests for the following specific purposes:</p>
+      <section class="card">
+        <h2 id="network-fr">3. Ce qui quitte votre appareil</h2>
+        <p>L'application effectue des requêtes réseau à une seule fin : obtenir les poids d'un modèle depuis un hôte de modèles. Une fois le modèle téléchargé, l'application fonctionne intégralement hors ligne et n'effectue plus aucune requête.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Requête</th><th>Quand</th><th>Objet</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>GET /api/models/{repo}/revision/main</code></td>
+                <td>Avant un téléchargement</td>
+                <td>Lister les fichiers du dépôt et leurs tailles, afin que l'application puisse afficher la taille du téléchargement et vérifier que le modèle existe.</td>
+              </tr>
+              <tr>
+                <td><code>HEAD /{repo}/resolve/main/{file}</code></td>
+                <td>Avant un téléchargement</td>
+                <td>Lire la taille du fichier, son ETag et le hash du commit, afin d'ignorer les fichiers déjà présents et de reprendre les téléchargements partiels.</td>
+              </tr>
+              <tr>
+                <td><code>GET /{repo}/resolve/main/{file}</code></td>
+                <td>Pendant un téléchargement</td>
+                <td>Télécharger le fichier de poids du modèle lui-même.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Les téléchargements peuvent se poursuivre après avoir quitté l'application, en utilisant le mécanisme de transfert en arrière-plan du système d'exploitation. Aucune autre activité réseau n'a lieu.</p>
+
+        <h3>Ce que reçoit l'hôte de modèles</h3>
+        <p>Comme l'application doit identifier quoi télécharger, la requête contient nécessairement :</p>
         <ul>
-            <li><strong>Model Downloads:</strong> When you select a model, it is downloaded from external repositories (e.g., Hugsting Face/hf-mirror.com). This is a one-time download per model.</li>
-            <li><strong>Model Metadata:</strong> Minimal requests to fetch basic model info (size, architecture) before the download process begins.</li>
+          <li>Votre adresse IP, telle que visible par tout serveur web auquel vous vous connectez.</li>
+          <li>Les métadonnées de requête HTTP standard envoyés par la pile réseau du système d'exploitation, telles que la chaîne User-Agent et les chemins de fichiers demandés.</li>
+          <li>Les noms du dépôt et des fichiers demandés — par exemple <code>LiquidAI/LFM2.5-1.2B-Instruct-MLX-4bit</code>. Ce sont des identifiants de modèles publics, choisis par nous, et non des informations vous concernant.</li>
         </ul>
-        <p><em>Note: Once models are downloaded, you can disable network access entirely. The app is designed to function fully offline.</em></p>
-    </section>
 
-    <section>
-        <h2>3. Local Storage</h2>
-        <p>All data remains within your device's private application container:</p>
+        <h3>Ce que l'hôte de modèles ne reçoit jamais</h3>
         <ul>
-            <li><strong>Conversation History:</strong> Stored locally in the app's private storage.</li>
-            <li><strong>Model Weights:</strong> Stored in the system cache directory.</li>
-            <li><strong>Data Control:</strong> You can delete all data at any time via the "Clear Chat" feature or by uninstalling the app.</li>
+          <li>Vos invites, vos conversations ou les réponses du modèle.</li>
+          <li>Les images que vous joignez à un message.</li>
+          <li>Un compte Hugging Face ou un jeton d'accès — l'application ne s'authentifie pas et n'envoie aucune donnée d'identification.</li>
+          <li>Tout identifiant que nous vous attribuerions, puisque nous n'en créons aucun.</li>
         </ul>
-    </section>
 
-    <section>
-        <h2>4. Third-Party Components</h2>
-        <p>This app utilizes the following technologies for local execution:</p>
+        <h3>Utilisation hors ligne</h3>
+        <p>Une fois les modèles souhaités téléchargés, vous pouvez désactiver entièrement l'accès réseau — par exemple en coupant le Wi-Fi et les données cellulaires, ou en passant en mode avion. La discussion, l'appel d'outils et l'historique continuent de fonctionner.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="hosts-fr">4. Hôtes de modèles et tiers destinataires</h2>
+        <p>Cette section est fournie par transparence au regard des obligations réglementaires et des flux de données.</p>
+
+        <p>L'application vous permet de choisir l'hôte qui sert les fichiers de modèle, via le menu <em>HF Source</em> de la barre d'outils :</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Sélection</th><th>Hôte contacté</th><th>Qui l'exploite</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Par défaut</strong></td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>Un opérateur de miroir tiers, et non Hugging Face.</strong> Il s'agit d'un service distinct, exploité indépendamment, qui relaie les requêtes vers les dépôts de modèles.</td>
+              </tr>
+              <tr>
+                <td>Optionnel</td>
+                <td><code>huggingface.co</code></td>
+                <td>Hugging Face, l'exploitant du hub de modèles.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="notice">
+          <p><strong>Qui agit comme responsable de traitement pour les téléchargements.</strong> L'exploitant de l'hôte que vous sélectionnez reçoit votre adresse IP et les métadonnées de requête et agit comme <strong>responsable de traitement indépendant</strong> pour cette requête. Avec le réglage par défaut, ce partie est l'opérateur de <code>hf-mirror.com</code>, qui est un tiers et <em>n'est pas</em> Hugging Face ; si vous basculez la source vers <code>huggingface.co</code>, il s'agit de Hugging Face. Nous ne contrôlons, ne détenons et ne stockons aucune de ces données, et nous n'y avons pas accès. Ces hôtes les traitent selon leurs propres conditions et politiques de confidentialité.</p>
+        </div>
+
+        <p>Nous n'envoyons aucune donnée personnelle à un hôte de modèles au-delà de ce qu'exige un téléchargement de fichier ordinaire. Nous n'utilisons pas un hôte de modèles comme fournisseur d'analyse et n'avons aucune visibilité sur ce qu'il journalise.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="storage-fr">5. Données stockées sur votre appareil</h2>
+        <p>L'application écrit les éléments suivants sur votre appareil, tous dans son propre conteneur isolé. Aucun n'est transmis par l'application.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Quoi</th><th>Où</th><th>Remarques</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Historique des conversations</td>
+                <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> et <code>&lt;model&gt;.md</code></td>
+                <td>Un fichier par modèle, contenant <strong>uniquement les messages texte</strong>. Les messages contenant une image jointe ne sont pas conservés. Le fichier <code>.md</code> est une copie lisible de ce même contenu.</td>
+              </tr>
+              <tr>
+                <td>Poids des modèles téléchargés</td>
+                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code> sur iOS et iPadOS ; <code>~/.localllmclient/…</code> sur macOS</td>
+                <td>Fichiers de modèles publics récupérés depuis l'hôte sélectionné. Peuvent peser plusieurs gigaoctets. L'application demande au système d'exclure ce répertoire des sauvegardes de l'appareil.</td>
+              </tr>
+              <tr>
+                <td>Journal de diagnostic</td>
+                <td><code>Documents/diagnostics.log</code> (iOS et iPadOS uniquement)</td>
+                <td>Un fichier plafonné (512 Ko, puis réinitialisé) contenant des horodatages, l'utilisation mémoire et l'identifiant du modèle actif, utilisé pour diagnostiquer l'arrêt de l'application. Il ne contient <strong>aucun texte d'invite ou de réponse</strong> et n'est jamais transmis.</td>
+              </tr>
+              <tr>
+                <td>Conversations exportées</td>
+                <td>L'emplacement que vous choisissez lors de l'utilisation de <em>Export…</em></td>
+                <td>Écrit uniquement à votre demande, sous forme de fichier Markdown dans l'app Fichiers ou via un panneau d'enregistrement.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>L'historique des conversations est conservé jusqu'à ce que vous le supprimiez ou désinstalliez l'application.</p>
+
+        <div class="notice warn">
+          <p><strong>Les sauvegardes de l'appareil sont une autre affaire.</strong> Cette application ne transmet pas vos données, mais si vous avez activé la sauvegarde iCloud ou via Finder/iTunes, votre système d'exploitation peut inclure les données de l'application dans cette sauvegarde. Ce transfert est effectué par Apple dans le cadre de votre compte Apple et de vos réglages de sauvegarde, et relève de la politique de confidentialité d'Apple, pas de cette application. Vous pouvez l'examiner et la modifier dans les réglages de sauvegarde de votre appareil.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 id="delete-fr">6. Suppression de vos données</h2>
+        <p>Vous êtes aux commandes, et la suppression est immédiate et locale :</p>
         <ul>
-            <li>llama.cpp (C++ inference engine)</li>
-            <li>MLX (Apple's machine learning framework)</li>
-            <li>FoundationModels (Apple's on-device LLM framework)</li>
+          <li><strong>Clear Chat</strong> dans le menu de l'application efface la conversation en cours de la mémoire et supprime les fichiers d'historique correspondants à ce modèle.</li>
+          <li>Supprimer les données d'un modèle supprime les poids téléchargés de ce modèle et son historique de conversation.</li>
+          <li>Supprimer des messages individuels les efface de la conversation ; appuyez longuement sur une bulle pour la sélectionner et la supprimer.</li>
+          <li><strong>Désinstaller l'application</strong> supprime l'intégralité de son conteneur, y compris l'historique, les poids des modèles et le journal de diagnostic.</li>
         </ul>
-        <p>These components run locally on your device. No data is sent to their maintainers. When downloading models, your IP address may be visible to the host provider (e.g., Hugging Face) solely for the purpose of the download session. We do not control or store this connection data.</p>
-    </section>
+        <p>Comme nous ne détenons aucune donnée, il n'y a rien à nous demander. Une fois les données supprimées de votre appareil, nous ne pouvons pas les récupérer.</p>
+      </section>
 
-    <section>
-        <h2>5. Your Rights & Compliance</h2>
-        <p><strong>Your Rights:</strong> Since we do not collect or transmit personal data, there is no data held on our servers to access, correct, or delete. Your data belongs solely to you and stays on your device.</p>
-        <p><strong>Children's Privacy:</strong> This app is intended for general audiences and does share personal information with third parties.</p>
-    </section>
+      <section class="card">
+        <h2 id="components-fr">7. Composants tiers</h2>
+        <p>L'application embarque ou dépend des composants open source et de plateforme suivants. Tous les composants d'inférence s'exécutent localement et aucun ne transmet vos conversations :</p>
+        <ul>
+          <li><code>llama.cpp</code> — un moteur d'inférence C++, embarqué dans l'application.</li>
+          <li><code>MLX</code> et <code>mlx-swift</code> — le framework de machine learning d'Apple pour Apple silicon.</li>
+          <li><code>FoundationModels</code> — le framework de grands modèles de langage sur appareil d'Apple (iOS&nbsp;26 / macOS&nbsp;26 et ultérieur, avec Apple Intelligence activé).</li>
+        </ul>
+        <p>Ce sont des composants logiciels locaux ; inclure une bibliothèque n'envoie aucune donnée à ses mainteneurs. Aucune donnée ne leur est envoyée.</p>
+      </section>
 
-    <section class="contact-section">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, concerns, or feedback regarding this privacy policy, please contact us at:</p>
-        <p><strong>Email: <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></strong></p>
-    </section>
+      <section class="card">
+        <h2 id="rights-fr">8. Vos droits</h2>
+        <p>Nous ne collectons pas de données ; il n'y a donc rien que nous puissions consulter, corriger, exporter ou supprimer. L'intégralité de vos données reste sur votre appareil, sous votre contrôle, et peut être supprimée à tout moment comme décrit ci-dessus.</p>
+        <p>Si vous avez une question sur cette politique ou sur le traitement des données par l'application, contactez-nous à l'adresse indiquée dans la section <a href="#contact-fr">Contact</a>.</p>
+      </section>
 
-    <div style="text-align: center; margin-top: 50px; font-size: 0.9em; color: #999;">
-        <p>Effective date: 2026-09-17</p>
+      <section class="card">
+        <h2>9. Vie privée des enfants</h2>
+        <p>LocalLLMClient s'adresse à un public général et n'est pas destiné aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations personnelles concernant des enfants. Comme l'application ne collecte aucune information personnelle de qui que ce soit, aucune dispositions spécifique ne s'applique.</p>
+      </section>
+
+      <section class="card">
+        <h2>10. Sécurité</h2>
+        <p>L'inférence des modèles et les données de conversation restent dans le conteneur isolé de l'application sur votre appareil. L'application utilise le réseau TLS protégé par le système d'exploitation pour les téléchargements et n'implémente ni sa propre cryptographie ni de stockage d'identifiants. Nous recommandons de protéger votre appareil par un code d'accès et des logiciels à jour.</p>
+      </section>
+
+      <section class="card">
+        <h2>11. Mises à jour de la politique</h2>
+        <p>Si nous modifions cette politique, nous mettrons à jour la date « Dernière mise à jour » en haut de cette page et, le cas échéant, vous en informerons dans l'application. Continuer à utiliser l'application après une mise à jour signifie que la politique révisée s'applique.</p>
+      </section>
+
+      <section class="card" id="contact-fr">
+        <h2>12. Contact</h2>
+        <p>Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité, contactez-nous :</p>
+        <p><strong>E-mail :</strong> <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+      </section>
+
+      <footer>
+        <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
+        <p><a href="support.html">Assistance</a></p>
+      </footer>
     </div>
+  </section>
+  <section class="lang" id="lang-ja" lang="ja" hidden>
+  <div class="container">
+      <header>
+        <div class="logo">LocalLLMClient</div>
+        <h1>プライバシーポリシー</h1>
+        <p class="updated">最終更新日：2026年9月17日 &middot; 発効日：2026年9月17日</p>
+      </header>
 
+      <div class="summary">
+        <p><strong>要点：</strong> LocalLLMClient は言語モデルをすべてデバイス上で実行し、アカウント、解析機能、クラッシュレポートのいずれも備えません。プロンプト、会話履歴、モデルの出力が当社に送信されることはありません。</p>
+        <p>アプリがネットワーク通信を行うのは、モデルファイルのダウンロードという 1 つの場合のみです。その通信先は、ツールバーの <em>HF Source</em> メニューで選択したモデルホストです。初期設定は <code>hf-mirror.com</code>、変更すれば <code>huggingface.co</code> になります。そのホストの運営者は、あなたの IP アドレスと標準的なリクエスト情報を受け取り、当社とは独立した当事者です。詳細は「<a href="#network-ja">デバイスの外に出る情報</a>」および「<a href="#hosts-ja">モデルホストと第三者受益者</a>」をご覧ください。</p>
+      </div>
+
+      <section class="card">
+        <h2>1. 概要</h2>
+        <p>LocalLLMClient は、iPhone、iPad、Mac 向けのローカル優先の LLM チャットアプリです。モデル推論（プロンプトを応答に変換する計算）は、Apple MLX、同梱の llama.cpp エンジン、または Apple のオンデバイス Foundation Models フレームワークを用いてデバイス上で実行されます。</p>
+        <p>お客様のプライバシーを最重要視しています。本ポリシーは、アプリが扱うデータ、デバイスの外に出る情報、および当社がそのデータを取り扱う方法を示します。</p>
+      </section>
+
+      <section class="card">
+        <h2 id="collect-ja">2. 当社が収集するデータ</h2>
+        <p><strong>当社は個人データを一切収集しません。</strong>本アプリにサーバー側の成分は存在しません。当社はアカウント、バックエンド、利用者データベースを運用していないため、保持するものがありません。</p>
+        <ul>
+          <li>すべてのモデル推論は<strong>すべてデバイス上で</strong>実行されます。</li>
+          <li>プロンプト、会話履歴、添付画像、モデルの出力は、デバイスの外に出ることはありません。</li>
+          <li>アナリティクス、テレメトリ、クラッシュレポートをサーバーに送信することはありません。</li>
+          <li>広告やアプリ横断トラッキングは行っていません。</li>
+          <li>ユーザーアカウント、認証、身元による追跡はありません。</li>
+          <li>広告 SDK や第三者のデータブローカー SDK も使用していません。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 id="network-ja">3. デバイスの外に出る情報</h2>
+        <p>アプリがネットワーク通信を行う目的は、モデルホストからモデルの重みを取得することだけです。モデルをダウンロードした後は、アプリは完全にオフラインで動作し、それ以降の通信は行いません。</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>リクエスト</th><th>実行時</th><th>目的</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>GET /api/models/{repo}/revision/main</code></td>
+                <td>ダウンロード前</td>
+                <td>モデルリポジトリのファイルとサイズを取得し、ダウンロード容量を表示してモデルの存在を確認します。</td>
+              </tr>
+              <tr>
+                <td><code>HEAD /{repo}/resolve/main/{file}</code></td>
+                <td>ダウンロード前</td>
+                <td>ファイルサイズ、ETag、コミットハッシュを読み取り、既存のファイルをスキップして部分的なダウンロードを再開します。</td>
+              </tr>
+              <tr>
+                <td><code>GET /{repo}/resolve/main/{file}</code></td>
+                <td>ダウンロード中</td>
+                <td>モデル重みファイル本体をダウンロードします。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>ダウンロードは、アプリを閉じた後も OS のバックグラウンド転送機能を使って続行する場合があります。それ以外のネットワーク通信は行われません。</p>
+
+        <h3>モデルホストが受け取る情報</h3>
+        <p>何を取得するかをアプリが特定する必要があるため、リクエストには次の情報が必ず含まれます。</p>
+        <ul>
+          <li>接続先サーバーから見える、あなたの IP アドレス。</li>
+          <li>OS のネットワーク層が送信する標準的な HTTP リクエスト情報（User-Agent 文字列、要求されたファイルパスなど）。</li>
+          <li>要求されたリポジトリ名とファイル名（例：<code>LiquidAI/LFM2.5-1.2B-Instruct-MLX-4bit</code>）。これらは当社が選択した公開モデル識別子であり、あなたに関する情報は含まれません。</li>
+        </ul>
+
+        <h3>モデルホストが一切受け取ることのない情報</h3>
+        <ul>
+          <li>プロンプト、会話履歴、モデルの出力。</li>
+          <li>メッセージに添付した画像。</li>
+          <li>Hugging Face のアカウントやアクセストークン。アプリは認証を行わず、資格情報も送信しません。</li>
+          <li>当社があなたに付与する識別子。当社は識別子を一切作成していません。</li>
+        </ul>
+
+        <h3>オフラインでの利用</h3>
+        <p>使用するモデルをダウンロードした後は、ネットワークアクセスを完全に無効にできます（Wi-Fi とモバイル通信を切る、航空機モードにするなど）。チャット、ツール呼び出し、履歴表示はそのまま利用できます。</p>
+      </section>
+  <section class="card">
+        <h2 id="hosts-ja">4. モデルホストと第三者受益者</h2>
+        <p>本節は、規制上の義務とデータの流れに関する透明性のために記載しています。</p>
+
+        <p>アプリは、ツールバーの <em>HF Source</em> メニューを通じて、モデルファイルを提供するホストを選択できます。</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>選択</th><th>接続先のホスト</th><th>運営者</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>初期設定</strong></td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>第三者のミラー運営者であり、Hugging Face ではありません。</strong>独立して運営される別個のサービスであり、モデルリポジトリへのリクエストを中継します。</td>
+              </tr>
+              <tr>
+                <td>任意</td>
+                <td><code>huggingface.co</code></td>
+                <td>モデルハブの運営元である Hugging Face。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="notice">
+          <p><strong>ダウンロードにおけるデータ管理責任者。</strong>選択したホストの運営者は、あなたの IP アドレスとリクエスト情報を受け取り、そのリクエストについては<strong>独立したデータ管理者</strong>として扱われます。初期設定では、その当事者は <code>hf-mirror.com</code> の運営者であり、これは第三者であって Hugging Face <em>ではありません</em>。取得元を <code>huggingface.co</code> に変更した場合、その当事者は Hugging Face になります。当社はこれらのデータを管理、所有、保管せず、アクセスすることもありません。各ホストは自らの利用規約とプライバシーポリシーに基づいて処理を行います。</p>
+        </div>
+
+        <p>当社は、通常のファイルダウンロードに最低限必要な範囲を超えて、モデルホストへ個人データを送信しません。モデルホストを解析機能として利用することも、何が記録されているかを把握することもありません。</p>
+      </section>
+
+      <section class="card">
+        <h2 id="storage-ja">5. デバイスに保存されるデータ</h2>
+        <p>アプリは次の項目をデバイスに書き込みます。いずれもアプリ専用のサンドボックス内であり、アプリが送信することはありません。</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>内容</th><th>保存場所</th><th>備考</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>会話履歴</td>
+                <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> と <code>&lt;model&gt;.md</code></td>
+                <td>モデルごとに 1 ファイルで、<strong>テキストメッセージのみ</strong>を保持します。画像を添付したメッセージは保存されません。<code>.md</code> ファイルは、同じ内容を人が読める形式で保存した写しです。</td>
+              </tr>
+              <tr>
+                <td>ダウンロードしたモデル重み</td>
+                <td>iOS および iPadOS では <code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code>、macOS では <code>~/.localllmclient/…</code></td>
+                <td>選択したホストから取得した公開モデルファイルです。数十 GB になることがあります。アプリは、このディレクトリをデバイスのバックアップ対象から除外するようシステムに要求します。</td>
+              </tr>
+              <tr>
+                <td>診断ログ</td>
+                <td><code>Documents/diagnostics.log</code>（iOS および iPadOS のみ）</td>
+                <td>タイムスタンプ、メモリ使用量、使用中のモデル識別子をまとめたファイル（上限 512&nbsp;KB、到達したら再作成）。アプリの終了原因の診断に使用します。<strong>プロンプトや応答のテキストは含まれません</strong>。外部に送信されることもありません。</td>
+              </tr>
+              <tr>
+                <td>エクスポートした会話</td>
+                <td><em>Export…</em> を使用する際にあなたが選ぶ場所</td>
+                <td>お客様の指示があったときにのみ、Files アプリまたは保存パネルを通じて Markdown ファイルとして書き出します。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>会話履歴は、削除するかアプリをアンインストールするまで保持されます。</p>
+
+        <div class="notice warn">
+          <p><strong>デバイスのバックアップは別の仕組みです。</strong>本アプリはデータを送信しませんが、iCloud または Finder／iTunes のデバイスバックアップを有効にしている場合、OS がそのバックアップにアプリデータを含めることがあります。この転送は、Apple がお客様の Apple アカウントとバックアップ設定に基づいて実行するものであり、Apple のプライバシーポリシーに従うものです。本アプリによる転送ではありません。デバイスのバックアップ設定で確認・変更できます。</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 id="delete-ja">6. データの削除</h2>
+        <p>データはお客様の管理下にあり、削除はローカルで即時に行われます。</p>
+        <ul>
+          <li>メニューの<strong>Clear Chat</strong>で、現在の会話をメモリから消去し、そのモデルの履歴ファイルを削除します。</li>
+          <li>モデルのデータを削除すると、そのモデルの重みと会話履歴が削除されます。</li>
+          <li>個々のメッセージを削除すると、会話からその内容が消えます。吹き出しを長押しすると、選択して削除できます。</li>
+          <li><strong>アプリをアンインストール</strong>すると、履歴、モデル重み、診断ログを含むコンテナ全体が削除されます。</li>
+        </ul>
+        <p>当社はデータを保持していないため、当社に請求する必要はありません。デバイスの上でデータが削除された後は、当社が復元することはできません。</p>
+      </section>
+
+      <section class="card">
+        <h2 id="components-ja">7. サードパーティコンポーネント</h2>
+        <p>アプリは次のオープンソースおよびプラットフォームコンポーネントを同梱または依存しています。すべての推論コンポーネントはローカルで動作し、会話履歴を送信するものはありません。</p>
+        <ul>
+          <li><code>llama.cpp</code> — アプリに同梱された C++ 推論エンジン。</li>
+          <li><code>MLX</code> および <code>mlx-swift</code> — Apple silicon 向けの Apple の機械学習フレームワーク。</li>
+          <li><code>FoundationModels</code> — Apple のオンデバイス大規模言語モデルフレームワーク（iOS&nbsp;26 / macOS&nbsp;26 以降、Apple Intelligence が有効な環境）。</li>
+        </ul>
+        <p>これらはローカル動作のソフトウェアコンポーネントであり、ライブラリを同梱すること自体は、その開発者にデータを送信するものではありません。当社はデータを送信していません。</p>
+      </section>
+
+      <section class="card">
+        <h2 id="rights-ja">8. お客様の権利</h2>
+        <p>当社はデータを収集していないため、当社が参照、訂正、書き出し、削除を行う対象はありません。お客様のデータはすべてデバイス上にあり、上記のとおりいつでも削除できます。</p>
+        <p>本ポリシーまたはアプリでのデータ取り扱いについてのご質問は、<a href="#contact-ja">お問い合わせ</a>に記載の連絡先へご連絡ください。</p>
+      </section>
+
+      <section class="card">
+        <h2>9. 子どものプライバシー</h2>
+        <p>LocalLLMClient は一般を対象としており、13 歳未満の子どもを対象としていません。当社は子どもの個人情報を意図的に収集しません。アプリはいかなる対象者からも個人情報を収集しないため、特別な取り扱いは適用されません。</p>
+      </section>
+
+      <section class="card">
+        <h2>10. セキュリティ</h2>
+        <p>モデル推論と会話データは、アプリのコンテナ内つまりお客様のデバイス上に留まります。アプリはダウンロードに OS の TLS 保護された通信を使用し、独自の暗号や資格情報の保存は行いません。デバイスにはパスコードを設定し、ソフトウェアを最新の状態に保つことを推奨します。</p>
+      </section>
+
+      <section class="card">
+        <h2>11. ポリシーの更新</h2>
+        <p>本ポリシーを変更した場合は、このページ上部の「最終更新日」を更新し、必要に応じてアプリ内でお知らせします。更新後もアプリを使い続けることで、変更後のポリシーに同意したものとみなされます。</p>
+      </section>
+
+      <section class="card" id="contact-ja">
+        <h2>12. お問い合わせ</h2>
+        <p>本ポリシーに関するご質問やご不明な点がある場合は、次の連絡先までお問い合わせください。</p>
+        <p><strong>メール：</strong> <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+      </section>
+
+      <footer>
+        <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
+        <p><a href="support.html">サポート</a></p>
+      </footer>
+    </div>
+  </section>
+  <section class="lang" id="lang-de" lang="de" hidden>
+  <div class="container">
+      <header>
+        <div class="logo">LocalLLMClient</div>
+        <h1>Datenschutzerklärung</h1>
+        <p class="updated">Zuletzt aktualisiert: 17. September 2026 &middot; Gültig ab: 17. September 2026</p>
+      </header>
+
+      <div class="summary">
+        <p><strong>Kurz gesagt:</strong> LocalLLMClient führt Sprachmodelle vollständig auf Ihrem Gerät aus und bietet weder Konten noch Analyse- oder Absturzberichte. Ihre Prompts, Unterhaltungen und Modellausgaben werden nie an uns übermittelt.</p>
+        <p>Die App stellt Netzwerkanfragen in genau einer Situation: beim Herunterladen von Modelldateien. Diese Anfragen gehen an den Modell-Host, den Sie im Menü <em>HF Source</em> der App auswählen – standardmäßig <code>hf-mirror.com</code> oder <code>huggingface.co</code>, wenn Sie umstellen. Der Betreiber dieses Hosts erhält Ihre IP-Adresse und standardmäßige Anfrage-Metadaten und ist eine von uns unabhängige Partei. Einzelheiten unter <a href="#network-de">Was Ihr Gerät verlässt</a> und <a href="#hosts-de">Modell-Hosts und Drittanbieter</a>.</p>
+      </div>
+
+      <section class="card">
+        <h2>1. Überblick</h2>
+        <p>LocalLLMClient ist eine lokal ausgerichtete LLM-Chat-App für iPhone, iPad und Mac. Die Modellinferenz – also die Rechnung, die Ihren Prompt in eine Antwort umwandelt – läuft auf Ihrem Gerät mit Apple MLX, der integrierten llama.cpp-Engine oder Apples On-Device-Framework FoundationModels.</p>
+        <p>Ihre Privatsphäre hat für uns höchste Priorität. Diese Erklärung beschreibt, welche Daten die App verarbeitet, was Ihr Gerät verlässt und was wir damit tun.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="collect-de">2. Daten, die wir erheben</h2>
+        <p><strong>Wir erheben keine personenbezogenen Daten.</strong> Die App hat keine serverseitige Komponente: Wir betreiben weder Konten noch ein Backend und keine Nutzerdatenbank, sodass wir nichts aufbewahren.</p>
+        <ul>
+          <li>Die gesamte Modellinferenz läuft <strong>vollständig auf Ihrem Gerät</strong>.</li>
+          <li>Keine Prompts, keine Unterhaltungsverläufe, keine angehängten Bilder und keine Modellausgaben verlassen Ihr Gerät.</li>
+          <li>Es werden keine Analyse-, Telemetrie- oder Absturzberichte an einen Server gesendet.</li>
+          <li>Keine Werbung und kein seitenübergreifendes Tracking.</li>
+          <li>Keine Nutzerkonten, keine Authentifizierung, keine Identitätsverfolgung.</li>
+          <li>Wir verwenden keine Werbe-SDKs und keine SDKs von Datenbrokern Dritter.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 id="network-de">3. Was Ihr Gerät verlässt</h2>
+        <p>Die App stellt Netzwerkanfragen zu einem einzigen Zweck: um Modellgewichte von einem Modell-Host zu erhalten. Sobald ein Modell heruntergeladen ist, funktioniert die App vollständig offline und stellt keine weiteren Anfragen.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Anfrage</th><th>Wann</th><th>Zweck</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>GET /api/models/{repo}/revision/main</code></td>
+                <td>Vor dem Herunterladen</td>
+                <td>Die Dateien des Repositorys und ihre Größen auflisten, damit die App die Downloadgröße anzeigen und die Existenz des Modells bestätigen kann.</td>
+              </tr>
+              <tr>
+                <td><code>HEAD /{repo}/resolve/main/{file}</code></td>
+                <td>Vor dem Herunterladen</td>
+                <td>Dateigröße, ETag und Commit-Hash lesen, um bereits vorhandene Dateien zu überspringen und partielle Downloads fortzusetzen.</td>
+              </tr>
+              <tr>
+                <td><code>GET /{repo}/resolve/main/{file}</code></td>
+                <td>Während des Herunterladens</td>
+                <td>Die eigentliche Gewichtsdatei des Modells herunterladen.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Downloads können nach dem Verlassen der App über den Hintergrund-Transfermechanismus des Betriebssystems fortgesetzt werden. Weitere Netzwerkaktivität findet nicht statt.</p>
+
+        <h3>Was der Modell-Host erhält</h3>
+        <p>Da die App bestimmen muss, was heruntergeladen werden soll, enthält die Anfrage zwangsläufig:</p>
+        <ul>
+          <li>Ihre IP-Adresse, wie sie für jeden Webserver sichtbar ist, mit dem Sie sich verbinden.</li>
+          <li>Standardmäßige HTTP-Anfrage-Metadaten, die vom Netzwerk-Stack des Betriebssystems gesendet werden, etwa die User-Agent-Zeichenfolge und die angeforderten Dateipfade.</li>
+          <li>Die Namen des angeforderten Repositorys und der Dateien – zum Beispiel <code>LiquidAI/LFM2.5-1.2B-Instruct-MLX-4bit</code>. Das sind öffentliche Modellkennungen, von uns gewählt und keine Informationen über Sie.</li>
+        </ul>
+
+        <h3>Was der Modell-Host niemals erhält</h3>
+        <ul>
+          <li>Ihre Prompts, Ihre Unterhaltungen oder die Modellausgaben.</li>
+          <li>Bilder, die Sie einer Nachricht anhängen.</li>
+          <li>Ein Hugging-Face-Konto oder ein Zugriffstoken – die App authentifiziert sich nicht und sendet keine Anmeldedaten.</li>
+          <li>Eine Kennung, die wir Ihnen zuweisen würden, da wir keine vergeben.</li>
+        </ul>
+
+        <h3>Nutzung ohne Verbindung</h3>
+        <p>Nach dem Herunterladen der gewünschten Modelle können Sie den Netzwerkzugriff vollständig deaktivieren – etwa indem Sie WLAN und Mobilfunk abschalten oder den Flugmodus aktivieren. Chat, Werkzeugaufrufe und Verlauf funktionieren weiterhin.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="hosts-de">4. Modell-Hosts und Drittanbieter als Empfänger</h2>
+        <p>Dieser Abschnitt dient der Transparenz im Hinblick auf regulatorische Pflichten und Datenflüsse.</p>
+
+        <p>Die App lässt Sie über das Menü <em>HF Source</em> in der Symbolleiste wählen, welcher Host die Modelldateien ausliefert:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Auswahl</th><th>Kontaktierter Host</th><th>Betreiber</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Standard</strong></td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>Ein Drittanbieter-Mirror-Betreiber, nicht Hugging Face.</strong> Es handelt sich um einen eigenständigen, unabhängig betriebenen Dienst, der Anfragen an Modell-Repositories weiterleitet.</td>
+              </tr>
+              <tr>
+                <td>Optional</td>
+                <td><code>huggingface.co</code></td>
+                <td>Hugging Face, der Betreiber des Modell-Hubs.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="notice">
+          <p><strong>Wer bei Downloads als Verantwortlicher fungiert.</strong> Der Betreiber des von Ihnen gewählten Hosts erhält Ihre IP-Adresse und die Anfrage-Metadaten und handelt für diese Anfrage als <strong>unabhängiger Verantwortlicher</strong>. In der Standardeinstellung ist dies der Betreiber von <code>hf-mirror.com</code>, ein Dritter, der <em>not</em> Hugging Face ist; stellen Sie die Quelle auf <code>huggingface.co</code> um, ist es Hugging Face. Wir kontrollieren, besitzen und speichern keine dieser Daten und haben keinen Zugriff darauf. Diese Hosts verarbeiten sie nach ihren eigenen Bedingungen und Datenschutzerklärungen.</p>
+        </div>
+
+        <p>Wir senden über das hinaus, was ein gewöhnlicher Dateidownload erfordert, keine personenbezogenen Daten an einen Modell-Host. Wir nutzen keinen Modell-Host als Analyseanbieter und haben keine Kenntnis davon, was er protokolliert.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="storage-de">5. Auf Ihrem Gerät gespeicherte Daten</h2>
+        <p>Die App schreibt die folgenden Daten auf Ihr Gerät, sämtlich innerhalb ihres eigenen Containers. Keines davon wird von der App übermittelt.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Was</th><th>Wo</th><th>Hinweise</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Unterhaltungsverlauf</td>
+                <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> und <code>&lt;model&gt;.md</code></td>
+                <td>Eine Datei pro Modell mit <strong>ausschließlich Textnachrichten</strong>. Nachrichten mit angehängtem Bild werden nicht gespeichert. Die Datei <code>.md</code> ist eine lesbare Kopie desselben Inhalts.</td>
+              </tr>
+              <tr>
+                <td>Heruntergeladene Modellgewichte</td>
+                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code> auf iOS und iPadOS; <code>~/.localllmclient/…</code> auf macOS</td>
+                <td>Öffentliche Modelldateien vom gewählten Host. Können mehrere Gigabyte groß sein. Die App fordert das System auf, dieses Verzeichnis von Gerätesicherungen auszunehmen.</td>
+              </tr>
+              <tr>
+                <td>Diagnoseprotokoll</td>
+                <td><code>Documents/diagnostics.log</code> (nur iOS und iPadOS)</td>
+                <td>Eine begrenzte Datei (512&nbsp;KB, danach neu begonnen) mit Zeitstempeln, Speicherverbrauch und der Kennung des aktiven Modells, zur Diagnose von App-Abbrüchen. Sie enthält <strong>keinen Prompt- oder Antworttext</strong> und wird nie übermittelt.</td>
+              </tr>
+              <tr>
+                <td>Exportierte Unterhaltungen</td>
+                <td>Der von Ihnen bei <em>Export…</em> gewählte Ort</td>
+                <td>Nur auf Ihren Wunsch, als Markdown-Datei in der Dateien-App oder über einen Speicherdialog geschrieben.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Der Unterhaltungsverlauf bleibt erhalten, bis Sie ihn löschen oder die App deinstallieren.</p>
+
+        <div class="notice warn">
+          <p><strong>Gerätesicherungen sind etwas anderes.</strong> Diese App übermittelt Ihre Daten nicht. Wenn Sie jedoch iCloud- oder Finder-/iTunes-Gerätesicherungen aktiviert haben, kann Ihr Betriebssystem App-Daten in diese Sicherung aufnehmen. Diese Übertragung erfolgt durch Apple im Rahmen Ihres Apple-Kontos und Ihrer Sicherungseinstellungen und unterliegt Apples Datenschutzerklärung, nicht dieser App. Sie können dies in den Sicherungseinstellungen Ihres Geräts einsehen und ändern.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 id="delete-de">6. Löschen Ihrer Daten</h2>
+        <p>Sie haben die Kontrolle, und das Löschen erfolgt sofort und lokal:</p>
+        <ul>
+          <li><strong>Clear Chat</strong> im Menü der App löscht die aktuelle Unterhaltung aus dem Speicher und entfernt die gespeicherten Verlaufsdateien dieses Modells.</li>
+          <li>Wenn Sie die Daten eines Modells entfernen, werden dessen heruntergeladene Gewichte und sein Unterhaltungsverlauf gelöscht.</li>
+          <li>Einzelne Nachrichten zu löschen entfernt sie aus der Unterhaltung; halten Sie eine Sprechblase gedrückt, um sie auszuwählen und zu löschen.</li>
+          <li><strong>Deinstallieren der App</strong> entfernt den gesamten Container einschließlich Verlauf, Modellgewichten und Diagnoseprotokoll.</li>
+        </ul>
+        <p>Da wir keine Daten aufbewahren, gibt es nichts bei uns anzufordern. Nach dem Löschen von Daten auf Ihrem Gerät können wir sie nicht wiederherstellen.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="components-de">7. Komponenten von Drittanbietern</h2>
+        <p>Die App enthält bzw. nutzt die folgenden Open-Source- und Plattformkomponenten. Alle Inferenzkomponenten laufen lokal, und keine übermittelt Ihre Unterhaltungen:</p>
+        <ul>
+          <li><code>llama.cpp</code> – eine C++-Inferenz-Engine, die in der App enthalten ist.</li>
+          <li><code>MLX</code> und <code>mlx-swift</code> – Apples Framework für maschinelles Lernen für Apple Silicon.</li>
+          <li><code>FoundationModels</code> – Apples On-Device-Framework für große Sprachmodelle (iOS&nbsp;26 / macOS&nbsp;26 und neuer, mit aktivierter Apple Intelligence).</li>
+        </ul>
+        <p>Dies sind lokale Softwarekomponenten; das Einbinden einer Bibliothek sendet keine Daten an deren Maintainer. Es werden keine Daten an sie gesendet.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="rights-de">8. Ihre Rechte</h2>
+        <p>Wir erheben keine Daten, sodass es bei uns nichts gibt, was Sie einsehen, korrigieren, exportieren oder löschen könnten. Alle Ihre Daten verbleiben auf Ihrem Gerät, unter Ihrer Kontrolle, und können wie oben beschrieben jederzeit gelöscht werden.</p>
+        <p>Wenn Sie Fragen zu dieser Erklärung oder zum Datenumgang der App haben, kontaktieren Sie uns unter den Angaben im Abschnitt <a href="#contact-de">Kontakt</a>.</p>
+      </section>
+
+      <section class="card">
+        <h2>9. Datenschutz für Kinder</h2>
+        <p>LocalLLMClient richtet sich an eine allgemeine Öffentlichkeit und nicht an Kinder unter 13 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Kindern. Da die App von niemandem personenbezogene Daten erhebt, gilt keine besondere Behandlung.</p>
+      </section>
+
+      <section class="card">
+        <h2>10. Sicherheit</h2>
+        <p>Modellinferenz und Unterhaltungsdaten bleiben im isolierten Container der App auf Ihrem Gerät. Für Downloads nutzt die App die TLS-geschützte Vernetzung des Betriebssystems und implementiert weder eigene Kryptografie noch die Speicherung von Anmeldedaten. Wir empfehlen, Ihr Gerät mit einem Passcode und aktueller Software zu schützen.</p>
+      </section>
+
+      <section class="card">
+        <h2>11. Änderungen der Erklärung</h2>
+        <p>Wenn wir diese Erklärung ändern, aktualisieren wir das Datum „Zuletzt aktualisiert“ oben auf dieser Seite und informieren Sie, wo angebracht, in der App. Die weitere Nutzung der App nach einer Änderung bedeutet, dass die überarbeitete Erklärung gilt.</p>
+      </section>
+
+      <section class="card" id="contact-de">
+        <h2>12. Kontakt</h2>
+        <p>Wenn Sie Fragen oder Bedenken zu dieser Datenschutzerklärung haben, kontaktieren Sie uns:</p>
+        <p><strong>E-Mail:</strong> <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+      </section>
+
+      <footer>
+        <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
+        <p><a href="support.html">Support</a></p>
+      </footer>
+    </div>
+  </section>
+  <section class="lang" id="lang-nl" lang="nl" hidden>
+  <div class="container">
+      <header>
+        <div class="logo">LocalLLMClient</div>
+        <h1>Privacybeleid</h1>
+        <p class="updated">Laatst bijgewerkt: 17 september 2026 &middot; Ingegaan op: 17 september 2026</p>
+      </header>
+
+      <div class="summary">
+        <p><strong>Kort samengevat:</strong> LocalLLMClient draait taalmodellen volledig op uw apparaat en heeft geen accounts, geen analytics en geen crashrapportage. Uw prompts, gesprekken en modelantwoorden worden nooit naar ons verstuurd.</p>
+        <p>De app doet in precies één situatie netwerkverzoeken: bij het downloaden van modelbestanden. Die verzoeken gaan naar de modelhost die u in het menu <em>HF Source</em> van de app selecteert — standaard <code>hf-mirror.com</code>, of <code>huggingface.co</code> als u overschakelt. De beheerder van die host ontvangt uw IP-adres en standaardverzoekmetagegevens en is een van ons onafhankelijke partij. Meer hierover in <a href="#network-nl">Wat uw apparaat verlaat</a> en <a href="#hosts-nl">Modelhosts en derden als ontvangers</a>.</p>
+      </div>
+
+      <section class="card">
+        <h2>1. Overzicht</h2>
+        <p>LocalLLMClient is een lokaal gerichte LLM-chatapp voor iPhone, iPad en Mac. De modelinferentie — de berekening die uw prompt omzet in een antwoord — draait op uw apparaat met Apple MLX, de ingebouwde llama.cpp-engine of het on-device framework FoundationModels van Apple.</p>
+        <p>Uw privacy is onze hoogste prioriteit. Dit beleid legt uit welke gegevens de app verwerkt, wat uw apparaat verlaat en wat wij ermee doen.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="collect-nl">2. Gegevens die wij verzamelen</h2>
+        <p><strong>Wij verzamelen geen persoonsgegevens.</strong> De app heeft geen servercomponent: wij exploiteren geen accounts, geen backend en geen gebruikersdatabase, dus wij houden niets vast.</p>
+        <ul>
+          <li>Alle modelinferentie draait <strong>volledig op uw apparaat</strong>.</li>
+          <li>Geen prompts, gespreksgeschiedenis, bijgevoegde afbeeldingen of modelantwoorden verlaten uw apparaat.</li>
+          <li>Er worden geen analytics, telemetrie of crashrapporten naar een server gestuurd.</li>
+          <li>Geen advertenties en geen tracking over apps heen.</li>
+          <li>Geen gebruikersaccounts, geen authenticatie, geen identiteitsvolgsysteem.</li>
+          <li>Wij gebruiken geen advertentie-SDK's en geen SDK's van databrokers van derden.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 id="network-nl">3. Wat uw apparaat verlaat</h2>
+        <p>De app doet netwerkverzoeken voor precies één doel: modelgewichten verkrijgen van een modelhost. Zodra een model is gedownload, werkt de app volledig offline en doet zij geen verdere verzoeken.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Verzoek</th><th>Wanneer</th><th>Doel</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>GET /api/models/{repo}/revision/main</code></td>
+                <td>Voor het downloaden</td>
+                <td>De bestanden van de repository en hun groottes opvragen, zodat de app de downloadgrootte kan tonen en kan bevestigen dat het model bestaat.</td>
+              </tr>
+              <tr>
+                <td><code>HEAD /{repo}/resolve/main/{file}</code></td>
+                <td>Voor het downloaden</td>
+                <td>Bestandsgrootte, ETag en commit-hash lezen om al aanwezige bestanden over te slaan en gedeeltelijke downloads te hervatten.</td>
+              </tr>
+              <tr>
+                <td><code>GET /{repo}/resolve/main/{file}</code></td>
+                <td>Tijdens het downloaden</td>
+                <td>Het gewichtbestand van het model zelf downloaden.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Downloads kunnen doorgaan nadat u de app hebt verlaten, via de achtergrondoverdracht van het besturingssysteem. Er vindt geen andere netwerkactiviteit plaats.</p>
+
+        <h3>Wat de modelhost ontvangt</h3>
+        <p>Omdat de app moet vaststellen wat er gedownload moet worden, bevat het verzoek noodzakelijk:</p>
+        <ul>
+          <li>Uw IP-adres, zoals zichtbaar voor elke webserver waarmee u verbinding maakt.</li>
+          <li>Standaard HTTP-verzoekmetagegevens die de netwerklaag van het besturingssysteem verstuurt, zoals de User-Agent-tekenreeks en de opgevraagde bestandspaden.</li>
+          <li>De namen van de opgevraagde repository en bestanden — bijvoorbeeld <code>LiquidAI/LFM2.5-1.2B-Instruct-MLX-4bit</code>. Dit zijn openbare modelidentificatoren, door ons gekozen en geen informatie over u.</li>
+        </ul>
+
+        <h3>Wat de modelhost nooit ontvangt</h3>
+        <ul>
+          <li>Uw prompts, uw gesprekken of de modelantwoorden.</li>
+          <li>Afbeeldingen die u aan een bericht toevoegt.</li>
+          <li>Een Hugging Face-account of toegangstoken — de app meldt zich niet aan en verstuurt geen inloggegevens.</li>
+          <li>Een identificator die wij u zouden toewijzen, omdat wij er geen aanmaken.</li>
+        </ul>
+
+        <h3>Gebruik zonder verbinding</h3>
+        <p>Nadat de gewenste modellen zijn gedownload, kunt u netwerktoegang volledig uitschakelen — bijvoorbeeld door wifi en mobiele data uit te zetten of de vliegtuigmodus in te schakelen. Chat, toolaanroepen en geschiedenis blijven werken.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="hosts-nl">4. Modelhosts en derden als ontvangers</h2>
+        <p>Dit onderdeel is opgenomen voor transparantie met betrekking tot regelgevende verplichtingen en gegevensstromen.</p>
+
+        <p>De app laat u via het menu <em>HF Source</em> op de werkbalk kiezen welke host de modelbestanden levert:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Keuze</th><th>Gecontacteerde host</th><th>Wie beheert deze</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Standaard</strong></td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>Een spiegelbeheerder van een derde partij, niet Hugging Face.</strong> Het is een afzonderlijke, onafhankelijk geëxploiteerde dienst die verzoeken naar modelrepositories doorgeeft.</td>
+              </tr>
+              <tr>
+                <td>Optioneel</td>
+                <td><code>huggingface.co</code></td>
+                <td>Hugging Face, de beheerder van de modelhub.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="notice">
+          <p><strong>Wie bij downloads als verwerkingsverantwoordelijke optreedt.</strong> De beheerder van de door u gekozen host ontvangt uw IP-adres en de verzoekmetagegevens en treedt voor dat verzoek op als <strong>onafhankelijke verwerkingsverantwoordelijke</strong>. Bij de standaardinstelling is dat de beheerder van <code>hf-mirror.com</code>, een derde partij die <em>niet</em> Hugging Face is; schakelt u de bron over naar <code>huggingface.co</code>, dan is het Hugging Face. Wij controleren, bezitten of slaan geen van deze gegevens op en hebben er geen toegang toe. Die hosts verwerken ze volgens hun eigen voorwaarden en privacybeleid.</p>
+        </div>
+
+        <p>Wij sturen geen persoonsgegevens naar een modelhost die verder gaat dan wat een gewone bestandsdownload vereist. Wij gebruiken een modelhost niet als analyticsaanbieder en hebben geen zicht op wat die logt.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="storage-nl">5. Gegevens die op uw apparaat worden opgeslagen</h2>
+        <p>De app schrijft het volgende naar uw apparaat, allemaal binnen de eigen container van de app. Niets ervan wordt door de app verstuurd.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Wat</th><th>Waar</th><th>Opmerkingen</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Gespreksgeschiedenis</td>
+                <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> en <code>&lt;model&gt;.md</code></td>
+                <td>Eén bestand per model met <strong>alleen berichten in tekst</strong>. Berichten met een bijgevoegde afbeelding worden niet opgeslagen. Het bestand <code>.md</code> is een leesbare kopie van dezelfde inhoud.</td>
+              </tr>
+              <tr>
+                <td>Gedownloade modelgewichten</td>
+                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code> op iOS en iPadOS; <code>~/.localllmclient/…</code> op macOS</td>
+                <td>Openbare modelbestanden opgehaald bij de gekozen host. Kunnen meerdere gigabytes groot zijn. De app vraagt het systeem om deze map uit te sluiten van back-ups van het apparaat.</td>
+              </tr>
+              <tr>
+                <td>Diagnoselogboek</td>
+                <td><code>Documents/diagnostics.log</code> (alleen iOS en iPadOS)</td>
+                <td>Een begrensd bestand (512&nbsp;KB, daarna opnieuw begonnen) met tijdstempels, geheugengebruik en de identificator van het actieve model, gebruikt om het beëindigen van de app te diagnosticeren. Het bevat <strong>geen prompt- of antwoordtekst</strong> en wordt nooit verstuurd.</td>
+              </tr>
+              <tr>
+                <td>Geëxporteerde gesprekken</td>
+                <td>De locatie die u kiest bij het gebruik van <em>Export…</em></td>
+                <td>Alleen op uw verzoek geschreven, als Markdown-bestand in het bestanden-app of via een opslagdialoog.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>De gespreksgeschiedenis blijft behouden tot u die verwijdert of de app deïnstalleert.</p>
+
+        <div class="notice warn">
+          <p><strong>Back-ups van het apparaat zijn iets anders.</strong> Deze app verstuurt uw gegevens niet, maar als u een back-up via iCloud of Finder/iTunes hebt ingeschakeld, kan uw besturingssysteem appgegevens in die back-up opnemen. Die overdracht wordt uitgevoerd door Apple in het kader van uw Apple-account en back-upinstellingen en valt onder het privacybeleid van Apple, niet onder dat van deze app. U kunt dit bekijken en wijzigen in de back-upinstellingen van uw apparaat.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 id="delete-nl">6. Uw gegevens verwijderen</h2>
+        <p>U houdt de regie, en verwijderen gebeurt direct en lokaal:</p>
+        <ul>
+          <li><strong>Clear Chat</strong> in het menu van de app wist de huidige gesprek uit het geheugen en verwijdert de opgeslagen geschiedenisbestanden voor dat model.</li>
+          <li>De gegevens van een model verwijderen verwijdert de gedownloade gewichten en de gespreksgeschiedenis van dat model.</li>
+          <li>Losse berichten verwijderen haalt ze uit het gesprek; houd een spraakballon ingedrukt om die te selecteren en te verwijderen.</li>
+          <li><strong>De app verwijderen</strong> verwijdert de volledige container, inclusief geschiedenis, modelgewichten en diagnoselogboek.</li>
+        </ul>
+        <p>Omdat wij geen gegevens vasthouden, valt er bij ons niets aan te vragen. Zodra gegevens van uw apparaat zijn verwijderd, kunnen wij die niet herstellen.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="components-nl">7. Componenten van derden</h2>
+        <p>De app bevat of gebruikt de volgende open-source- en platformcomponenten. Alle inferentiecomponenten draaien lokaal en geen ervan verstuurt uw gesprekken:</p>
+        <ul>
+          <li><code>llama.cpp</code> — een C++-inferentie-engine die in de app is opgenomen.</li>
+          <li><code>MLX</code> en <code>mlx-swift</code> — het raamwerk voor machine learning van Apple voor Apple silicon.</li>
+          <li><code>FoundationModels</code> — het on-device raamwerk voor grote taalmodellen van Apple (iOS&nbsp;26 / macOS&nbsp;26 en nieuwer, met Apple Intelligence ingeschakeld).</li>
+        </ul>
+        <p>Dit zijn lokale softwarecomponenten; het opnemen van een bibliotheek verstuurt geen gegevens naar de maintainers ervan. Er worden geen gegevens naar hen verstuurd.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="rights-nl">8. Uw rechten</h2>
+        <p>Wij verzamelen geen gegevens, dus bij ons valt niets te raadplegen, corrigeren, exporteren of verwijderen. Al uw gegevens blijven op uw apparaat, onder uw controle, en kunnen op elk moment worden verwijderd zoals hierboven beschreven.</p>
+        <p>Als u vragen hebt over dit beleid of over de gegevensverwerking van de app, neem dan contact op via de gegevens in <a href="#contact-nl">Contact</a>.</p>
+      </section>
+
+      <section class="card">
+        <h2>9. Privacy van kinderen</h2>
+        <p>LocalLLMClient is bedoeld voor een algemeen publiek en is niet gericht op kinderen jonger dan 13 jaar. Wij verzamelen bewust geen persoonsgegevens van kinderen. Omdat de app van niemand persoonsgegevens verzamelt, geldt er geen speciale behandeling.</p>
+      </section>
+
+      <section class="card">
+        <h2>10. Beveiliging</h2>
+        <p>Modelinferentie en gespreksgegevens blijven in de geïsoleerde container van de app op uw apparaat. Voor downloads gebruikt de app de door het besturingssysteem beveiligde TLS-netwerkmogelijkheid en implementeert zij geen eigen cryptografie of opslag van inloggegevens. Wij adviseren uw apparaat te beveiligen met een toegangscode en actuele software.</p>
+      </section>
+
+      <section class="card">
+        <h2>11. Wijzigingen in het beleid</h2>
+        <p>Als wij dit beleid wijzigen, werken wij de datum “Laatst bijgewerkt” bovenaan deze pagina bij en informeren wij u, waar passend, in de app. Als u de app na een wijziging blijft gebruiken, geldt het herziene beleid.</p>
+      </section>
+
+      <section class="card" id="contact-nl">
+        <h2>12. Contact</h2>
+        <p>Als u vragen of zorgen over dit privacybeleid heeft, neem dan contact op:</p>
+        <p><strong>E-mail:</strong> <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+      </section>
+
+      <footer>
+        <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
+        <p><a href="support.html">Ondersteuning</a></p>
+      </footer>
+    </div>
+  </section>
+  <section class="lang" id="lang-pl" lang="pl" hidden>
+  <div class="container">
+      <header>
+        <div class="logo">LocalLLMClient</div>
+        <h1>Polityka prywatności</h1>
+        <p class="updated">Ostatnia aktualizacja: 17 września 2026 &middot; Obowiązuje od: 17 września 2026</p>
+      </header>
+
+      <div class="summary">
+        <p><strong>Najważniejsze informacje:</strong> LocalLLMClient uruchamia modele językowe w całości na Twoim urządzeniu i nie ma kont, analityki ani raportów o awariach. Twoje prompty, rozmowy i odpowiedzi modelu nigdy nie są do nas wysyłane.</p>
+        <p>Aplikacja wykonuje żądania sieciowe w dokładnie jednej sytuacji: podczas pobierania plików modelu. Trafiają one do hosta modeli, który wybierasz w menu <em>HF Source</em> aplikacji — domyślnie <code>hf-mirror.com</code> albo <code>huggingface.co</code>, jeśli zmienisz ustawienie. Operator tego hosta otrzymuje Twój adres IP i standardowe metadane żądania i jest podmiotem niezależnym od nas. Szczegóły znajdziesz w sekcjach <a href="#network-pl">Co opuszcza Twoje urządzenie</a> oraz <a href="#hosts-pl">Hosty modeli i podmioty trzecie</a>.</p>
+      </div>
+
+      <section class="card">
+        <h2>1. Informacje ogólne</h2>
+        <p>LocalLLMClient to działający lokalnie asystent czatu z modelami językowymi na iPhone'a, iPada i Maca. Wnioskowanie modelu — obliczenie zamieniające Twój prompt w odpowiedź — odbywa się na Twoim urządzeniu za pomocą Apple MLX, wbudowanego silnika llama.cpp lub frameworka FoundationModels firmy Apple działającego na urządzeniu.</p>
+        <p>Twoja prywatność jest dla nas najważniejsza. Niniejsza polityka wyjaśnia, jakie dane obsługuje aplikacja, co opuszcza Twoje urządzenie i co z nimi robimy.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="collect-pl">2. Dane, które zbieramy</h2>
+        <p><strong>Nie zbieramy żadnych danych osobowych.</strong> Aplikacja nie ma komponentu po stronie serwera: nie prowadzimy kont, zaplecza ani bazy użytkowników, więc nie mamy niczego do przechowywania.</p>
+        <ul>
+          <li>Całe wnioskowanie modelu odbywa się <strong>wyłącznie na Twoim urządzeniu</strong>.</li>
+          <li>Prompty, historia rozmów, załączone obrazy i odpowiedzi modelu nigdy nie opuszczają Twojego urządzenia.</li>
+          <li>Nie wysyłamy na żaden serwer analityki, telemetrii ani raportów o awariach.</li>
+          <li>Brak reklam i śledzenia między aplikacjami.</li>
+          <li>Brak kont użytkownika, uwierzytelniania i śledzenia tożsamości.</li>
+          <li>Nie używamy SDK reklamowych ani SDK brokerów danych podmiotów trzecich.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 id="network-pl">3. Co opuszcza Twoje urządzenie</h2>
+        <p>Aplikacja wykonuje żądania sieciowe w jednym celu: uzyskania wag modelu od hosta modeli. Po pobraniu modelu aplikacja działa w pełni offline i nie wykonuje kolejnych żądań.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Żądanie</th><th>Kiedy</th><th>Cel</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>GET /api/models/{repo}/revision/main</code></td>
+                <td>Przed pobraniem</td>
+                <td>Pobranie listy plików repozytorium wraz z rozmiarami, aby aplikacja mogła pokazać rozmiar pobierania i potwierdzić, że model istnieje.</td>
+              </tr>
+              <tr>
+                <td><code>HEAD /{repo}/resolve/main/{file}</code></td>
+                <td>Przed pobraniem</td>
+                <td>Odczytanie rozmiaru pliku, ETagu i skrótu commita, aby pominąć pliki już obecne i wznowić częściowe pobieranie.</td>
+              </tr>
+              <tr>
+                <td><code>GET /{repo}/resolve/main/{file}</code></td>
+                <td>Podczas pobierania</td>
+                <td>Pobranie samego pliku wag modelu.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Pobieranie może kontynuować się po zamknięciu aplikacji, korzystając z mechanizmu transferu w tle systemu operacyjnego. Żadna inna aktywność sieciowa nie ma miejsca.</p>
+
+        <h3>Co otrzymuje host modeli</h3>
+        <p>Ponieważ aplikacja musi ustalić, co pobrać, żądanie musi zawierać:</p>
+        <ul>
+          <li>Twój adres IP, widoczny dla każdego serwera WWW, z którym się łączysz.</li>
+          <li>Standardowe metadane żądania HTTP wysyłane przez warstwę sieciową systemu operacyjnego, takie jak ciąg User-Agent oraz żądane ścieżki plików.</li>
+          <li>Nazwy żądanego repozytorium i plików — na przykład <code>LiquidAI/LFM2.5-1.2B-Instruct-MLX-4bit</code>. Są to publiczne identyfikatory modeli wybrane przez nas, a nie informacje o Tobie.</li>
+        </ul>
+
+        <h3>Czego host modeli nigdy nie otrzymuje</h3>
+        <ul>
+          <li>Twoich promptów, rozmów ani odpowiedzi modelu.</li>
+          <li>Obrazów, które dołączasz do wiadomości.</li>
+          <li>Konta Hugging Face ani tokenu dostępu — aplikacja się nie uwierzytelnia i nie wysyła żadnych danych uwierzytelniających.</li>
+          <li>Identyfikatora, który moglibyśmy Ci przypisać, ponieważ żadnych nie tworzymy.</li>
+        </ul>
+
+        <h3>Korzystanie offline</h3>
+        <p>Po pobraniu wybranych modeli możesz całkowicie wyłączyć dostęp do sieci — na przykład wyłączając Wi-Fi i transmisję danych komórkowych albo włączając tryb samolotowy. Czat, wywołania narzędzi i historia działają dalej.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="hosts-pl">4. Hosty modeli i podmioty trzecie jako odbiorcy</h2>
+        <p>Ta sekcja została zamieszczona dla przejrzystości w zakresie obowiązków regulacyjnych i przepływu danych.</p>
+
+        <p>Aplikacja pozwala wybrać host serwujący pliki modeli w menu <em>HF Source</em> na pasku narzędzi:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Wybór</th><th>Serwer, z którym się łączymy</th><th>Kto nim zarządza</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Domyślnie</strong></td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>Operator lustrzanego repozytorium będący podmiotem trzecim — nie Hugging Face.</strong> To odrębna, niezależnie prowadzona usługa, która przekazuje żądania do repozytoriów modeli.</td>
+              </tr>
+              <tr>
+                <td>Opcjonalnie</td>
+                <td><code>huggingface.co</code></td>
+                <td>Hugging Face, operator centrum modeli.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="notice">
+          <p><strong>Kto jest administratorem danych przy pobieraniu.</strong> Operator wybranego hosta otrzymuje Twój adres IP i metadane żądania oraz pełni w odniesieniu do tego żądania rolę <strong>niezależnego administratora danych</strong>. Przy ustawieniu domyślnym jest to operator <code>hf-mirror.com</code>, czyli podmiot trzeci, który <em>nie jest</em> Hugging Face; jeśli zmienisz źródło na <code>huggingface.co</code>, będzie to Hugging Face. Nie kontrolujemy tych danych, nie posiadamy ich i nie mamy do nich dostępu. Te hosty przetwarzają je na podstawie własnych warunków i polityk prywatności.</p>
+        </div>
+
+        <p>Nie wysyłamy do hosta modeli danych osobowych wykraczających poza to, co wymaga zwykłe pobranie pliku. Nie używamy hosta modeli jako dostawcy analityki i nie mamy wglądu w to, co zapisuje.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="storage-pl">5. Dane przechowywane na Twoim urządzeniu</h2>
+        <p>Aplikacja zapisuje na Twoim urządzeniu następujące dane, wszystkie w jej własnym kontenerze. Żadna z nich nie jest przez aplikację przesyłana.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Co</th><th>Gdzie</th><th>Uwagi</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Historia rozmów</td>
+                <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> oraz <code>&lt;model&gt;.md</code></td>
+                <td>Jeden plik na model zawierający <strong>wyłącznie wiadomości tekstowe</strong>. Wiadomości z dołączonym obrazem nie są zapisywane. Plik <code>.md</code> to czytelna kopia tej samej treści.</td>
+              </tr>
+              <tr>
+                <td>Pobrane wagi modeli</td>
+                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code> na iOS i iPadOS; <code>~/.localllmclient/…</code> na macOS</td>
+                <td>Publiczne pliki modeli pobrane z wybranego hosta. Mogą zajmować kilka gigabajtów. Aplikacja prosi system o wyłączenie tego katalogu z kopii zapasowych urządzenia.</td>
+              </tr>
+              <tr>
+                <td>Dziennik diagnostyczny</td>
+                <td><code>Documents/diagnostics.log</code> (tylko iOS i iPadOS)</td>
+                <td>Plik o ograniczonym rozmiarze (512&nbsp;KB, potem tworzony od nowa) zawierający znaczniki czasu, zużycie pamięci i identyfikator aktywnego modelu, używany do diagnozowania zakończenia działania aplikacji. Nie zawiera <strong>tekstu promptów ani odpowiedzi</strong> i nigdy nie jest przesyłany.</td>
+              </tr>
+              <tr>
+                <td>Wyeksportowane rozmowy</td>
+                <td>Miejsce wybrane podczas korzystania z <em>Export…</em></td>
+                <td>Pisywany wyłącznie na Twoje żądanie jako plik Markdown w aplikacji Pliki lub za pomocą panelu zapisu.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Historia rozmów jest przechowywana, dopóki jej nie usuniesz lub nie odinstalujesz aplikacji.</p>
+
+        <div class="notice warn">
+          <p><strong>Kopie zapasowe urządzenia to odrębna kwestia.</strong> Ta aplikacja nie przesyła Twoich danych, ale jeśli masz włączoną kopię zapasową iCloud lub przez Finder/iTunes, system operacyjny może umieścić dane aplikacji w tej kopii. Transfer ten wykonuje Apple w ramach Twojego konta Apple i ustawień kopii zapasowej i podlega polityce prywatności firmy Apple, a nie tej aplikacji. Możesz to sprawdzić i zmienić w ustawieniach kopii zapasowej urządzenia.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 id="delete-pl">6. Usuwanie Twoich danych</h2>
+        <p>To Ty decydujesz, a usuwanie jest natychmiastowe i odbywa się lokalnie:</p>
+        <ul>
+          <li><strong>Clear Chat</strong> w menu aplikacji czyści bieżącą rozmowę z pamięci i usuwa zapisane pliki historii tego modelu.</li>
+          <li>Usunięcie danych modelu usuwa jego pobrane wagi oraz historię rozmów.</li>
+          <li>Usunięcie pojedynczych wiadomości kasuje je z rozmowy; dotknij i przytrzymaj bańkę, aby ją zaznaczyć i usunąć.</li>
+          <li><strong>Odinstalowanie aplikacji</strong> usuwa cały jej kontener, w tym historię, wagi modeli i dziennik diagnostyczny.</li>
+        </ul>
+        <p>Ponieważ nie przechowujemy żadnych danych, nie ma u nas czego żądać. Po usunięciu danych z urządzenia nie jesteśmy w stanie ich odzyskać.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="components-pl">7. Komponenty podmiotów trzecich</h2>
+        <p>Aplikacja zawiera lub korzysta z następujących komponentów open source i platformowych. Wszystkie komponenty wnioskowania działają lokalnie i żaden z nich nie przesyła Twoich rozmów:</p>
+        <ul>
+          <li><code>llama.cpp</code> — silnik wnioskowania w C++, dołączony do aplikacji.</li>
+          <li><code>MLX</code> i <code>mlx-swift</code> — framework uczenia maszynowego firmy Apple dla układów Apple silicon.</li>
+          <li><code>FoundationModels</code> — framework dużych modeli językowych firmy Apple działający na urządzeniu (iOS&nbsp;26 / macOS&nbsp;26 i nowsze, z włączoną funkcją Apple Intelligence).</li>
+        </ul>
+        <p>Są to lokalne komponenty oprogramowania; samo dołączenie biblioteki nie przesyła żadnych danych jej opiekunom. Nie wysyłamy do nich żadnych danych.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="rights-pl">8. Twoje prawa</h2>
+        <p>Nie zbieramy danych, więc po naszej stronie nie ma niczego, co można by przeglądać, poprawić, wyeksportować lub usunąć. Wszystkie Twoje dane pozostają na urządzeniu, pod Twoją kontrolą, i możesz je w każdej chwili usunąć w sposób opisany powyżej.</p>
+        <p>W razie pytań o tę politykę lub o sposób przetwarzania danych przez aplikację skontaktuj się z nami — dane znajdziesz w sekcji <a href="#contact-pl">Kontakt</a>.</p>
+      </section>
+
+      <section class="card">
+        <h2>9. Prywatność dzieci</h2>
+        <p>LocalLLMClient jest przeznaczona dla ogółu użytkowników i nie jest kierowana do dzieci poniżej 13 roku życia. Nie zbieramy świadomie danych osobowych dzieci. Ponieważ aplikacja nie zbiera danych osobowych od nikogo, nie stosuje się żadnego szczególnego postępowania.</p>
+      </section>
+
+      <section class="card">
+        <h2>10. Bezpieczeństwo</h2>
+        <p>Wnioskowanie modelu i dane rozmów pozostają w izolowanym kontenerze aplikacji na Twoim urządzeniu. Do pobierania aplikacja korzysta z chronionego przez system operacyjny połączenia TLS i nie implementuje własnej kryptografii ani przechowywania danych uwierzytelniających. Zalecamy ochronę urządzenia kodem dostępu i aktualnym oprogramowaniem.</p>
+      </section>
+
+      <section class="card">
+        <h2>11. Zmiany polityki</h2>
+        <p>Jeśli zmienimy tę politykę, zaktualizujemy datę „Ostatnia aktualizacja” u góry tej strony, a tam, gdzie to właściwe, powiadomimy Cię w aplikacji. Dalsze korzystanie z aplikacji po zmianie oznacza akceptację zmienionej polityki.</p>
+      </section>
+
+      <section class="card" id="contact-pl">
+        <h2>12. Kontakt</h2>
+        <p>W razie pytań lub wątpliwości dotyczących tej polityki prywatności skontaktuj się z nami:</p>
+        <p><strong>E-mail:</strong> <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+      </section>
+
+      <footer>
+        <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
+        <p><a href="support.html">Wsparcie</a></p>
+      </footer>
+    </div>
+  </section>
+  <section class="lang" id="lang-es" lang="es" hidden>
+  <div class="container">
+      <header>
+        <div class="logo">LocalLLMClient</div>
+        <h1>Política de privacidad</h1>
+        <p class="updated">Última actualización: 17 de septiembre de 2026 &middot; Entrada en vigor: 17 de septiembre de 2026</p>
+      </header>
+
+      <div class="summary">
+        <p><strong>En resumen:</strong> LocalLLMClient ejecuta los modelos de lenguaje íntegramente en tu dispositivo y no tiene cuentas, analítica ni informes de fallos. Tus instrucciones, conversaciones y respuestas del modelo nunca se envían a nosotros.</p>
+        <p>La aplicación hace solicitudes de red en una única situación: al descargar archivos de modelo. Se dirigen al servidor de modelos que elijas en el menú <em>HF Source</em> de la aplicación — <code>hf-mirror.com</code> de forma predeterminada, o <code>huggingface.co</code> si cambias la selección. Quien opere ese servidor recibe tu dirección IP y los metadatos estándar de la solicitud, y es una parte independiente de nosotros. Los detalles están en <a href="#network-es">Qué sale de tu dispositivo</a> y <a href="#hosts-es">Servidores de modelos y terceros destinatarios</a>.</p>
+      </div>
+
+      <section class="card">
+        <h2>1. Descripción general</h2>
+        <p>LocalLLMClient es una aplicación de chat con LLM orientada a funcionar en el dispositivo, para iPhone, iPad y Mac. La inferencia del modelo —el cálculo que convierte tu instrucción en una respuesta— se ejecuta en tu dispositivo mediante Apple MLX, el motor llama.cpp integrado o el framework FoundationModels de Apple.</p>
+        <p>Tu privacidad es nuestra máxima prioridad. Esta política explica qué datos gestiona la aplicación, qué sale de tu dispositivo y qué hacemos con ello.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="collect-es">2. Datos que recopilamos</h2>
+        <p><strong>No recopilamos ningún dato personal.</strong> La aplicación no tiene ningún componente del lado del servidor: no gestionamos cuentas, ni backend, ni una base de datos de usuarios, de modo que no retenemos nada.</p>
+        <ul>
+          <li>Toda la inferencia del modelo se ejecuta <strong>íntegramente en tu dispositivo</strong>.</li>
+          <li>Ninguna instrucción, historial de conversación, imagen adjunta ni respuesta del modelo sale de tu dispositivo.</li>
+          <li>No se envía analítica, telemetría ni informes de fallos a ningún servidor.</li>
+          <li>Sin publicidad ni seguimiento entre aplicaciones.</li>
+          <li>Sin cuentas de usuario, autenticación ni rastreo de identidad.</li>
+          <li>No utilizamos SDK publicitarios ni SDK de intermediarios de datos de terceros.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 id="network-es">3. Qué sale de tu dispositivo</h2>
+        <p>La aplicación hace solicitudes de red con un único fin: obtener los pesos de un modelo desde un servidor de modelos. Una vez descargado el modelo, la aplicación funciona por completo sin conexión y no realiza más solicitudes.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Solicitud</th><th>Cuándo</th><th>Finalidad</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>GET /api/models/{repo}/revision/main</code></td>
+                <td>Antes de la descarga</td>
+                <td>Listar los archivos del repositorio y sus tamaños, para que la aplicación pueda mostrar el tamaño de la descarga y confirmar que el modelo existe.</td>
+              </tr>
+              <tr>
+                <td><code>HEAD /{repo}/resolve/main/{file}</code></td>
+                <td>Antes de la descarga</td>
+                <td>Leer el tamaño del archivo, su ETag y el hash de la confirmación para omitir los archivos ya presentes y reanudar descargas parciales.</td>
+              </tr>
+              <tr>
+                <td><code>GET /{repo}/resolve/main/{file}</code></td>
+                <td>Durante la descarga</td>
+                <td>Descargar el propio archivo de pesos del modelo.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Las descargas pueden continuar después de salir de la aplicación, mediante el mecanismo de transferencia en segundo plano del sistema operativo. No se produce ninguna otra actividad de red.</p>
+
+        <h3>Qué recibe el servidor de modelos</h3>
+        <p>Como la aplicación necesita saber qué descargar, la solicitud contiene necesariamente:</p>
+        <ul>
+          <li>Tu dirección IP, tal como la ve cualquier servidor web al que te conectes.</li>
+          <li>Los metadatos estándar de solicitud HTTP que envía la pila de red del sistema operativo, como la cadena User-Agent y las rutas de archivo solicitadas.</li>
+          <li>Los nombres del repositorio y de los archivos solicitados —por ejemplo, <code>LiquidAI/LFM2.5-1.2B-Instruct-MLX-4bit</code>. Son identificadores de modelos públicos, elegidos por nosotros, no información sobre ti.</li>
+        </ul>
+
+        <h3>Qué nunca recibe el servidor de modelos</h3>
+        <ul>
+          <li>Tus instrucciones, tus conversaciones ni las respuestas del modelo.</li>
+          <li>Las imágenes que adjuntas a un mensaje.</li>
+          <li>Una cuenta de Hugging Face ni un token de acceso: la aplicación no se autentica ni envía credenciales.</li>
+          <li>Identificador alguno que nos pudiéramos asignarte, ya que no creamos ninguno.</li>
+        </ul>
+
+        <h3>Uso sin conexión</h3>
+        <p>Una vez descargados los modelos que quieras usar, puedes desactivar por completo el acceso a la red; por ejemplo, apagando el wifi y los datos móviles o activando el modo avión. El chat, las llamadas a herramientas y el historial siguen funcionando.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="hosts-es">4. Servidores de modelos y terceros destinatarios</h2>
+        <p>Esta sección se incluye por transparencia en relación con las obligaciones regulatorias y los flujos de datos.</p>
+
+        <p>La aplicación te permite elegir qué servidor distribuye los archivos de modelo, desde el menú <em>HF Source</em> de la barra de herramientas:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Selección</th><th>Servidor contactado</th><th>Quién lo opera</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Predeterminada</strong></td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>Un operador de espejo de terceros, no Hugging Face.</strong> Es un servicio distinto, explotado de forma independiente, que retransmite las solicitudes a los repositorios de modelos.</td>
+              </tr>
+              <tr>
+                <td>Opcional</td>
+                <td><code>huggingface.co</code></td>
+                <td>Hugging Face, el operador del centro de modelos.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="notice">
+          <p><strong>Quién actúa como responsable del tratamiento en las descargas.</strong> El operador del servidor que elijas recibe tu dirección IP y los metadatos de la solicitud y actúa, para esa solicitud, como <strong>responsable del tratamiento independiente</strong>. Con la selección predeterminada, esa parte es el operador de <code>hf-mirror.com</code>, un tercero que <em>no</em> es Hugging Face; si cambias el origen a <code>huggingface.co</code>, es Hugging Face. No controlamos, poseemos ni almacenamos ninguno de estos datos y no tenemos acceso a ellos. Dichos servidores los tratan conforme a sus propias condiciones y políticas de privacidad.</p>
+        </div>
+
+        <p>No enviamos datos personales a un servidor de modelos más allá de lo que exige una descarga de archivos ordinary. No utilizamos un servidor de modelos como proveedor de analítica y no tenemos visibilidad sobre lo que registra.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="storage-es">5. Datos almacenados en tu dispositivo</h2>
+        <p>La aplicación escribe lo siguiente en tu dispositivo, todo ello dentro de su propio contenedor aislado. Nada de eso lo transmite la aplicación.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Qué</th><th>Dónde</th><th>Notas</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Historial de conversaciones</td>
+                <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> y <code>&lt;model&gt;.md</code></td>
+                <td>Un archivo por modelo con <strong>únicamente mensajes de texto</strong>. Los mensajes con una imagen adjunta no se guardan. El archivo <code>.md</code> es una copia legible del mismo contenido.</td>
+              </tr>
+              <tr>
+                <td>Pesos de los modelos descargados</td>
+                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code> en iOS y iPadOS; <code>~/.localllmclient/…</code> en macOS</td>
+                <td>Archivos de modelos públicos obtenidos del servidor elegido. Pueden ocupar varios gigabytes. La aplicación pide al sistema que excluya ese directorio de las copias de seguridad del dispositivo.</td>
+              </tr>
+              <tr>
+                <td>Registro de diagnóstico</td>
+                <td><code>Documents/diagnostics.log</code> (solo iOS y iPadOS)</td>
+                <td>Un archivo con tamaño limitado (512&nbsp;KB, después se reinicia) con marcas de tiempo, uso de memoria y el identificador del modelo activo, para diagnosticar la terminación de la aplicación. No contiene <strong>texto de instrucciones ni de respuestas</strong> y nunca se transmite.</td>
+              </tr>
+              <tr>
+                <td>Conversaciones exportadas</td>
+                <td>La ubicación que elijas al usar <em>Export…</em></td>
+                <td>Se escribe solo a petición tuya, como archivo Markdown en la app Archivos o mediante un panel de guardado.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>El historial de conversaciones se conserva hasta que lo elimines o desinstales la aplicación.</p>
+
+        <div class="notice warn">
+          <p><strong>Las copias de seguridad del dispositivo son otra cosa.</strong> Esta aplicación no transmite tus datos, pero si tienes activada la copia de seguridad mediante iCloud o Finder/iTunes, tu sistema operativo puede incluir los datos de la aplicación en esa copia. Esa transferencia la realiza Apple en el marco de tu cuenta de Apple y de tus ajustes de copia de seguridad, y se rige por la política de privacidad de Apple, no por esta aplicación. Puedes revisarla y modificarla en los ajustes de copia de seguridad de tu dispositivo.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 id="delete-es">6. Eliminación de tus datos</h2>
+        <p>El control es tuyo, y la eliminación es inmediata y local:</p>
+        <ul>
+          <li><strong>Clear Chat</strong> en el menú de la aplicación borra la conversación actual de la memoria y elimina los archivos de historial guardados para ese modelo.</li>
+          <li>Eliminar los datos de un modelo borra los pesos descargados de ese modelo y su historial de conversaciones.</li>
+          <li>Eliminar mensajes concretos los quita de la conversación; mantén pulsada una burbuja para seleccionarla y eliminarla.</li>
+          <li><strong>Desinstalar la aplicación</strong> elimina todo su contenedor, incluido el historial, los pesos de los modelos y el registro de diagnóstico.</li>
+        </ul>
+        <p>Como no retenemos datos, no hay nada que solicitarnos. Una vez que los datos se eliminan de tu dispositivo, no podemos recuperarlos.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="components-es">7. Componentes de terceros</h2>
+        <p>La aplicación incluye o depende de los siguientes componentes de código abierto y de plataforma. Todos los componentes de inferencia se ejecutan en local y ninguno transmite tus conversaciones:</p>
+        <ul>
+          <li><code>llama.cpp</code> — un motor de inferencia en C++, incluido en la aplicación.</li>
+          <li><code>MLX</code> y <code>mlx-swift</code> — el framework de aprendizaje automático de Apple para Apple silicon.</li>
+          <li><code>FoundationModels</code> — el framework de grandes modelos de lenguaje en el dispositivo de Apple (iOS&nbsp;26 / macOS&nbsp;26 y posteriores, con Apple Intelligence activado).</li>
+        </ul>
+        <p>Son componentes de software locales; incluir una biblioteca no envía ningún dato a sus responsables. No se les envía ningún dato.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="rights-es">8. Tus derechos</h2>
+        <p>No recopilamos datos, así que de nuestra parte no hay nada que puedas consultar, corregir, exportar ni eliminar. Todos tus datos permanecen en tu dispositivo, bajo tu control, y pueden eliminarse en cualquier momento como se explica arriba.</p>
+        <p>Si tienes alguna pregunta sobre esta política o sobre el tratamiento de datos de la aplicación, contacta con nosotros mediante los datos del apartado <a href="#contact-es">Contacto</a>.</p>
+      </section>
+
+      <section class="card">
+        <h2>9. Privacidad de los menores</h2>
+        <p>LocalLLMClient está dirigida al público general y no va dirigida a menores de 13 años. No recopilamos conscientemente información personal de menores. Como la aplicación no recopila información personal de nadie, no se aplica ningún tratamiento especial.</p>
+      </section>
+
+      <section class="card">
+        <h2>10. Seguridad</h2>
+        <p>La inferencia del modelo y los datos de las conversaciones permanecen en el contenedor aislado de la aplicación, en tu dispositivo. Para las descargas, la aplicación utiliza la red protegida con TLS del sistema operativo y no implementa criptografía propia ni almacenamiento de credenciales. Recomendamos proteger el dispositivo con un código de acceso y software actualizado.</p>
+      </section>
+
+      <section class="card">
+        <h2>11. Cambios en la política</h2>
+        <p>Si cambiamos esta política, actualizaremos la fecha «Última actualización» que aparece arriba en esta página y, cuando proceda, te avisaremos en la aplicación. Seguir usando la aplicación después de un cambio significa que se aplica la política revisada.</p>
+      </section>
+
+      <section class="card" id="contact-es">
+        <h2>12. Contacto</h2>
+        <p>Si tienes preguntas o dudas sobre esta política de privacidad, contacta con nosotros:</p>
+        <p><strong>Correo electrónico:</strong> <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+      </section>
+
+      <footer>
+        <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
+        <p><a href="support.html">Soporte</a></p>
+      </footer>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var LANGS = [["en", "English"],
+        ["fr", "Français"],
+        ["ja", "日本語"],
+        ["de", "Deutsch"],
+        ["nl", "Nederlands"],
+        ["pl", "Polski"],
+        ["es", "Español"]];
+      var TITLES = {"en": "Privacy Policy · LocalLLMClient", "fr": "Politique de confidentialité · LocalLLMClient", "ja": "プライバシーポリシー · LocalLLMClient", "de": "Datenschutzerklärung · LocalLLMClient", "nl": "Privacybeleid · LocalLLMClient", "pl": "Polityka prywatności · LocalLLMClient", "es": "Política de privacidad · LocalLLMClient"};
+      var LABELS = {"en": "Language", "fr": "Langue", "ja": "言語", "de": "Sprache", "nl": "Taal", "pl": "Język", "es": "Idioma"};
+      var STORE = 'llmc-lang';
+      var select = document.getElementById('langSelect');
+      var label = document.getElementById('langLabel');
+      var bar = document.getElementById('langbar');
+      var sections = [].slice.call(document.querySelectorAll('section.lang'));
+
+      LANGS.forEach(function (entry) {
+        var option = document.createElement('option');
+        option.value = entry[0];
+        option.textContent = entry[1];
+        select.appendChild(option);
+      });
+
+      function show(code) {
+        var known = LANGS.some(function (entry) { return entry[0] === code; });
+        if (!known) { code = 'en'; }
+        sections.forEach(function (section) {
+          var match = section.getAttribute('lang') === code;
+          section.classList.toggle('active', match);
+          if (match) { section.removeAttribute('hidden'); } else { section.setAttribute('hidden', ''); }
+        });
+        document.documentElement.lang = code;
+        document.title = TITLES[code];
+        select.value = code;
+        label.textContent = LABELS[code];
+        try { localStorage.setItem(STORE, code); } catch (e) { /* private mode */ }
+      }
+
+      function fromLocation() {
+        var hash = (location.hash || '').replace(/^#/, '');
+        if (/^(en|fr|ja|de|nl|pl|es)$/.test(hash)) { return hash; }
+        try { return localStorage.getItem(STORE) || 'en'; } catch (e) { return 'en'; }
+      }
+
+      if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+      select.addEventListener('change', function () {
+        history.replaceState(null, '', '#' + select.value);
+        show(select.value);
+      });
+
+      window.addEventListener('hashchange', function () {
+        var hash = (location.hash || '').replace(/^#/, '');
+        if (/^(en|fr|ja|de|nl|pl|es)$/.test(hash)) { show(hash); }
+      });
+
+      show(fromLocation());
+    })();
+  </script>
 </body>
 </html>
