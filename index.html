@@ -156,7 +156,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: September 17, 2026 &middot; Effective date: September 17, 2026</p>
+        <p class="updated">Last updated: October 16, 2026 &middot; Effective date: October 16, 2026</p>
       </header>
 
       <div class="summary">
@@ -166,7 +166,7 @@
 
       <section class="card">
         <h2>1. Overview</h2>
-        <p>LocalLLMClient is a local-first LLM chat app for iPhone, iPad, and Mac. Model inference — the computation that turns your prompt into a response — runs on your device using Apple MLX, the bundled llama.cpp engine, or Apple's on-device Foundation Models framework.</p>
+        <p>LocalLLMClient is a local-first LLM chat app for iPhone. Model inference — the computation that turns your prompt into a response — runs on your device using Apple MLX or the bundled llama.cpp engine.</p>
         <p>Your privacy is our top priority. This policy explains what data the app handles, what leaves your device, and what we do with it.</p>
       </section>
 
@@ -175,7 +175,7 @@
         <p><strong>We do not collect any personal data.</strong> There is no server-side component to this app: we operate no accounts, no backend, and no user database, so there is nothing for us to hold.</p>
         <ul>
           <li>All model inference runs <strong>entirely on your device</strong>.</li>
-          <li>No prompts, conversation history, images you attach, or model outputs leave your device.</li>
+          <li>No prompts, conversation history, or model outputs leave your device.</li>
           <li>No analytics, telemetry, or crash reporting is sent to any server.</li>
           <li>No advertising or cross-app tracking.</li>
           <li>No user accounts, authentication, or identity tracking.</li>
@@ -225,7 +225,6 @@
         <h3>What the model host never receives</h3>
         <ul>
           <li>Your prompts, conversations, or model outputs.</li>
-          <li>Images you attach to a message.</li>
           <li>A Hugging Face account or access token — the app does not authenticate, and sends no credentials.</li>
           <li>Any identifier we assign to you, because we do not create any.</li>
         </ul>
@@ -280,16 +279,16 @@
               <tr>
                 <td>Conversation history</td>
                 <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> and <code>&lt;model&gt;.md</code></td>
-                <td>One file per model, holding <strong>text messages only</strong>. Messages containing an attached image are not persisted. The <code>.md</code> file is a human-readable copy of the same content.</td>
+                <td>One file per model, holding <strong>text messages only</strong>. The <code>.md</code> file is a human-readable copy of the same content.</td>
               </tr>
               <tr>
                 <td>Downloaded model weights</td>
-                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code> on iOS and iPadOS; <code>~/.localllmclient/…</code> on macOS</td>
+                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
                 <td>Public model files fetched from the selected host. Can be several gigabytes. The app asks the system to exclude this directory from device backups.</td>
               </tr>
               <tr>
                 <td>Diagnostics log</td>
-                <td><code>Documents/diagnostics.log</code> (iOS and iPadOS only)</td>
+                <td><code>Documents/diagnostics.log</code></td>
                 <td>A capped file (512&nbsp;KB, then rotated) of timestamps, memory usage, and the active model identifier, used to diagnose app termination. It contains <strong>no prompt or response text</strong> and is never transmitted.</td>
               </tr>
               <tr>
@@ -314,7 +313,6 @@
         <ul>
           <li><strong>Clear Chat</strong> in the app's menu clears the current conversation from memory and deletes its stored history files for that model.</li>
           <li>Removing a model's data deletes that model's downloaded weights and its conversation history.</li>
-          <li>Deleting individual messages clears them from the conversation; press and hold a bubble to select and remove.</li>
           <li><strong>Uninstalling the app</strong> removes its entire container, including history, model weights, and the diagnostics log.</li>
         </ul>
         <p>Because we hold no data, there is nothing to request from us. Once data is deleted from your device, it cannot be recovered by us.</p>
@@ -326,7 +324,6 @@
         <ul>
           <li><code>llama.cpp</code> — a C++ inference engine, bundled in the app.</li>
           <li><code>MLX</code> and <code>mlx-swift</code> — Apple's machine learning framework for Apple silicon.</li>
-          <li><code>FoundationModels</code> — Apple's on-device large language model framework (iOS&nbsp;26 / macOS&nbsp;26 and later, with Apple Intelligence enabled).</li>
         </ul>
         <p>These are local software components; including a library does not send any data to its maintainers. No data is sent to them.</p>
       </section>
@@ -369,7 +366,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>Politique de confidentialité</h1>
-        <p class="updated">Dernière mise à jour : 17 septembre 2026 &middot; Date d'entrée en vigueur : 17 septembre 2026</p>
+        <p class="updated">Dernière mise à jour : 16 octobre 2026 &middot; Date d'entrée en vigueur : 16 octobre 2026</p>
       </header>
 
       <div class="summary">
@@ -379,7 +376,7 @@
 
       <section class="card">
         <h2>1. Aperçu</h2>
-        <p>LocalLLMClient est une application de chat LLM privilégiant le local, pour iPhone, iPad et Mac. L'inférence des modèles — le calcul qui transforme votre invite en réponse — s'exécute sur votre appareil à l'aide d'Apple MLX, du moteur llama.cpp intégré, ou du framework FoundationModels d'Apple.</p>
+        <p>LocalLLMClient est une application de chat LLM privilégiant le local, pour iPhone. L'inférence des modèles — le calcul qui transforme votre invite en réponse — s'exécute sur votre appareil à l'aide d'Apple MLX ou du moteur llama.cpp intégré.</p>
         <p>Votre confidentialité est notre priorité absolue. Cette politique explique les données que l'application traite, ce qui quitte votre appareil, et ce que nous en faisons.</p>
       </section>
 
@@ -388,7 +385,7 @@
         <p><strong>Nous ne collectons aucune donnée personnelle.</strong> L'application ne comporte aucun composant côté serveur : nous n'exploitons ni comptes, ni backend, ni base de données d'utilisateurs, et n'avons donc rien à conserver.</p>
         <ul>
           <li>Toute l'inférence des modèles s'exécute <strong>intégralement sur votre appareil</strong>.</li>
-          <li>Aucune invite, aucun historique de conversation, aucune image jointe et aucune réponse de modèle ne quitte votre appareil.</li>
+          <li>Aucune invite, aucun historique de conversation et aucune réponse de modèle ne quitte votre appareil.</li>
           <li>Aucune analyse d'usage, télémétrie ou rapport d'incident n'est envoyé à un serveur.</li>
           <li>Aucune publicité ni pistage inter-applications.</li>
           <li>Aucun compte utilisateur, aucune authentification, aucun suivi d'identité.</li>
@@ -438,7 +435,6 @@
         <h3>Ce que l'hôte de modèles ne reçoit jamais</h3>
         <ul>
           <li>Vos invites, vos conversations ou les réponses du modèle.</li>
-          <li>Les images que vous joignez à un message.</li>
           <li>Un compte Hugging Face ou un jeton d'accès — l'application ne s'authentifie pas et n'envoie aucune donnée d'identification.</li>
           <li>Tout identifiant que nous vous attribuerions, puisque nous n'en créons aucun.</li>
         </ul>
@@ -493,16 +489,16 @@
               <tr>
                 <td>Historique des conversations</td>
                 <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> et <code>&lt;model&gt;.md</code></td>
-                <td>Un fichier par modèle, contenant <strong>uniquement les messages texte</strong>. Les messages contenant une image jointe ne sont pas conservés. Le fichier <code>.md</code> est une copie lisible de ce même contenu.</td>
+                <td>Un fichier par modèle, contenant <strong>uniquement les messages texte</strong>. Le fichier <code>.md</code> est une copie lisible de ce même contenu.</td>
               </tr>
               <tr>
                 <td>Poids des modèles téléchargés</td>
-                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code> sur iOS et iPadOS ; <code>~/.localllmclient/…</code> sur macOS</td>
+                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
                 <td>Fichiers de modèles publics récupérés depuis l'hôte sélectionné. Peuvent peser plusieurs gigaoctets. L'application demande au système d'exclure ce répertoire des sauvegardes de l'appareil.</td>
               </tr>
               <tr>
                 <td>Journal de diagnostic</td>
-                <td><code>Documents/diagnostics.log</code> (iOS et iPadOS uniquement)</td>
+                <td><code>Documents/diagnostics.log</code></td>
                 <td>Un fichier plafonné (512 Ko, puis réinitialisé) contenant des horodatages, l'utilisation mémoire et l'identifiant du modèle actif, utilisé pour diagnostiquer l'arrêt de l'application. Il ne contient <strong>aucun texte d'invite ou de réponse</strong> et n'est jamais transmis.</td>
               </tr>
               <tr>
@@ -527,7 +523,6 @@
         <ul>
           <li><strong>Clear Chat</strong> dans le menu de l'application efface la conversation en cours de la mémoire et supprime les fichiers d'historique correspondants à ce modèle.</li>
           <li>Supprimer les données d'un modèle supprime les poids téléchargés de ce modèle et son historique de conversation.</li>
-          <li>Supprimer des messages individuels les efface de la conversation ; appuyez longuement sur une bulle pour la sélectionner et la supprimer.</li>
           <li><strong>Désinstaller l'application</strong> supprime l'intégralité de son conteneur, y compris l'historique, les poids des modèles et le journal de diagnostic.</li>
         </ul>
         <p>Comme nous ne détenons aucune donnée, il n'y a rien à nous demander. Une fois les données supprimées de votre appareil, nous ne pouvons pas les récupérer.</p>
@@ -539,7 +534,6 @@
         <ul>
           <li><code>llama.cpp</code> — un moteur d'inférence C++, embarqué dans l'application.</li>
           <li><code>MLX</code> et <code>mlx-swift</code> — le framework de machine learning d'Apple pour Apple silicon.</li>
-          <li><code>FoundationModels</code> — le framework de grands modèles de langage sur appareil d'Apple (iOS&nbsp;26 / macOS&nbsp;26 et ultérieur, avec Apple Intelligence activé).</li>
         </ul>
         <p>Ce sont des composants logiciels locaux ; inclure une bibliothèque n'envoie aucune donnée à ses mainteneurs. Aucune donnée ne leur est envoyée.</p>
       </section>
@@ -582,7 +576,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>プライバシーポリシー</h1>
-        <p class="updated">最終更新日：2026年9月17日 &middot; 発効日：2026年9月17日</p>
+        <p class="updated">最終更新日：2026年10月16日 &middot; 発効日：2026年10月16日</p>
       </header>
 
       <div class="summary">
@@ -592,7 +586,7 @@
 
       <section class="card">
         <h2>1. 概要</h2>
-        <p>LocalLLMClient は、iPhone、iPad、Mac 向けのローカル優先の LLM チャットアプリです。モデル推論（プロンプトを応答に変換する計算）は、Apple MLX、同梱の llama.cpp エンジン、または Apple のオンデバイス Foundation Models フレームワークを用いてデバイス上で実行されます。</p>
+        <p>LocalLLMClient は、iPhone 向けのローカル優先の LLM チャットアプリです。モデル推論（プロンプトを応答に変換する計算）は、Apple MLX または同梱の llama.cpp エンジンを用いてデバイス上で実行されます。</p>
         <p>お客様のプライバシーを最重要視しています。本ポリシーは、アプリが扱うデータ、デバイスの外に出る情報、および当社がそのデータを取り扱う方法を示します。</p>
       </section>
 
@@ -601,7 +595,7 @@
         <p><strong>当社は個人データを一切収集しません。</strong>本アプリにサーバー側の成分は存在しません。当社はアカウント、バックエンド、利用者データベースを運用していないため、保持するものがありません。</p>
         <ul>
           <li>すべてのモデル推論は<strong>すべてデバイス上で</strong>実行されます。</li>
-          <li>プロンプト、会話履歴、添付画像、モデルの出力は、デバイスの外に出ることはありません。</li>
+          <li>プロンプト、会話履歴、モデルの出力は、デバイスの外に出ることはありません。</li>
           <li>アナリティクス、テレメトリ、クラッシュレポートをサーバーに送信することはありません。</li>
           <li>広告やアプリ横断トラッキングは行っていません。</li>
           <li>ユーザーアカウント、認証、身元による追跡はありません。</li>
@@ -651,7 +645,6 @@
         <h3>モデルホストが一切受け取ることのない情報</h3>
         <ul>
           <li>プロンプト、会話履歴、モデルの出力。</li>
-          <li>メッセージに添付した画像。</li>
           <li>Hugging Face のアカウントやアクセストークン。アプリは認証を行わず、資格情報も送信しません。</li>
           <li>当社があなたに付与する識別子。当社は識別子を一切作成していません。</li>
         </ul>
@@ -705,16 +698,16 @@
               <tr>
                 <td>会話履歴</td>
                 <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> と <code>&lt;model&gt;.md</code></td>
-                <td>モデルごとに 1 ファイルで、<strong>テキストメッセージのみ</strong>を保持します。画像を添付したメッセージは保存されません。<code>.md</code> ファイルは、同じ内容を人が読める形式で保存した写しです。</td>
+                <td>モデルごとに 1 ファイルで、<strong>テキストメッセージのみ</strong>を保持します。<code>.md</code> ファイルは、同じ内容を人が読める形式で保存した写しです。</td>
               </tr>
               <tr>
                 <td>ダウンロードしたモデル重み</td>
-                <td>iOS および iPadOS では <code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code>、macOS では <code>~/.localllmclient/…</code></td>
+                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
                 <td>選択したホストから取得した公開モデルファイルです。数十 GB になることがあります。アプリは、このディレクトリをデバイスのバックアップ対象から除外するようシステムに要求します。</td>
               </tr>
               <tr>
                 <td>診断ログ</td>
-                <td><code>Documents/diagnostics.log</code>（iOS および iPadOS のみ）</td>
+                <td><code>Documents/diagnostics.log</code></td>
                 <td>タイムスタンプ、メモリ使用量、使用中のモデル識別子をまとめたファイル（上限 512&nbsp;KB、到達したら再作成）。アプリの終了原因の診断に使用します。<strong>プロンプトや応答のテキストは含まれません</strong>。外部に送信されることもありません。</td>
               </tr>
               <tr>
@@ -739,7 +732,6 @@
         <ul>
           <li>メニューの<strong>Clear Chat</strong>で、現在の会話をメモリから消去し、そのモデルの履歴ファイルを削除します。</li>
           <li>モデルのデータを削除すると、そのモデルの重みと会話履歴が削除されます。</li>
-          <li>個々のメッセージを削除すると、会話からその内容が消えます。吹き出しを長押しすると、選択して削除できます。</li>
           <li><strong>アプリをアンインストール</strong>すると、履歴、モデル重み、診断ログを含むコンテナ全体が削除されます。</li>
         </ul>
         <p>当社はデータを保持していないため、当社に請求する必要はありません。デバイスの上でデータが削除された後は、当社が復元することはできません。</p>
@@ -751,7 +743,6 @@
         <ul>
           <li><code>llama.cpp</code> — アプリに同梱された C++ 推論エンジン。</li>
           <li><code>MLX</code> および <code>mlx-swift</code> — Apple silicon 向けの Apple の機械学習フレームワーク。</li>
-          <li><code>FoundationModels</code> — Apple のオンデバイス大規模言語モデルフレームワーク（iOS&nbsp;26 / macOS&nbsp;26 以降、Apple Intelligence が有効な環境）。</li>
         </ul>
         <p>これらはローカル動作のソフトウェアコンポーネントであり、ライブラリを同梱すること自体は、その開発者にデータを送信するものではありません。当社はデータを送信していません。</p>
       </section>
@@ -794,7 +785,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>Datenschutzerklärung</h1>
-        <p class="updated">Zuletzt aktualisiert: 17. September 2026 &middot; Gültig ab: 17. September 2026</p>
+        <p class="updated">Zuletzt aktualisiert: 16. Oktober 2026 &middot; Gültig ab: 16. Oktober 2026</p>
       </header>
 
       <div class="summary">
@@ -804,7 +795,7 @@
 
       <section class="card">
         <h2>1. Überblick</h2>
-        <p>LocalLLMClient ist eine lokal ausgerichtete LLM-Chat-App für iPhone, iPad und Mac. Die Modellinferenz – also die Rechnung, die Ihren Prompt in eine Antwort umwandelt – läuft auf Ihrem Gerät mit Apple MLX, der integrierten llama.cpp-Engine oder Apples On-Device-Framework FoundationModels.</p>
+        <p>LocalLLMClient ist eine lokal ausgerichtete LLM-Chat-App für das iPhone. Die Modellinferenz – also die Rechnung, die Ihren Prompt in eine Antwort umwandelt – läuft auf Ihrem Gerät mit Apple MLX oder der integrierten llama.cpp-Engine.</p>
         <p>Ihre Privatsphäre hat für uns höchste Priorität. Diese Erklärung beschreibt, welche Daten die App verarbeitet, was Ihr Gerät verlässt und was wir damit tun.</p>
       </section>
 
@@ -813,7 +804,7 @@
         <p><strong>Wir erheben keine personenbezogenen Daten.</strong> Die App hat keine serverseitige Komponente: Wir betreiben weder Konten noch ein Backend und keine Nutzerdatenbank, sodass wir nichts aufbewahren.</p>
         <ul>
           <li>Die gesamte Modellinferenz läuft <strong>vollständig auf Ihrem Gerät</strong>.</li>
-          <li>Keine Prompts, keine Unterhaltungsverläufe, keine angehängten Bilder und keine Modellausgaben verlassen Ihr Gerät.</li>
+          <li>Keine Prompts, keine Unterhaltungsverläufe und keine Modellausgaben verlassen Ihr Gerät.</li>
           <li>Es werden keine Analyse-, Telemetrie- oder Absturzberichte an einen Server gesendet.</li>
           <li>Keine Werbung und kein seitenübergreifendes Tracking.</li>
           <li>Keine Nutzerkonten, keine Authentifizierung, keine Identitätsverfolgung.</li>
@@ -863,7 +854,6 @@
         <h3>Was der Modell-Host niemals erhält</h3>
         <ul>
           <li>Ihre Prompts, Ihre Unterhaltungen oder die Modellausgaben.</li>
-          <li>Bilder, die Sie einer Nachricht anhängen.</li>
           <li>Ein Hugging-Face-Konto oder ein Zugriffstoken – die App authentifiziert sich nicht und sendet keine Anmeldedaten.</li>
           <li>Eine Kennung, die wir Ihnen zuweisen würden, da wir keine vergeben.</li>
         </ul>
@@ -918,16 +908,16 @@
               <tr>
                 <td>Unterhaltungsverlauf</td>
                 <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> und <code>&lt;model&gt;.md</code></td>
-                <td>Eine Datei pro Modell mit <strong>ausschließlich Textnachrichten</strong>. Nachrichten mit angehängtem Bild werden nicht gespeichert. Die Datei <code>.md</code> ist eine lesbare Kopie desselben Inhalts.</td>
+                <td>Eine Datei pro Modell mit <strong>ausschließlich Textnachrichten</strong>. Die Datei <code>.md</code> ist eine lesbare Kopie desselben Inhalts.</td>
               </tr>
               <tr>
                 <td>Heruntergeladene Modellgewichte</td>
-                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code> auf iOS und iPadOS; <code>~/.localllmclient/…</code> auf macOS</td>
+                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
                 <td>Öffentliche Modelldateien vom gewählten Host. Können mehrere Gigabyte groß sein. Die App fordert das System auf, dieses Verzeichnis von Gerätesicherungen auszunehmen.</td>
               </tr>
               <tr>
                 <td>Diagnoseprotokoll</td>
-                <td><code>Documents/diagnostics.log</code> (nur iOS und iPadOS)</td>
+                <td><code>Documents/diagnostics.log</code></td>
                 <td>Eine begrenzte Datei (512&nbsp;KB, danach neu begonnen) mit Zeitstempeln, Speicherverbrauch und der Kennung des aktiven Modells, zur Diagnose von App-Abbrüchen. Sie enthält <strong>keinen Prompt- oder Antworttext</strong> und wird nie übermittelt.</td>
               </tr>
               <tr>
@@ -952,7 +942,6 @@
         <ul>
           <li><strong>Clear Chat</strong> im Menü der App löscht die aktuelle Unterhaltung aus dem Speicher und entfernt die gespeicherten Verlaufsdateien dieses Modells.</li>
           <li>Wenn Sie die Daten eines Modells entfernen, werden dessen heruntergeladene Gewichte und sein Unterhaltungsverlauf gelöscht.</li>
-          <li>Einzelne Nachrichten zu löschen entfernt sie aus der Unterhaltung; halten Sie eine Sprechblase gedrückt, um sie auszuwählen und zu löschen.</li>
           <li><strong>Deinstallieren der App</strong> entfernt den gesamten Container einschließlich Verlauf, Modellgewichten und Diagnoseprotokoll.</li>
         </ul>
         <p>Da wir keine Daten aufbewahren, gibt es nichts bei uns anzufordern. Nach dem Löschen von Daten auf Ihrem Gerät können wir sie nicht wiederherstellen.</p>
@@ -964,7 +953,6 @@
         <ul>
           <li><code>llama.cpp</code> – eine C++-Inferenz-Engine, die in der App enthalten ist.</li>
           <li><code>MLX</code> und <code>mlx-swift</code> – Apples Framework für maschinelles Lernen für Apple Silicon.</li>
-          <li><code>FoundationModels</code> – Apples On-Device-Framework für große Sprachmodelle (iOS&nbsp;26 / macOS&nbsp;26 und neuer, mit aktivierter Apple Intelligence).</li>
         </ul>
         <p>Dies sind lokale Softwarekomponenten; das Einbinden einer Bibliothek sendet keine Daten an deren Maintainer. Es werden keine Daten an sie gesendet.</p>
       </section>
@@ -1007,7 +995,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>Privacybeleid</h1>
-        <p class="updated">Laatst bijgewerkt: 17 september 2026 &middot; Ingegaan op: 17 september 2026</p>
+        <p class="updated">Laatst bijgewerkt: 16 oktober 2026 &middot; Ingegaan op: 16 oktober 2026</p>
       </header>
 
       <div class="summary">
@@ -1017,7 +1005,7 @@
 
       <section class="card">
         <h2>1. Overzicht</h2>
-        <p>LocalLLMClient is een lokaal gerichte LLM-chatapp voor iPhone, iPad en Mac. De modelinferentie — de berekening die uw prompt omzet in een antwoord — draait op uw apparaat met Apple MLX, de ingebouwde llama.cpp-engine of het on-device framework FoundationModels van Apple.</p>
+        <p>LocalLLMClient is een lokaal gerichte LLM-chatapp voor iPhone. De modelinferentie — de berekening die uw prompt omzet in een antwoord — draait op uw apparaat met Apple MLX of de ingebouwde llama.cpp-engine.</p>
         <p>Uw privacy is onze hoogste prioriteit. Dit beleid legt uit welke gegevens de app verwerkt, wat uw apparaat verlaat en wat wij ermee doen.</p>
       </section>
 
@@ -1026,7 +1014,7 @@
         <p><strong>Wij verzamelen geen persoonsgegevens.</strong> De app heeft geen servercomponent: wij exploiteren geen accounts, geen backend en geen gebruikersdatabase, dus wij houden niets vast.</p>
         <ul>
           <li>Alle modelinferentie draait <strong>volledig op uw apparaat</strong>.</li>
-          <li>Geen prompts, gespreksgeschiedenis, bijgevoegde afbeeldingen of modelantwoorden verlaten uw apparaat.</li>
+          <li>Geen prompts, gespreksgeschiedenis of modelantwoorden verlaten uw apparaat.</li>
           <li>Er worden geen analytics, telemetrie of crashrapporten naar een server gestuurd.</li>
           <li>Geen advertenties en geen tracking over apps heen.</li>
           <li>Geen gebruikersaccounts, geen authenticatie, geen identiteitsvolgsysteem.</li>
@@ -1076,7 +1064,6 @@
         <h3>Wat de modelhost nooit ontvangt</h3>
         <ul>
           <li>Uw prompts, uw gesprekken of de modelantwoorden.</li>
-          <li>Afbeeldingen die u aan een bericht toevoegt.</li>
           <li>Een Hugging Face-account of toegangstoken — de app meldt zich niet aan en verstuurt geen inloggegevens.</li>
           <li>Een identificator die wij u zouden toewijzen, omdat wij er geen aanmaken.</li>
         </ul>
@@ -1131,16 +1118,16 @@
               <tr>
                 <td>Gespreksgeschiedenis</td>
                 <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> en <code>&lt;model&gt;.md</code></td>
-                <td>Eén bestand per model met <strong>alleen berichten in tekst</strong>. Berichten met een bijgevoegde afbeelding worden niet opgeslagen. Het bestand <code>.md</code> is een leesbare kopie van dezelfde inhoud.</td>
+                <td>Eén bestand per model met <strong>alleen berichten in tekst</strong>. Het bestand <code>.md</code> is een leesbare kopie van dezelfde inhoud.</td>
               </tr>
               <tr>
                 <td>Gedownloade modelgewichten</td>
-                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code> op iOS en iPadOS; <code>~/.localllmclient/…</code> op macOS</td>
+                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
                 <td>Openbare modelbestanden opgehaald bij de gekozen host. Kunnen meerdere gigabytes groot zijn. De app vraagt het systeem om deze map uit te sluiten van back-ups van het apparaat.</td>
               </tr>
               <tr>
                 <td>Diagnoselogboek</td>
-                <td><code>Documents/diagnostics.log</code> (alleen iOS en iPadOS)</td>
+                <td><code>Documents/diagnostics.log</code></td>
                 <td>Een begrensd bestand (512&nbsp;KB, daarna opnieuw begonnen) met tijdstempels, geheugengebruik en de identificator van het actieve model, gebruikt om het beëindigen van de app te diagnosticeren. Het bevat <strong>geen prompt- of antwoordtekst</strong> en wordt nooit verstuurd.</td>
               </tr>
               <tr>
@@ -1165,7 +1152,6 @@
         <ul>
           <li><strong>Clear Chat</strong> in het menu van de app wist de huidige gesprek uit het geheugen en verwijdert de opgeslagen geschiedenisbestanden voor dat model.</li>
           <li>De gegevens van een model verwijderen verwijdert de gedownloade gewichten en de gespreksgeschiedenis van dat model.</li>
-          <li>Losse berichten verwijderen haalt ze uit het gesprek; houd een spraakballon ingedrukt om die te selecteren en te verwijderen.</li>
           <li><strong>De app verwijderen</strong> verwijdert de volledige container, inclusief geschiedenis, modelgewichten en diagnoselogboek.</li>
         </ul>
         <p>Omdat wij geen gegevens vasthouden, valt er bij ons niets aan te vragen. Zodra gegevens van uw apparaat zijn verwijderd, kunnen wij die niet herstellen.</p>
@@ -1177,7 +1163,6 @@
         <ul>
           <li><code>llama.cpp</code> — een C++-inferentie-engine die in de app is opgenomen.</li>
           <li><code>MLX</code> en <code>mlx-swift</code> — het raamwerk voor machine learning van Apple voor Apple silicon.</li>
-          <li><code>FoundationModels</code> — het on-device raamwerk voor grote taalmodellen van Apple (iOS&nbsp;26 / macOS&nbsp;26 en nieuwer, met Apple Intelligence ingeschakeld).</li>
         </ul>
         <p>Dit zijn lokale softwarecomponenten; het opnemen van een bibliotheek verstuurt geen gegevens naar de maintainers ervan. Er worden geen gegevens naar hen verstuurd.</p>
       </section>
@@ -1220,7 +1205,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>Polityka prywatności</h1>
-        <p class="updated">Ostatnia aktualizacja: 17 września 2026 &middot; Obowiązuje od: 17 września 2026</p>
+        <p class="updated">Ostatnia aktualizacja: 16 października 2026 &middot; Obowiązuje od: 16 października 2026</p>
       </header>
 
       <div class="summary">
@@ -1230,7 +1215,7 @@
 
       <section class="card">
         <h2>1. Informacje ogólne</h2>
-        <p>LocalLLMClient to działający lokalnie asystent czatu z modelami językowymi na iPhone'a, iPada i Maca. Wnioskowanie modelu — obliczenie zamieniające Twój prompt w odpowiedź — odbywa się na Twoim urządzeniu za pomocą Apple MLX, wbudowanego silnika llama.cpp lub frameworka FoundationModels firmy Apple działającego na urządzeniu.</p>
+        <p>LocalLLMClient to działający lokalnie asystent czatu z modelami językowymi na iPhone'a. Wnioskowanie modelu — obliczenie zamieniające Twój prompt w odpowiedź — odbywa się na Twoim urządzeniu za pomocą Apple MLX lub wbudowanego silnika llama.cpp.</p>
         <p>Twoja prywatność jest dla nas najważniejsza. Niniejsza polityka wyjaśnia, jakie dane obsługuje aplikacja, co opuszcza Twoje urządzenie i co z nimi robimy.</p>
       </section>
 
@@ -1239,7 +1224,7 @@
         <p><strong>Nie zbieramy żadnych danych osobowych.</strong> Aplikacja nie ma komponentu po stronie serwera: nie prowadzimy kont, zaplecza ani bazy użytkowników, więc nie mamy niczego do przechowywania.</p>
         <ul>
           <li>Całe wnioskowanie modelu odbywa się <strong>wyłącznie na Twoim urządzeniu</strong>.</li>
-          <li>Prompty, historia rozmów, załączone obrazy i odpowiedzi modelu nigdy nie opuszczają Twojego urządzenia.</li>
+          <li>Prompty, historia rozmów i odpowiedzi modelu nigdy nie opuszczają Twojego urządzenia.</li>
           <li>Nie wysyłamy na żaden serwer analityki, telemetrii ani raportów o awariach.</li>
           <li>Brak reklam i śledzenia między aplikacjami.</li>
           <li>Brak kont użytkownika, uwierzytelniania i śledzenia tożsamości.</li>
@@ -1289,7 +1274,6 @@
         <h3>Czego host modeli nigdy nie otrzymuje</h3>
         <ul>
           <li>Twoich promptów, rozmów ani odpowiedzi modelu.</li>
-          <li>Obrazów, które dołączasz do wiadomości.</li>
           <li>Konta Hugging Face ani tokenu dostępu — aplikacja się nie uwierzytelnia i nie wysyła żadnych danych uwierzytelniających.</li>
           <li>Identyfikatora, który moglibyśmy Ci przypisać, ponieważ żadnych nie tworzymy.</li>
         </ul>
@@ -1344,16 +1328,16 @@
               <tr>
                 <td>Historia rozmów</td>
                 <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> oraz <code>&lt;model&gt;.md</code></td>
-                <td>Jeden plik na model zawierający <strong>wyłącznie wiadomości tekstowe</strong>. Wiadomości z dołączonym obrazem nie są zapisywane. Plik <code>.md</code> to czytelna kopia tej samej treści.</td>
+                <td>Jeden plik na model zawierający <strong>wyłącznie wiadomości tekstowe</strong>. Plik <code>.md</code> to czytelna kopia tej samej treści.</td>
               </tr>
               <tr>
                 <td>Pobrane wagi modeli</td>
-                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code> na iOS i iPadOS; <code>~/.localllmclient/…</code> na macOS</td>
+                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
                 <td>Publiczne pliki modeli pobrane z wybranego hosta. Mogą zajmować kilka gigabajtów. Aplikacja prosi system o wyłączenie tego katalogu z kopii zapasowych urządzenia.</td>
               </tr>
               <tr>
                 <td>Dziennik diagnostyczny</td>
-                <td><code>Documents/diagnostics.log</code> (tylko iOS i iPadOS)</td>
+                <td><code>Documents/diagnostics.log</code></td>
                 <td>Plik o ograniczonym rozmiarze (512&nbsp;KB, potem tworzony od nowa) zawierający znaczniki czasu, zużycie pamięci i identyfikator aktywnego modelu, używany do diagnozowania zakończenia działania aplikacji. Nie zawiera <strong>tekstu promptów ani odpowiedzi</strong> i nigdy nie jest przesyłany.</td>
               </tr>
               <tr>
@@ -1378,7 +1362,6 @@
         <ul>
           <li><strong>Clear Chat</strong> w menu aplikacji czyści bieżącą rozmowę z pamięci i usuwa zapisane pliki historii tego modelu.</li>
           <li>Usunięcie danych modelu usuwa jego pobrane wagi oraz historię rozmów.</li>
-          <li>Usunięcie pojedynczych wiadomości kasuje je z rozmowy; dotknij i przytrzymaj bańkę, aby ją zaznaczyć i usunąć.</li>
           <li><strong>Odinstalowanie aplikacji</strong> usuwa cały jej kontener, w tym historię, wagi modeli i dziennik diagnostyczny.</li>
         </ul>
         <p>Ponieważ nie przechowujemy żadnych danych, nie ma u nas czego żądać. Po usunięciu danych z urządzenia nie jesteśmy w stanie ich odzyskać.</p>
@@ -1390,7 +1373,6 @@
         <ul>
           <li><code>llama.cpp</code> — silnik wnioskowania w C++, dołączony do aplikacji.</li>
           <li><code>MLX</code> i <code>mlx-swift</code> — framework uczenia maszynowego firmy Apple dla układów Apple silicon.</li>
-          <li><code>FoundationModels</code> — framework dużych modeli językowych firmy Apple działający na urządzeniu (iOS&nbsp;26 / macOS&nbsp;26 i nowsze, z włączoną funkcją Apple Intelligence).</li>
         </ul>
         <p>Są to lokalne komponenty oprogramowania; samo dołączenie biblioteki nie przesyła żadnych danych jej opiekunom. Nie wysyłamy do nich żadnych danych.</p>
       </section>
@@ -1433,7 +1415,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>Política de privacidad</h1>
-        <p class="updated">Última actualización: 17 de septiembre de 2026 &middot; Entrada en vigor: 17 de septiembre de 2026</p>
+        <p class="updated">Última actualización: 16 de octubre de 2026 &middot; Entrada en vigor: 16 de octubre de 2026</p>
       </header>
 
       <div class="summary">
@@ -1443,7 +1425,7 @@
 
       <section class="card">
         <h2>1. Descripción general</h2>
-        <p>LocalLLMClient es una aplicación de chat con LLM orientada a funcionar en el dispositivo, para iPhone, iPad y Mac. La inferencia del modelo —el cálculo que convierte tu instrucción en una respuesta— se ejecuta en tu dispositivo mediante Apple MLX, el motor llama.cpp integrado o el framework FoundationModels de Apple.</p>
+        <p>LocalLLMClient es una aplicación de chat con LLM orientada a funcionar en el dispositivo, para iPhone. La inferencia del modelo —el cálculo que convierte tu instrucción en una respuesta— se ejecuta en tu dispositivo mediante Apple MLX o el motor llama.cpp integrado.</p>
         <p>Tu privacidad es nuestra máxima prioridad. Esta política explica qué datos gestiona la aplicación, qué sale de tu dispositivo y qué hacemos con ello.</p>
       </section>
 
@@ -1452,7 +1434,7 @@
         <p><strong>No recopilamos ningún dato personal.</strong> La aplicación no tiene ningún componente del lado del servidor: no gestionamos cuentas, ni backend, ni una base de datos de usuarios, de modo que no retenemos nada.</p>
         <ul>
           <li>Toda la inferencia del modelo se ejecuta <strong>íntegramente en tu dispositivo</strong>.</li>
-          <li>Ninguna instrucción, historial de conversación, imagen adjunta ni respuesta del modelo sale de tu dispositivo.</li>
+          <li>Ninguna instrucción, historial de conversación ni respuesta del modelo sale de tu dispositivo.</li>
           <li>No se envía analítica, telemetría ni informes de fallos a ningún servidor.</li>
           <li>Sin publicidad ni seguimiento entre aplicaciones.</li>
           <li>Sin cuentas de usuario, autenticación ni rastreo de identidad.</li>
@@ -1502,7 +1484,6 @@
         <h3>Qué nunca recibe el servidor de modelos</h3>
         <ul>
           <li>Tus instrucciones, tus conversaciones ni las respuestas del modelo.</li>
-          <li>Las imágenes que adjuntas a un mensaje.</li>
           <li>Una cuenta de Hugging Face ni un token de acceso: la aplicación no se autentica ni envía credenciales.</li>
           <li>Identificador alguno que nos pudiéramos asignarte, ya que no creamos ninguno.</li>
         </ul>
@@ -1557,16 +1538,16 @@
               <tr>
                 <td>Historial de conversaciones</td>
                 <td><code>Application Support/LocalLLMClientExample/History/&lt;model&gt;.json</code> y <code>&lt;model&gt;.md</code></td>
-                <td>Un archivo por modelo con <strong>únicamente mensajes de texto</strong>. Los mensajes con una imagen adjunta no se guardan. El archivo <code>.md</code> es una copia legible del mismo contenido.</td>
+                <td>Un archivo por modelo con <strong>únicamente mensajes de texto</strong>. El archivo <code>.md</code> es una copia legible del mismo contenido.</td>
               </tr>
               <tr>
                 <td>Pesos de los modelos descargados</td>
-                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code> en iOS y iPadOS; <code>~/.localllmclient/…</code> en macOS</td>
+                <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
                 <td>Archivos de modelos públicos obtenidos del servidor elegido. Pueden ocupar varios gigabytes. La aplicación pide al sistema que excluya ese directorio de las copias de seguridad del dispositivo.</td>
               </tr>
               <tr>
                 <td>Registro de diagnóstico</td>
-                <td><code>Documents/diagnostics.log</code> (solo iOS y iPadOS)</td>
+                <td><code>Documents/diagnostics.log</code></td>
                 <td>Un archivo con tamaño limitado (512&nbsp;KB, después se reinicia) con marcas de tiempo, uso de memoria y el identificador del modelo activo, para diagnosticar la terminación de la aplicación. No contiene <strong>texto de instrucciones ni de respuestas</strong> y nunca se transmite.</td>
               </tr>
               <tr>
@@ -1591,7 +1572,6 @@
         <ul>
           <li><strong>Clear Chat</strong> en el menú de la aplicación borra la conversación actual de la memoria y elimina los archivos de historial guardados para ese modelo.</li>
           <li>Eliminar los datos de un modelo borra los pesos descargados de ese modelo y su historial de conversaciones.</li>
-          <li>Eliminar mensajes concretos los quita de la conversación; mantén pulsada una burbuja para seleccionarla y eliminarla.</li>
           <li><strong>Desinstalar la aplicación</strong> elimina todo su contenedor, incluido el historial, los pesos de los modelos y el registro de diagnóstico.</li>
         </ul>
         <p>Como no retenemos datos, no hay nada que solicitarnos. Una vez que los datos se eliminan de tu dispositivo, no podemos recuperarlos.</p>
@@ -1603,7 +1583,6 @@
         <ul>
           <li><code>llama.cpp</code> — un motor de inferencia en C++, incluido en la aplicación.</li>
           <li><code>MLX</code> y <code>mlx-swift</code> — el framework de aprendizaje automático de Apple para Apple silicon.</li>
-          <li><code>FoundationModels</code> — el framework de grandes modelos de lenguaje en el dispositivo de Apple (iOS&nbsp;26 / macOS&nbsp;26 y posteriores, con Apple Intelligence activado).</li>
         </ul>
         <p>Son componentes de software locales; incluir una biblioteca no envía ningún dato a sus responsables. No se les envía ningún dato.</p>
       </section>
