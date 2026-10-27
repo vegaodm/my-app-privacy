@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Third-Party Licenses · LocalLLMClient</title>
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --accent: #0071e3;
+      --border: #d2d2d7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-text-size-adjust: 100%;
+      padding: 0 16px 60px;
+    }
+    .container { max-width: 760px; margin: 0 auto; }
+    header {
+      text-align: center;
+      padding: 48px 0 28px;
+    }
+    header .logo {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+    header .updated {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+    h3 {
+      font-size: 16px;
+      margin: 20px 0 8px;
+    }
+    p { margin: 10px 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .muted { color: var(--muted); font-size: 14px; }
+    .meta { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+    pre.notice {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    ul { margin: 8px 0 8px 22px; }
+    li { margin: 4px 0; }
+    footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer a { margin: 0 8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">LocalLLMClient</div>
+      <h1>Third-Party Licenses</h1>
+      <div class="updated">Last updated: 2026-10-27</div>
+    </header>
+
+    <p>
+      LocalLLMClient runs its language models entirely on your device. This page lists the
+      model authors, attribution, and license terms for the models the app can use. The same
+      notices are bundled with the app and shown under <strong>⋯ → Licenses…</strong>, so they
+      remain readable offline.
+    </p>
+
+    <section class="card">
+      <h2>LFM2.5 1.2B Instruct (4-bit MLX)</h2>
+      <p class="meta">Copyright © Liquid AI, Inc.</p>
+      <p>
+        Licensed under the <a href="LFM2.5-LICENSE.txt">LFM Open License v1.0</a>.
+      </p>
+      <p class="muted">
+        Commercial use is licensed only for Legal Entities with annual revenue under
+        US$10 million. See Section 5 of the license for the full limitation.
+      </p>
+      <p>
+        Model repository:
+        <a href="https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-MLX-4bit">LiquidAI/LFM2.5-1.2B-Instruct-MLX-4bit</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Bonsai 2 2B (ternary, MLX 2-bit)</h2>
+      <p class="meta">Copyright 2026-present Prism ML, Inc.</p>
+      <p>
+        Licensed under the <a href="Bonsai-APACHE-2.0.txt">Apache License 2.0</a>.
+        Bonsai 2 is built from Qwen3.5-2B, Copyright 2026 Alibaba Cloud, also licensed
+        under the Apache License 2.0.
+      </p>
+      <p>
+        Model repository:
+        <a href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-2B-mlx-2bit">prism-ml/Ternary-Bonsai-2-2B-mlx-2bit</a>
+      </p>
+
+      <h3>NOTICE</h3>
+      <pre class="notice">This software is copyright 2026-present Prism ML, Inc. It is available under the Apache 2.0 license.
+If you publicly deploy or redistribute this software, we would appreciate attribution such as: "Created using Bonsai by Prism ML."
+
+This software is built from Qwen3.5-2B, Copyright 2026 Alibaba Cloud, which is available under the Apache 2.0 License: https://huggingface.co/Qwen/Qwen3.5-2B/blob/main/LICENSE</pre>
+      <p class="muted">Attribution: "Created using Bonsai by Prism ML."</p>
+      <p>
+        Full notice: <a href="Bonsai-NOTICE.txt">Bonsai-NOTICE.txt</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Full license texts</h2>
+      <ul>
+        <li><a href="LFM2.5-LICENSE.txt">LFM Open License v1.0</a></li>
+        <li><a href="Bonsai-APACHE-2.0.txt">Apache License 2.0</a></li>
+        <li><a href="Bonsai-NOTICE.txt">Bonsai 2 NOTICE</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <div>Copyright © 2026 Vega · LocalLLMClient</div>
+      <div>
+        <a href="../support.html">Support</a>
+        <a href="../index.html">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
