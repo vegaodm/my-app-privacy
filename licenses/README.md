@@ -1,6 +1,6 @@
 # Third-Party Licenses
 
-License notices for the models bundled with **LocalLLMClient / Pocket LLM**.
+License notices for the models available in **LocalLLMClient / Pocket LLM**.
 
 The published page is served from GitHub Pages at:
 
@@ -11,17 +11,17 @@ The published page is served from GitHub Pages at:
 | File | Purpose |
 | --- | --- |
 | [index.html](index.html) | Human-readable page with attribution and links to the full texts |
-| [LFM2.5-LICENSE.txt](LFM2.5-LICENSE.txt) | LFM Open License v1.0 |
+| [LFM3-LICENSE.txt](LFM3-LICENSE.txt) | LFM Open License v1.0 |
 | [Bonsai-NOTICE.txt](Bonsai-NOTICE.txt) | Prism ML NOTICE and Qwen3.5-2B attribution |
 | [Bonsai-APACHE-2.0.txt](Bonsai-APACHE-2.0.txt) | Apache License 2.0 |
 
 ## Models
 
-### LFM2.5 1.2B Instruct (4-bit MLX)
+### LFM3 1.7B (4-bit MLX)
 
-- Repository: <https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-MLX-4bit>
+- Repository: <https://huggingface.co/LiquidAI/LFM3-1.7B-MLX-4bit>
 - Copyright © Liquid AI, Inc.
-- Licensed under the [LFM Open License v1.0](LFM2.5-LICENSE.txt).
+- Licensed under the [LFM Open License v1.0](LFM3-LICENSE.txt).
 - Commercial use is licensed only for Legal Entities with annual revenue under US$10 million.
 
 ### Bonsai 2 2B (ternary, MLX 2-bit)
@@ -47,7 +47,7 @@ my-app-privacy/
 └── licenses/
     ├── index.html
     ├── README.md
-    ├── LFM2.5-LICENSE.txt
+    ├── LFM3-LICENSE.txt
     ├── Bonsai-NOTICE.txt
     └── Bonsai-APACHE-2.0.txt
 ```
