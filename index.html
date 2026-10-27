@@ -175,7 +175,7 @@
         <p><strong>We do not collect any personal data.</strong> There is no server-side component to this app: we operate no accounts, no backend, and no user database, so there is nothing for us to hold.</p>
         <ul>
           <li>All model inference runs <strong>entirely on your device</strong>.</li>
-          <li>No prompts, conversation history, or model outputs leave your device.</li>
+          <li>No prompts, conversation history, images you attach, or model outputs leave your device.</li>
           <li>No analytics, telemetry, or crash reporting is sent to any server.</li>
           <li>No advertising or cross-app tracking.</li>
           <li>No user accounts, authentication, or identity tracking.</li>
@@ -225,11 +225,14 @@
         <h3>What the model host never receives</h3>
         <ul>
           <li>Your prompts, conversations, or model outputs.</li>
+          <li>Images you attach to a message.</li>
           <li>A Hugging Face account or access token — the app does not authenticate, and sends no credentials.</li>
           <li>Any identifier we assign to you, because we do not create any.</li>
         </ul>
 
-        <h3>Offline use</h3>
+                <p>Attached photos are read through the system photo picker, so the app never gets access to your photo library, and the image is processed on your device.</p>
+
+<h3>Offline use</h3>
         <p>After the models you want are downloaded, you can disable network access entirely — for example by turning off Wi-Fi and cellular data, or by putting the device in airplane mode. Chat, tool calling, and history all continue to work.</p>
       </section>
 
@@ -284,7 +287,7 @@
               <tr>
                 <td>Downloaded model weights</td>
                 <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
-                <td>Public model files fetched from the selected host. Can be several gigabytes. The app asks the system to exclude this directory from device backups.</td>
+                <td>Public model files fetched from the selected host. The models offered here are about 0.6 GB (LFM2.5 1.2B) and 1.2 GB (Bonsai 2 2B). The app asks the system to exclude this directory from device backups.</td>
               </tr>
               <tr>
                 <td>Diagnostics log</td>
@@ -357,7 +360,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="support.html">Support</a></p>
+        <p><a href="support.html">Support</a> &middot; <a href="licenses/">Licenses</a></p>
       </footer>
     </div>
   </section>
@@ -385,7 +388,7 @@
         <p><strong>Nous ne collectons aucune donnée personnelle.</strong> L'application ne comporte aucun composant côté serveur : nous n'exploitons ni comptes, ni backend, ni base de données d'utilisateurs, et n'avons donc rien à conserver.</p>
         <ul>
           <li>Toute l'inférence des modèles s'exécute <strong>intégralement sur votre appareil</strong>.</li>
-          <li>Aucune invite, aucun historique de conversation et aucune réponse de modèle ne quitte votre appareil.</li>
+          <li>Aucune invite, aucun historique de conversation, aucune image jointe et aucune réponse de modèle ne quitte votre appareil.</li>
           <li>Aucune analyse d'usage, télémétrie ou rapport d'incident n'est envoyé à un serveur.</li>
           <li>Aucune publicité ni pistage inter-applications.</li>
           <li>Aucun compte utilisateur, aucune authentification, aucun suivi d'identité.</li>
@@ -435,11 +438,14 @@
         <h3>Ce que l'hôte de modèles ne reçoit jamais</h3>
         <ul>
           <li>Vos invites, vos conversations ou les réponses du modèle.</li>
+          <li>Les images que vous joignez à un message.</li>
           <li>Un compte Hugging Face ou un jeton d'accès — l'application ne s'authentifie pas et n'envoie aucune donnée d'identification.</li>
           <li>Tout identifiant que nous vous attribuerions, puisque nous n'en créons aucun.</li>
         </ul>
 
-        <h3>Utilisation hors ligne</h3>
+                <p>Les photos jointes sont lues via le sélecteur de photos du système : l'application n'accède jamais à votre photothèque, et l'image est traitée sur votre appareil.</p>
+
+<h3>Utilisation hors ligne</h3>
         <p>Une fois les modèles souhaités téléchargés, vous pouvez désactiver entièrement l'accès réseau — par exemple en coupant le Wi-Fi et les données cellulaires, ou en passant en mode avion. La discussion, l'appel d'outils et l'historique continuent de fonctionner.</p>
       </section>
 
@@ -494,7 +500,7 @@
               <tr>
                 <td>Poids des modèles téléchargés</td>
                 <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
-                <td>Fichiers de modèles publics récupérés depuis l'hôte sélectionné. Peuvent peser plusieurs gigaoctets. L'application demande au système d'exclure ce répertoire des sauvegardes de l'appareil.</td>
+                <td>Fichiers de modèle publics récupérés depuis l'hôte sélectionné. Les modèles proposés font environ 0,6 Go (LFM2.5 1.2B) et 1.2 Go (Bonsai 2 2B). L'application demande au système d'exclure ce dossier des sauvegardes de l'appareil.</td>
               </tr>
               <tr>
                 <td>Journal de diagnostic</td>
@@ -567,7 +573,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="support.html">Assistance</a></p>
+        <p><a href="support.html">Assistance</a> &middot; <a href="licenses/">Licences</a></p>
       </footer>
     </div>
   </section>
@@ -595,7 +601,7 @@
         <p><strong>当社は個人データを一切収集しません。</strong>本アプリにサーバー側の成分は存在しません。当社はアカウント、バックエンド、利用者データベースを運用していないため、保持するものがありません。</p>
         <ul>
           <li>すべてのモデル推論は<strong>すべてデバイス上で</strong>実行されます。</li>
-          <li>プロンプト、会話履歴、モデルの出力は、デバイスの外に出ることはありません。</li>
+          <li>プロンプト、会話履歴、添付画像、モデルの出力は、デバイスの外に出ることはありません。</li>
           <li>アナリティクス、テレメトリ、クラッシュレポートをサーバーに送信することはありません。</li>
           <li>広告やアプリ横断トラッキングは行っていません。</li>
           <li>ユーザーアカウント、認証、身元による追跡はありません。</li>
@@ -645,11 +651,14 @@
         <h3>モデルホストが一切受け取ることのない情報</h3>
         <ul>
           <li>プロンプト、会話履歴、モデルの出力。</li>
+          <li>メッセージに添付した画像。</li>
           <li>Hugging Face のアカウントやアクセストークン。アプリは認証を行わず、資格情報も送信しません。</li>
           <li>当社があなたに付与する識別子。当社は識別子を一切作成していません。</li>
         </ul>
 
-        <h3>オフラインでの利用</h3>
+                <p>添付した写真はシステムの写真選択ツールから読み込まれます。アプリが写真ライブラリへのアクセス権を受け取ることはなく、画像はデバイス上で処理されます。</p>
+
+<h3>オフラインでの利用</h3>
         <p>使用するモデルをダウンロードした後は、ネットワークアクセスを完全に無効にできます（Wi-Fi とモバイル通信を切る、航空機モードにするなど）。チャット、ツール呼び出し、履歴表示はそのまま利用できます。</p>
       </section>
   <section class="card">
@@ -703,7 +712,7 @@
               <tr>
                 <td>ダウンロードしたモデル重み</td>
                 <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
-                <td>選択したホストから取得した公開モデルファイルです。数十 GB になることがあります。アプリは、このディレクトリをデバイスのバックアップ対象から除外するようシステムに要求します。</td>
+                <td>選択したホストから取得した公開モデルファイルです。提供中のモデルは約 0.6 GB（LFM2.5 1.2B）と約 1.2 GB（Bonsai 2 2B）です。アプリは、このディレクトリをデバイスのバックアップ対象から除外するようシステムに要求します。</td>
               </tr>
               <tr>
                 <td>診断ログ</td>
@@ -776,7 +785,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="support.html">サポート</a></p>
+        <p><a href="support.html">サポート</a> &middot; <a href="licenses/">ライセンス</a></p>
       </footer>
     </div>
   </section>
@@ -804,7 +813,7 @@
         <p><strong>Wir erheben keine personenbezogenen Daten.</strong> Die App hat keine serverseitige Komponente: Wir betreiben weder Konten noch ein Backend und keine Nutzerdatenbank, sodass wir nichts aufbewahren.</p>
         <ul>
           <li>Die gesamte Modellinferenz läuft <strong>vollständig auf Ihrem Gerät</strong>.</li>
-          <li>Keine Prompts, keine Unterhaltungsverläufe und keine Modellausgaben verlassen Ihr Gerät.</li>
+          <li>Keine Prompts, keine Unterhaltungsverläufe, keine angehängten Bilder und keine Modellausgaben verlassen Ihr Gerät.</li>
           <li>Es werden keine Analyse-, Telemetrie- oder Absturzberichte an einen Server gesendet.</li>
           <li>Keine Werbung und kein seitenübergreifendes Tracking.</li>
           <li>Keine Nutzerkonten, keine Authentifizierung, keine Identitätsverfolgung.</li>
@@ -854,11 +863,14 @@
         <h3>Was der Modell-Host niemals erhält</h3>
         <ul>
           <li>Ihre Prompts, Ihre Unterhaltungen oder die Modellausgaben.</li>
+          <li>Bilder, die Sie einer Nachricht anhängen.</li>
           <li>Ein Hugging-Face-Konto oder ein Zugriffstoken – die App authentifiziert sich nicht und sendet keine Anmeldedaten.</li>
           <li>Eine Kennung, die wir Ihnen zuweisen würden, da wir keine vergeben.</li>
         </ul>
 
-        <h3>Nutzung ohne Verbindung</h3>
+                <p>Angehängte Fotos werden über die Fotoauswahl des Systems gelesen: Die App erhält keinen Zugriff auf Ihre Fotomediathek, und das Bild wird auf Ihrem Gerät verarbeitet.</p>
+
+<h3>Nutzung ohne Verbindung</h3>
         <p>Nach dem Herunterladen der gewünschten Modelle können Sie den Netzwerkzugriff vollständig deaktivieren – etwa indem Sie WLAN und Mobilfunk abschalten oder den Flugmodus aktivieren. Chat, Werkzeugaufrufe und Verlauf funktionieren weiterhin.</p>
       </section>
 
@@ -913,7 +925,7 @@
               <tr>
                 <td>Heruntergeladene Modellgewichte</td>
                 <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
-                <td>Öffentliche Modelldateien vom gewählten Host. Können mehrere Gigabyte groß sein. Die App fordert das System auf, dieses Verzeichnis von Gerätesicherungen auszunehmen.</td>
+                <td>Öffentliche Modelldateien vom ausgewählten Host. Die angebotenen Modelle sind etwa 0,6 GB (LFM2.5 1.2B) und 1,2 GB (Bonsai 2 2B) groß. Die App bittet das System, dieses Verzeichnis von Gerätesicherungen auszunehmen.</td>
               </tr>
               <tr>
                 <td>Diagnoseprotokoll</td>
@@ -986,7 +998,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="support.html">Support</a></p>
+        <p><a href="support.html">Support</a> &middot; <a href="licenses/">Licenses</a></p>
       </footer>
     </div>
   </section>
@@ -1014,7 +1026,7 @@
         <p><strong>Wij verzamelen geen persoonsgegevens.</strong> De app heeft geen servercomponent: wij exploiteren geen accounts, geen backend en geen gebruikersdatabase, dus wij houden niets vast.</p>
         <ul>
           <li>Alle modelinferentie draait <strong>volledig op uw apparaat</strong>.</li>
-          <li>Geen prompts, gespreksgeschiedenis of modelantwoorden verlaten uw apparaat.</li>
+          <li>Geen prompts, gespreksgeschiedenis, bijgevoegde afbeeldingen of modelantwoorden verlaten uw apparaat.</li>
           <li>Er worden geen analytics, telemetrie of crashrapporten naar een server gestuurd.</li>
           <li>Geen advertenties en geen tracking over apps heen.</li>
           <li>Geen gebruikersaccounts, geen authenticatie, geen identiteitsvolgsysteem.</li>
@@ -1068,7 +1080,9 @@
           <li>Een identificator die wij u zouden toewijzen, omdat wij er geen aanmaken.</li>
         </ul>
 
-        <h3>Gebruik zonder verbinding</h3>
+                <p>Bijgevoegde foto's worden gelezen via de systeemfotokiezer: de app krijgt geen toegang tot uw fotobibliotheek en de afbeelding wordt op uw apparaat verwerkt.</p>
+
+<h3>Gebruik zonder verbinding</h3>
         <p>Nadat de gewenste modellen zijn gedownload, kunt u netwerktoegang volledig uitschakelen — bijvoorbeeld door wifi en mobiele data uit te zetten of de vliegtuigmodus in te schakelen. Chat, toolaanroepen en geschiedenis blijven werken.</p>
       </section>
 
@@ -1123,7 +1137,7 @@
               <tr>
                 <td>Gedownloade modelgewichten</td>
                 <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
-                <td>Openbare modelbestanden opgehaald bij de gekozen host. Kunnen meerdere gigabytes groot zijn. De app vraagt het systeem om deze map uit te sluiten van back-ups van het apparaat.</td>
+                <td>Openbare modelbestanden van de geselecteerde host. De aangeboden modellen zijn ongeveer 0,6 GB (LFM2.5 1.2B) en 1,2 GB (Bonsai 2 2B). De app vraagt het systeem deze map uit te sluiten van apparaatback-ups.</td>
               </tr>
               <tr>
                 <td>Diagnoselogboek</td>
@@ -1196,7 +1210,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="support.html">Ondersteuning</a></p>
+        <p><a href="support.html">Ondersteuning</a> &middot; <a href="licenses/">Licenties</a></p>
       </footer>
     </div>
   </section>
@@ -1224,7 +1238,7 @@
         <p><strong>Nie zbieramy żadnych danych osobowych.</strong> Aplikacja nie ma komponentu po stronie serwera: nie prowadzimy kont, zaplecza ani bazy użytkowników, więc nie mamy niczego do przechowywania.</p>
         <ul>
           <li>Całe wnioskowanie modelu odbywa się <strong>wyłącznie na Twoim urządzeniu</strong>.</li>
-          <li>Prompty, historia rozmów i odpowiedzi modelu nigdy nie opuszczają Twojego urządzenia.</li>
+          <li>Prompty, historia rozmów, załączone obrazy i odpowiedzi modelu nigdy nie opuszczają Twojego urządzenia.</li>
           <li>Nie wysyłamy na żaden serwer analityki, telemetrii ani raportów o awariach.</li>
           <li>Brak reklam i śledzenia między aplikacjami.</li>
           <li>Brak kont użytkownika, uwierzytelniania i śledzenia tożsamości.</li>
@@ -1274,11 +1288,14 @@
         <h3>Czego host modeli nigdy nie otrzymuje</h3>
         <ul>
           <li>Twoich promptów, rozmów ani odpowiedzi modelu.</li>
+          <li>Obrazów, które dołączasz do wiadomości.</li>
           <li>Konta Hugging Face ani tokenu dostępu — aplikacja się nie uwierzytelnia i nie wysyła żadnych danych uwierzytelniających.</li>
           <li>Identyfikatora, który moglibyśmy Ci przypisać, ponieważ żadnych nie tworzymy.</li>
         </ul>
 
-        <h3>Korzystanie offline</h3>
+                <p>Dołączone zdjęcia są odczytywane przez systemowy wybór zdjęć: aplikacja nie uzyskuje dostępu do biblioteki zdjęć, a obraz jest przetwarzany na Twoim urządzeniu.</p>
+
+<h3>Korzystanie offline</h3>
         <p>Po pobraniu wybranych modeli możesz całkowicie wyłączyć dostęp do sieci — na przykład wyłączając Wi-Fi i transmisję danych komórkowych albo włączając tryb samolotowy. Czat, wywołania narzędzi i historia działają dalej.</p>
       </section>
 
@@ -1333,7 +1350,7 @@
               <tr>
                 <td>Pobrane wagi modeli</td>
                 <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
-                <td>Publiczne pliki modeli pobrane z wybranego hosta. Mogą zajmować kilka gigabajtów. Aplikacja prosi system o wyłączenie tego katalogu z kopii zapasowych urządzenia.</td>
+                <td>Publiczne pliki modeli pobrane z wybranego hosta. Oferowane modele mają około 0,6 GB (LFM2.5 1.2B) i 1,2 GB (Bonsai 2 2B). Aplikacja prosi system o wyłączenie tego katalogu z kopii zapasowych urządzenia.</td>
               </tr>
               <tr>
                 <td>Dziennik diagnostyczny</td>
@@ -1406,7 +1423,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="support.html">Wsparcie</a></p>
+        <p><a href="support.html">Wsparcie</a> &middot; <a href="licenses/">Licencje</a></p>
       </footer>
     </div>
   </section>
@@ -1434,7 +1451,7 @@
         <p><strong>No recopilamos ningún dato personal.</strong> La aplicación no tiene ningún componente del lado del servidor: no gestionamos cuentas, ni backend, ni una base de datos de usuarios, de modo que no retenemos nada.</p>
         <ul>
           <li>Toda la inferencia del modelo se ejecuta <strong>íntegramente en tu dispositivo</strong>.</li>
-          <li>Ninguna instrucción, historial de conversación ni respuesta del modelo sale de tu dispositivo.</li>
+          <li>Ninguna instrucción, historial de conversación, imagen adjunta ni respuesta del modelo sale de tu dispositivo.</li>
           <li>No se envía analítica, telemetría ni informes de fallos a ningún servidor.</li>
           <li>Sin publicidad ni seguimiento entre aplicaciones.</li>
           <li>Sin cuentas de usuario, autenticación ni rastreo de identidad.</li>
@@ -1484,11 +1501,14 @@
         <h3>Qué nunca recibe el servidor de modelos</h3>
         <ul>
           <li>Tus instrucciones, tus conversaciones ni las respuestas del modelo.</li>
+          <li>Las imágenes que adjuntas a un mensaje.</li>
           <li>Una cuenta de Hugging Face ni un token de acceso: la aplicación no se autentica ni envía credenciales.</li>
           <li>Identificador alguno que nos pudiéramos asignarte, ya que no creamos ninguno.</li>
         </ul>
 
-        <h3>Uso sin conexión</h3>
+                <p>Las fotos adjuntas se leen con el selector de fotos del sistema: la aplicación no accede a tu fototeca y la imagen se procesa en tu dispositivo.</p>
+
+<h3>Uso sin conexión</h3>
         <p>Una vez descargados los modelos que quieras usar, puedes desactivar por completo el acceso a la red; por ejemplo, apagando el wifi y los datos móviles o activando el modo avión. El chat, las llamadas a herramientas y el historial siguen funcionando.</p>
       </section>
 
@@ -1543,7 +1563,7 @@
               <tr>
                 <td>Pesos de los modelos descargados</td>
                 <td><code>Documents/.localllmclient/huggingface/models/{owner}/{repo}/</code></td>
-                <td>Archivos de modelos públicos obtenidos del servidor elegido. Pueden ocupar varios gigabytes. La aplicación pide al sistema que excluya ese directorio de las copias de seguridad del dispositivo.</td>
+                <td>Archivos de modelo públicos obtenidos del host seleccionado. Los modelos disponibles ocupan unos 0,6 GB (LFM2.5 1.2B) y 1,2 GB (Bonsai 2 2B). La aplicación pide al sistema que excluya esta carpeta de las copias de seguridad del dispositivo.</td>
               </tr>
               <tr>
                 <td>Registro de diagnóstico</td>
@@ -1616,7 +1636,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="support.html">Soporte</a></p>
+        <p><a href="support.html">Soporte</a> &middot; <a href="licenses/">Licencias</a></p>
       </footer>
     </div>
   </section>

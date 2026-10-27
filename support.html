@@ -172,9 +172,12 @@
           <dd>Yes. After a model finishes downloading, chat and tool calling work fully offline. Model files are downloaded once per model.</dd>
 
           <dt>Is anything I type sent to a server?</dt>
-          <dd>No. Inference happens on your device. No prompt, message, or model output is transmitted anywhere.</dd>
+          <dd>No. Inference happens on your device. No prompt, message, attached image, or model output is transmitted anywhere.</dd>
 
-          <dt>What does use the network?</dt>
+                    <dt>Can I send a photo?</dt>
+          <dd>Yes, with a model that supports images (Bonsai 2 2B). Photos are read through the system photo picker, so the app never gets access to your photo library, and the image is processed on your device. An attached photo is not saved in the conversation history, which stores text only.</dd>
+
+<dt>What does use the network?</dt>
           <dd>Only downloading model files. Before a download the app requests the repository's file list and file sizes so it can show a download size; then it downloads the weight files. Nothing else.</dd>
 
           <dt>Which host downloads model files from?</dt>
@@ -184,7 +187,7 @@
           <dd>No. There is no sign-in, and the app sends no credentials or access tokens.</dd>
 
           <dt>Where is my conversation history kept?</dt>
-          <dd>On your device, in the app's container under <code>Application Support/LocalLLMClientExample/History/</code>, one file per model, text only.</dd>
+          <dd>On your device, in the app's container under <code>Application Support/LocalLLMClientExample/History/</code>, one file per model, text only. Messages with an attached image are not saved.</dd>
 
           <dt>How do I delete my data?</dt>
           <dd>Use <em>Clear Chat</em> to erase the current conversation, remove a model's data to drop its weights and history, or uninstall the app to remove everything.</dd>
@@ -199,7 +202,7 @@
         <p><strong>We do not collect any personal data.</strong></p>
         <ul>
           <li>All model inference runs entirely on your device</li>
-          <li>Prompts, conversations, and model outputs never leave your device</li>
+          <li>Prompts, conversations, attached images, and model outputs never leave your device</li>
           <li>No analytics, telemetry, or crash reporting is sent to any server</li>
           <li>No accounts, authentication, or tracking</li>
           <li>No advertising or third-party data-broker SDKs</li>
@@ -285,7 +288,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="index.html">Privacy Policy</a></p>
+        <p><a href="index.html">Privacy Policy</a> &middot; <a href="licenses/">Licenses</a></p>
       </footer>
     </div>
   </section>
@@ -317,9 +320,12 @@
           <dd>Oui. Une fois un modèle téléchargé, la discussion et l'appel d'outils fonctionnent entièrement hors ligne. Les fichiers de modèle ne sont téléchargés qu'une seule fois par modèle.</dd>
 
           <dt>Ce que je tape est-il envoyé à un serveur ?</dt>
-          <dd>Non. L'inférence a lieu sur votre appareil. Aucune invite, aucun message et aucune réponse du modèle n'est transmise.</dd>
+          <dd>Non. L'inférence a lieu sur votre appareil. Aucune invite, aucun message, aucune image jointe et aucune réponse du modèle n'est transmise.</dd>
 
-          <dt>Qu'est-ce qui utilise le réseau ?</dt>
+                    <dt>Puis-je envoyer une photo ?</dt>
+          <dd>Oui, avec un modèle qui prend en charge les images (Bonsai 2 2B). Les photos sont lues via le sélecteur de photos du système : l'application n'accède jamais à votre photothèque, et l'image est traitée sur votre appareil. Une photo jointe n'est pas conservée dans l'historique de conversation, qui ne contient que du texte.</dd>
+
+<dt>Qu'est-ce qui utilise le réseau ?</dt>
           <dd>Uniquement le téléchargement des fichiers de modèle. Avant un téléchargement, l'application demande la liste des fichiers du dépôt et leur taille afin d'afficher la taille du téléchargement ; elle télécharge ensuite les fichiers de poids. Rien d'autre.</dd>
 
           <dt>Depuis quel hôte les fichiers de modèle sont-ils téléchargés ?</dt>
@@ -329,7 +335,7 @@
           <dd>Non. Il n'y a aucune connexion, et l'application n'envoie aucun identifiant ni jeton d'accès.</dd>
 
           <dt>Où mon historique de conversation est-il conservé ?</dt>
-          <dd>Sur votre appareil, dans le conteneur de l'application sous <code>Application Support/LocalLLMClientExample/History/</code>, un fichier par modèle, texte uniquement.</dd>
+          <dd>Sur votre appareil, dans le conteneur de l'application sous <code>Application Support/LocalLLMClientExample/History/</code>, un fichier par modèle, texte uniquement. Les messages contenant une image jointe ne sont pas enregistrés.</dd>
 
           <dt>Comment supprimer mes données ?</dt>
           <dd>Utilisez <em>Clear Chat</em> pour effacer la conversation en cours, supprimez les données d'un modèle pour effacer ses poids et son historique, ou désinstallez l'application pour tout supprimer.</dd>
@@ -344,7 +350,7 @@
         <p><strong>Nous ne collectons aucune donnée personnelle.</strong></p>
         <ul>
           <li>Toute l'inférence des modèles s'exécute entièrement sur votre appareil</li>
-          <li>Vos invites, conversations et réponses ne quittent jamais votre appareil</li>
+          <li>Vos invites, conversations, images jointes et réponses ne quittent jamais votre appareil</li>
           <li>Aucune analytique, télémétrie ou rapport de crash n'est envoyé à un serveur</li>
           <li>Aucun compte, aucune authentification, aucun suivi</li>
           <li>Aucune publicité ni SDK de courtier de données tiers</li>
@@ -430,7 +436,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="index.html">Politique de confidentialité</a></p>
+        <p><a href="index.html">Politique de confidentialité</a> &middot; <a href="licenses/">Licences</a></p>
       </footer>
     </div>
   </section>
@@ -462,9 +468,12 @@
           <dd>はい。モデルのダウンロードが完了すれば、チャットとツールの呼び出しは完全にオフラインで動作します。モデルファイルはモデルごとに一度だけダウンロードされます。</dd>
 
           <dt>入力した内容がサーバーに送信されますか？</dt>
-          <dd>いいえ。推論はデバイス上で実行されます。プロンプト、メッセージ、モデルの出力が送信されることはありません。</dd>
+          <dd>いいえ。推論はデバイス上で実行されます。プロンプト、メッセージ、添付した画像、モデルの出力が送信されることはありません。</dd>
 
-          <dt>ネットワーク通信は何に使われますか？</dt>
+                    <dt>写真を送れますか？</dt>
+          <dd>はい、画像に対応したモデル（Bonsai 2 2B）で送れます。写真はシステムの写真選択ツールから読み込まれ、アプリが写真ライブラリへのアクセス権を得ることはありません。画像はデバイス上で処理されます。添付した写真は会話履歴には保存されません（履歴はテキストのみ）。</dd>
+
+<dt>ネットワーク通信は何に使われますか？</dt>
           <dd>モデルファイルのダウンロードのためだけです。ダウンロード前にリポジトリのファイル一覧とサイズを取得してダウンロード容量を表示し、その後、重みファイルをダウンロードします。それ以外の通信は行いません。</dd>
 
           <dt>モデルファイルはどのホストからダウンロードされますか？</dt>
@@ -474,7 +483,7 @@
           <dd>不要です。サインインの仕組みはなく、認証情報やアクセストークンが送信されることもありません。</dd>
 
           <dt>会話履歴はどこに保存されますか？</dt>
-          <dd>デバイス上のアプリのコンテナ内、<code>Application Support/LocalLLMClientExample/History/</code> に、モデルごとに 1 つのファイルとしてテキストのみ保存されます。</dd>
+          <dd>デバイス上のアプリのコンテナ内、<code>Application Support/LocalLLMClientExample/History/</code> に、モデルごとに 1 つのファイルとしてテキストのみ保存されます。画像を添付したメッセージは保存されません。</dd>
 
           <dt>データを削除するにはどうすればよいですか？</dt>
           <dd><em>Clear Chat</em> で現在の会話を消去できます。モデルのデータを削除すると、そのモデルの重みと履歴が削除されます。アプリを削除すると、すべてが削除されます。</dd>
@@ -489,7 +498,7 @@
         <p><strong>当社は個人データを一切収集しません。</strong></p>
         <ul>
           <li>すべてのモデル推論はデバイス上で完全に実行されます</li>
-          <li>プロンプト、会話、モデルの出力がデバイスの外に出ることはありません</li>
+          <li>プロンプト、会話、添付画像、モデルの出力がデバイスの外に出ることはありません</li>
           <li>アナリティクス、テレメトリ、クラッシュレポートをサーバーに送信しません</li>
           <li>アカウント、認証、追跡はありません</li>
           <li>第三者のデータブローカー SDK も使用しません</li>
@@ -575,7 +584,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="index.html">プライバシーポリシー</a></p>
+        <p><a href="index.html">プライバシーポリシー</a> &middot; <a href="licenses/">ライセンス</a></p>
       </footer>
     </div>
   </section>
@@ -607,9 +616,12 @@
           <dd>Ja. Nach dem Download eines Modells funktionieren Chat und Werkzeugaufrufe vollständig offline. Modelldateien werden einmal pro Modell heruntergeladen.</dd>
 
           <dt>Wird das, was ich eingebe, an einen Server gesendet?</dt>
-          <dd>Nein. Die Inferenz läuft auf Ihrem Gerät. Es werden keine Prompts, Nachrichten oder Modellausgaben übermittelt.</dd>
+          <dd>Nein. Die Inferenz läuft auf Ihrem Gerät. Es werden keine Prompts, Nachrichten, angehängten Bilder oder Modellausgaben übermittelt.</dd>
 
-          <dt>Wofür wird das Netzwerk verwendet?</dt>
+                    <dt>Kann ich ein Foto senden?</dt>
+          <dd>Ja, mit einem Modell, das Bilder unterstützt (Bonsai 2 2B). Fotos werden über die Fotoauswahl des Systems gelesen – die App erhält nie Zugriff auf Ihre Fotomediathek – und das Bild wird auf Ihrem Gerät verarbeitet. Ein angehängtes Foto wird nicht im Chatverlauf gespeichert, der nur Text enthält.</dd>
+
+<dt>Wofür wird das Netzwerk verwendet?</dt>
           <dd>Nur für den Download von Modelldateien. Vor dem Download fragt die App die Dateiliste und die Dateigrößen des Repositories ab, um die Downloadgröße anzuzeigen; anschließend lädt sie die Gewichtsdateien. Sonst nichts.</dd>
 
           <dt>Von welchem Host werden Modelldateien heruntergeladen?</dt>
@@ -619,7 +631,7 @@
           <dd>Nein. Es gibt keine Anmeldung, und die App sendet weder Anmeldedaten noch Zugriffstoken.</dd>
 
           <dt>Wo wird mein Chatverlauf gespeichert?</dt>
-          <dd>Auf Ihrem Gerät, im App-Container unter <code>Application Support/LocalLLMClientExample/History/</code>, eine Datei pro Modell, nur Text.</dd>
+          <dd>Auf Ihrem Gerät, im App-Container unter <code>Application Support/LocalLLMClientExample/History/</code>, eine Datei pro Modell, nur Text. Nachrichten mit angehängtem Bild werden nicht gespeichert.</dd>
 
           <dt>Wie lösche ich meine Daten?</dt>
           <dd>Verwenden Sie <em>Clear Chat</em>, um die aktuelle Unterhaltung zu löschen, entfernen Sie die Daten eines Modells, um dessen Gewichte und Verlauf zu löschen, oder deinstallieren Sie die App, um alles zu entfernen.</dd>
@@ -634,7 +646,7 @@
         <p><strong>Wir erheben keine personenbezogenen Daten.</strong></p>
         <ul>
           <li>Die gesamte Modellinferenz läuft vollständig auf Ihrem Gerät</li>
-          <li>Prompts, Unterhaltungen und Modellausgaben verlassen Ihr Gerät nie</li>
+          <li>Prompts, Unterhaltungen, angehängte Bilder und Modellausgaben verlassen Ihr Gerät nie</li>
           <li>Es werden keine Analyse-, Telemetrie- oder Absturzberichte an einen Server gesendet</li>
           <li>Keine Konten, keine Authentifizierung, kein Tracking</li>
           <li>Keine Werbung und keine SDKs von Datenbrokern Dritter</li>
@@ -720,7 +732,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="index.html">Datenschutzerklärung</a></p>
+        <p><a href="index.html">Datenschutzerklärung</a> &middot; <a href="licenses/">Lizenzen</a></p>
       </footer>
     </div>
   </section>
@@ -752,9 +764,12 @@
           <dd>Ja. Zodra een model is gedownload, werken chat en toolaanroepen volledig offline. Modelbestanden worden eenmalig per model gedownload.</dd>
 
           <dt>Wordt wat ik typ naar een server gestuurd?</dt>
-          <dd>Nee. De inferentie vindt op uw apparaat plaats. Er worden geen prompts, berichten of modelantwoorden verstuurd.</dd>
+          <dd>Nee. De inferentie vindt op uw apparaat plaats. Er worden geen prompts, berichten, bijgevoegde afbeeldingen of modelantwoorden verstuurd.</dd>
 
-          <dt>Waarvoor wordt het netwerk gebruikt?</dt>
+                    <dt>Kan ik een foto sturen?</dt>
+          <dd>Ja, met een model dat afbeeldingen ondersteunt (Bonsai 2 2B). Foto's worden gelezen via de systeemfotokiezer — de app krijgt nooit toegang tot uw fotobibliotheek — en de afbeelding wordt op uw apparaat verwerkt. Een bijgevoegde foto wordt niet in de gespreksgeschiedenis opgeslagen; die bevat alleen tekst.</dd>
+
+<dt>Waarvoor wordt het netwerk gebruikt?</dt>
           <dd>Alleen om modelbestanden te downloaden. Vooraf vraagt de app de bestandslijst en bestandsgroottes van de repository op om de downloadgrootte te tonen; daarna downloadt ze de gewichtsbestanden. Verder niets.</dd>
 
           <dt>Van welke host worden modelbestanden gedownload?</dt>
@@ -764,7 +779,7 @@
           <dd>Nee. Er is geen aanmelding en de app verstuurt geen inloggegevens of toegangstokens.</dd>
 
           <dt>Waar wordt mijn gespreksgeschiedenis bewaard?</dt>
-          <dd>Op uw apparaat, in de container van de app onder <code>Application Support/LocalLLMClientExample/History/</code>, één bestand per model, alleen tekst.</dd>
+          <dd>Op uw apparaat, in de container van de app onder <code>Application Support/LocalLLMClientExample/History/</code>, één bestand per model, alleen tekst. Berichten met een bijgevoegde afbeelding worden niet opgeslagen.</dd>
 
           <dt>Hoe verwijder ik mijn gegevens?</dt>
           <dd>Gebruik <em>Clear Chat</em> om het huidige gesprek te wissen, verwijder de gegevens van een model om de gewichten en geschiedenis ervan te verwijderen, of verwijder de app om alles te verwijderen.</dd>
@@ -779,7 +794,7 @@
         <p><strong>We verzamelen geen persoonsgegevens.</strong></p>
         <ul>
           <li>Alle modelinferentie draait volledig op uw apparaat</li>
-          <li>Prompts, gesprekken en modelantwoorden verlaten uw apparaat nooit</li>
+          <li>Prompts, gesprekken, bijgevoegde afbeeldingen en modelantwoorden verlaten uw apparaat nooit</li>
           <li>Er worden geen analytics, telemetrie of crashrapporten naar een server gestuurd</li>
           <li>Geen accounts, geen authenticatie, geen tracking</li>
           <li>Geen advertenties en geen SDK's van databrokers van derden</li>
@@ -865,7 +880,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="index.html">Privacybeleid</a></p>
+        <p><a href="index.html">Privacybeleid</a> &middot; <a href="licenses/">Licenties</a></p>
       </footer>
     </div>
   </section>
@@ -897,9 +912,12 @@
           <dd>Tak. Po pobraniu modelu czat i wywołania narzędzi działają w pełni offline. Pliki modelu są pobierane raz dla każdego modelu.</dd>
 
           <dt>Czy to, co wpisuję, jest wysyłane na serwer?</dt>
-          <dd>Nie. Wnioskowanie odbywa się na Twoim urządzeniu. Nie są wysyłane żadne prompty, wiadomości ani odpowiedzi modelu.</dd>
+          <dd>Nie. Wnioskowanie odbywa się na Twoim urządzeniu. Nie są wysyłane żadne prompty, wiadomości, dołączone obrazy ani odpowiedzi modelu.</dd>
 
-          <dt>Do czego służy sieć?</dt>
+                    <dt>Czy mogę wysłać zdjęcie?</dt>
+          <dd>Tak, z modelem obsługującym obrazy (Bonsai 2 2B). Zdjęcia są odczytywane przez systemowy wybór zdjęć — aplikacja nigdy nie uzyskuje dostępu do biblioteki zdjęć — a obraz jest przetwarzany na Twoim urządzeniu. Dołączone zdjęcie nie jest zapisywane w historii rozmów, która zawiera tylko tekst.</dd>
+
+<dt>Do czego służy sieć?</dt>
           <dd>Wyłącznie do pobierania plików modelu. Przed pobraniem aplikacja pobiera listę plików repozytorium i ich rozmiary, aby pokazać rozmiar pobierania; następnie pobiera pliki z wagami. Nic więcej.</dd>
 
           <dt>Z którego serwera pobierane są pliki modelu?</dt>
@@ -909,7 +927,7 @@
           <dd>Nie. Nie ma logowania, a aplikacja nie wysyła żadnych danych uwierzytelniających ani tokenów dostępu.</dd>
 
           <dt>Gdzie przechowywana jest historia rozmów?</dt>
-          <dd>Na Twoim urządzeniu, w kontenerze aplikacji pod <code>Application Support/LocalLLMClientExample/History/</code>, w jednym pliku dla każdego modelu, wyłącznie tekst.</dd>
+          <dd>Na Twoim urządzeniu, w kontenerze aplikacji pod <code>Application Support/LocalLLMClientExample/History/</code>, w jednym pliku dla każdego modelu, wyłącznie tekst. Wiadomości z dołączonym obrazem nie są zapisywane.</dd>
 
           <dt>Jak usunąć moje dane?</dt>
           <dd>Użyj <em>Clear Chat</em>, aby usunąć bieżącą rozmowę, usuń dane modelu, aby usunąć jego wagi i historię, albo odinstaluj aplikację, aby usunąć wszystko.</dd>
@@ -924,7 +942,7 @@
         <p><strong>Nie zbieramy żadnych danych osobowych.</strong></p>
         <ul>
           <li>Całe wnioskowanie modelu odbywa się wyłącznie na Twoim urządzeniu</li>
-          <li>Prompty, rozmowy i odpowiedzi modelu nigdy nie opuszczają Twojego urządzenia</li>
+          <li>Prompty, rozmowy, dołączone obrazy i odpowiedzi modelu nigdy nie opuszczają Twojego urządzenia</li>
           <li>Nie wysyłamy na żaden serwer analityki, telemetrii ani raportów o awariach</li>
           <li>Brak kont, uwierzytelniania i śledzenia</li>
           <li>Brak reklam i brak SDK podmiotów trzecich typu broker danych</li>
@@ -1010,7 +1028,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="index.html">Polityka prywatności</a></p>
+        <p><a href="index.html">Polityka prywatności</a> &middot; <a href="licenses/">Licencje</a></p>
       </footer>
     </div>
   </section>
@@ -1042,9 +1060,12 @@
           <dd>Sí. Una vez descargado un modelo, el chat y las llamadas a herramientas funcionan totalmente sin conexión. Los archivos del modelo se descargan una sola vez por modelo.</dd>
 
           <dt>¿Se envía lo que escribo a un servidor?</dt>
-          <dd>No. La inferencia ocurre en tu dispositivo. No se envía ninguna instrucción, mensaje ni respuesta del modelo.</dd>
+          <dd>No. La inferencia ocurre en tu dispositivo. No se envía ninguna instrucción, mensaje, imagen adjunta ni respuesta del modelo.</dd>
 
-          <dt>¿Para qué se usa la red?</dt>
+                    <dt>¿Puedo enviar una foto?</dt>
+          <dd>Sí, con un modelo compatible con imágenes (Bonsai 2 2B). Las fotos se leen con el selector de fotos del sistema —la aplicación nunca accede a tu fototeca— y la imagen se procesa en tu dispositivo. Una foto adjunta no se guarda en el historial de conversación, que solo contiene texto.</dd>
+
+<dt>¿Para qué se usa la red?</dt>
           <dd>Solo para descargar archivos de modelo. Antes de la descarga, la aplicación solicita la lista de archivos del repositorio y sus tamaños para mostrar el tamaño de la descarga; a continuación descarga los archivos de pesos. Nada más.</dd>
 
           <dt>¿De qué servidor se descargan los archivos de modelo?</dt>
@@ -1054,7 +1075,7 @@
           <dd>No. No hay inicio de sesión y la aplicación no envía credenciales ni tokens de acceso.</dd>
 
           <dt>¿Dónde se guarda el historial de conversaciones?</dt>
-          <dd>En tu dispositivo, dentro del contenedor de la aplicación en <code>Application Support/LocalLLMClientExample/History/</code>, un archivo por modelo, solo texto.</dd>
+          <dd>En tu dispositivo, dentro del contenedor de la aplicación en <code>Application Support/LocalLLMClientExample/History/</code>, un archivo por modelo, solo texto. Los mensajes con una imagen adjunta no se guardan.</dd>
 
           <dt>¿Cómo elimino mis datos?</dt>
           <dd>Usa <em>Clear Chat</em> para borrar la conversación actual, elimina los datos de un modelo para eliminar sus pesos y su historial, o desinstala la aplicación para eliminarlo todo.</dd>
@@ -1069,7 +1090,7 @@
         <p><strong>No recopilamos ningún dato personal.</strong></p>
         <ul>
           <li>Toda la inferencia del modelo se ejecuta íntegramente en tu dispositivo</li>
-          <li>Tus instrucciones, conversaciones y respuestas del modelo nunca salen de tu dispositivo</li>
+          <li>Tus instrucciones, conversaciones, imágenes adjuntas y respuestas del modelo nunca salen de tu dispositivo</li>
           <li>No se envía analítica, telemetría ni informes de fallos a ningún servidor</li>
           <li>Sin cuentas, sin autenticación y sin seguimiento</li>
           <li>Sin publicidad ni SDK de intermediarios de datos de terceros</li>
@@ -1155,7 +1176,7 @@
 
       <footer>
         <p>Copyright &copy; 2026 Vega &middot; LocalLLMClient</p>
-        <p><a href="index.html">Política de privacidad</a></p>
+        <p><a href="index.html">Política de privacidad</a> &middot; <a href="licenses/">Licencias</a></p>
       </footer>
     </div>
   </section>
