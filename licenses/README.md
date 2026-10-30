@@ -1,6 +1,6 @@
 # Third-Party Licenses
 
-License notices for the models available in **LocalLLMClient / Pocket LLM**.
+License notices for models and bundled open-source software in **LocalLLMClient / Pocket LLM**.
 
 The published page is served from GitHub Pages at:
 
@@ -31,6 +31,27 @@ The published page is served from GitHub Pages at:
 - Licensed under the [Apache License 2.0](Bonsai-APACHE-2.0.txt).
 - Built from Qwen3.5-2B, Copyright 2026 Alibaba Cloud, also licensed under Apache 2.0.
 - Attribution: "Created using Bonsai by Prism ML."
+
+## Open Source Software
+
+This app bundles or depends on open-source software. Full license texts and notices for
+these dependencies are available in the app under **⋯ → Licenses…** (and will be included
+in the published licenses page). Key dependencies include (non-exhaustive):
+
+| Component | License | Notes |
+| --- | --- | --- |
+| [LocalLLMClient](https://github.com/tattn/LocalLLMClient) | MIT | Copyright © 2025 Tatsuya Tanaka (with additional contributions). |
+| [mlx-swift-lm](https://github.com/ml-explore/mlx-swift-lm) (fork in repo) | MIT | ml-explore; modified in this fork. |
+| [mlx-swift](https://github.com/ml-explore/mlx-swift) | MIT | ml-explore. |
+| [swift-transformers](https://github.com/huggingface/swift-transformers) | Apache 2.0 | Hugging Face. |
+| [swift-jinja](https://github.com/huggingface/swift-jinja) | Apache 2.0 | Hugging Face. |
+| [swift-huggingface](https://github.com/huggingface/swift-huggingface) | Apache 2.0 | Hugging Face. |
+| [Swift Crypto](https://github.com/apple/swift-crypto) | Apache 2.0 | Apple Inc. (see NOTICE). |
+| [Swift ASN1](https://github.com/apple/swift-asn1) | Apache 2.0 | Apple Inc. (see NOTICE). |
+| [swift-collections](https://github.com/apple/swift-collections) | Apache 2.0 | Apple Inc. |
+| [swift-numerics](https://github.com/apple/swift-numerics) | Apache 2.0 | Apple Inc. |
+| [yyjson](https://github.com/ibireme/yyjson) | MIT | © 2020 YaoYuan. |
+| [EventSource](https://github.com/mattt/EventSource) | MIT | © 2025 Mattt. |
 
 ## In the app
 
