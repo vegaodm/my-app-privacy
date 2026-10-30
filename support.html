@@ -149,7 +149,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>Support &amp; Privacy Policy</h1>
-        <p class="updated">Last updated: October 29, 2026 &middot; Effective date: October 29, 2026</p>
+        <p class="updated">Last updated: October 30, 2026 &middot; Effective date: October 30, 2026</p>
       </header>
 
       <section class="card">
@@ -162,7 +162,7 @@
         <h2>Support</h2>
         <p>If something is not working, or you have a question, feature request, or privacy concern, contact us and we will help:</p>
         <p><strong>Email:</strong> <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
-        <p>When reporting a problem, including the model you selected and your iPhone model helps a lot.</p>
+        <p>When reporting a problem, include the model you selected and your iPhone model — it helps a lot.</p>
       </section>
 
       <section class="card">
@@ -174,13 +174,13 @@
           <dt>Is anything I type sent to a server?</dt>
           <dd>No. Inference happens on your device. No prompt, message, attached image, or model output is transmitted anywhere.</dd>
 
-                    <dt>Can I send a photo?</dt>
+          <dt>Can I send a photo?</dt>
           <dd>Yes, with a model that supports images (Bonsai 2 2B). Photos are read through the system photo picker, so the app never gets access to your photo library, and the image is processed on your device. An attached photo is not saved in the conversation history, which stores text only.</dd>
 
-<dt>What does use the network?</dt>
+          <dt>What uses the network?</dt>
           <dd>Only downloading model files. Before a download the app requests the repository's file list and file sizes so it can show a download size; then it downloads the weight files. Nothing else.</dd>
 
-          <dt>Which host downloads model files from?</dt>
+          <dt>Which host are model files downloaded from?</dt>
           <dd>The one you pick in the <em>HF Source</em> menu in the toolbar. The default is <code>hf-mirror.com</code> (a third-party mirror); you can switch to the official <code>huggingface.co</code>. Whichever you choose receives your IP address and standard request metadata.</dd>
 
           <dt>Do I need an account?</dt>
@@ -245,8 +245,8 @@
         <ul>
           <li><strong>Conversation history</strong> — stored locally in the app container at <code>Application Support/LocalLLMClientExample/History/</code>; text messages only</li>
           <li><strong>Model weights</strong> — stored at <code>Documents/.localllmclient/huggingface/models/</code></li>
-          <li><strong>Diagnostics log</strong> — <code>Documents/diagnostics.log</code> (512&nbsp;KB cap) holding timestamps and memory usage only, never prompt text</li>
-          <li>You can delete all data via <em>Clear Chat</em>, by removing a model's data, or by removing the app</li>
+          <li><strong>Diagnostics log</strong> — <code>Documents/diagnostics.log</code> (512&nbsp;KB cap) holding timing and memory metrics, the active model identifier, and thermal state; never prompt or response text</li>
+          <li>Delete conversation history with <em>Clear Chat</em>, remove a model's weights and history by deleting its data, or remove everything by uninstalling the app</li>
           <li>Conversation history is retained until you delete it or uninstall the app</li>
         </ul>
 
@@ -296,7 +296,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>Support et politique de confidentialité</h1>
-        <p class="updated">Dernière mise à jour : 29 octobre 2026 &middot; Date d'entrée en vigueur : 29 octobre 2026</p>
+        <p class="updated">Dernière mise à jour : 30 octobre 2026 &middot; Date d'entrée en vigueur : 30 octobre 2026</p>
       </header>
 
       <section class="card">
@@ -392,8 +392,8 @@
         <ul>
           <li><strong>Historique des conversations</strong> — stocké localement dans le conteneur de l'application à <code>Application Support/LocalLLMClientExample/History/</code> ; messages texte uniquement</li>
           <li><strong>Poids des modèles</strong> — stockés dans <code>Documents/.localllmclient/huggingface/models/</code></li>
-          <li><strong>Journal de diagnostic</strong> — <code>Documents/diagnostics.log</code> (512 Ko maximum) contenant uniquement des horodatages et l'utilisation mémoire, jamais le texte des invites</li>
-          <li>Vous pouvez supprimer toutes les données via <em>Clear Chat</em>, en supprimant les données d'un modèle ou en supprimant l'application</li>
+          <li><strong>Journal de diagnostic</strong> — <code>Documents/diagnostics.log</code> (512 Ko maximum) contenant des métriques de temporisation et de mémoire, l'identifiant du modèle actif et l'état thermique ; jamais le texte des invites ou des réponses</li>
+          <li>Supprimez l'historique de conversation avec <em>Clear Chat</em>, supprimez les poids et l'historique d'un modèle en effaçant ses données, ou supprimez tout en désinstallant l'application</li>
           <li>L'historique des conversations est conservé jusqu'à ce que vous le supprimiez ou que vous désinstalliez l'application</li>
         </ul>
 
@@ -443,7 +443,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>サポートとプライバシーポリシー</h1>
-        <p class="updated">最終更新日：2026年10月29日 &middot; 発効日：2026年10月29日</p>
+        <p class="updated">最終更新日：2026年10月30日 &middot; 発効日：2026年10月30日</p>
       </header>
 
       <section class="card">
@@ -539,8 +539,8 @@
         <ul>
           <li><strong>会話履歴</strong> — アプリのコンテナ内の <code>Application Support/LocalLLMClientExample/History/</code> にローカル保存。テキストメッセージのみ</li>
           <li><strong>モデルの重み</strong> — <code>Documents/.localllmclient/huggingface/models/</code> に保存</li>
-          <li><strong>診断ログ</strong> — <code>Documents/diagnostics.log</code>（上限 512 KB）。タイムスタンプとメモリ使用量のみを記録し、プロンプトのテキストは含みません</li>
-          <li>すべてのデータは <em>Clear Chat</em>、モデルのデータ削除、またはアプリの削除によって消去できます</li>
+          <li><strong>診断ログ</strong> — <code>Documents/diagnostics.log</code>（上限 512 KB）。タイミングとメモリの指標、使用中のモデル識別子、熱状態を記録し、プロンプトや応答のテキストは含みません</li>
+          <li><em>Clear Chat</em> で会話履歴を削除し、モデルのデータを削除してその重みと履歴を消去するか、アプリをアンインストールしてすべてを削除できます</li>
           <li>会話履歴は、削除するかアプリをアンインストールするまで保持されます</li>
         </ul>
 
@@ -590,7 +590,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>Support &amp; Datenschutzerklärung</h1>
-        <p class="updated">Zuletzt aktualisiert: 29. Oktober 2026 &middot; Gültig ab: 29. Oktober 2026</p>
+        <p class="updated">Zuletzt aktualisiert: 30. Oktober 2026 &middot; Gültig ab: 30. Oktober 2026</p>
       </header>
 
       <section class="card">
@@ -686,8 +686,8 @@
         <ul>
           <li><strong>Chatverlauf</strong> – lokal im App-Container gespeichert unter <code>Application Support/LocalLLMClientExample/History/</code>; nur Textnachrichten</li>
           <li><strong>Modellgewichte</strong> – gespeichert unter <code>Documents/.localllmclient/huggingface/models/</code></li>
-          <li><strong>Diagnoseprotokoll</strong> – <code>Documents/diagnostics.log</code> (max. 512 KB) mit ausschließlich Zeitstempeln und Speicherverbrauch, niemals Prompt-Text</li>
-          <li>Sie können alle Daten über <em>Clear Chat</em>, durch Entfernen der Modelldaten oder durch Löschen der App entfernen</li>
+          <li><strong>Diagnoseprotokoll</strong> – <code>Documents/diagnostics.log</code> (max. 512 KB) mit Timing- und Speichermetriken, der Kennung des aktiven Modells und dem Thermalzustand; niemals Prompt- oder Antworttext</li>
+          <li>Löschen Sie den Chatverlauf mit <em>Clear Chat</em>, entfernen Sie die Gewichte und den Verlauf eines Modells durch Löschen seiner Daten, oder entfernen Sie alles durch Deinstallieren der App</li>
           <li>Der Chatverlauf bleibt erhalten, bis Sie ihn löschen oder die App deinstallieren</li>
         </ul>
 
@@ -737,7 +737,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>Ondersteuning &amp; privacybeleid</h1>
-        <p class="updated">Laatst bijgewerkt: 29 oktober 2026 &middot; Ingegaan op: 29 oktober 2026</p>
+        <p class="updated">Laatst bijgewerkt: 30 oktober 2026 &middot; Ingegaan op: 30 oktober 2026</p>
       </header>
 
       <section class="card">
@@ -833,8 +833,8 @@
         <ul>
           <li><strong>Gespreksgeschiedenis</strong> – lokaal opgeslagen in de container van de app onder <code>Application Support/LocalLLMClientExample/History/</code>; alleen berichten in tekst</li>
           <li><strong>Modelgewichten</strong> – opgeslagen onder <code>Documents/.localllmclient/huggingface/models/</code></li>
-          <li><strong>Diagnoselogboek</strong> – <code>Documents/diagnostics.log</code> (max. 512 KB) met uitsluitend tijdstempels en geheugengebruik, nooit prompttekst</li>
-          <li>U kunt alle gegevens verwijderen via <em>Clear Chat</em>, door de gegevens van een model te verwijderen of door de app te verwijderen</li>
+          <li><strong>Diagnoselogboek</strong> – <code>Documents/diagnostics.log</code> (max. 512 KB) met timing- en geheugenmetrieken, de identificatie van het actieve model en de thermische status; nooit prompt- of antwoordtekst</li>
+          <li>Verwijder de gespreksgeschiedenis met <em>Clear Chat</em>, verwijder de gewichten en geschiedenis van een model door de gegevens ervan te wissen, of verwijder alles door de app te verwijderen</li>
           <li>De gespreksgeschiedenis blijft behouden tot u die verwijdert of de app deïnstalleert</li>
         </ul>
 
@@ -884,7 +884,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>Wsparcie i polityka prywatności</h1>
-        <p class="updated">Ostatnia aktualizacja: 29 października 2026 &middot; Obowiązuje od: 29 października 2026</p>
+        <p class="updated">Ostatnia aktualizacja: 30 października 2026 &middot; Obowiązuje od: 30 października 2026</p>
       </header>
 
       <section class="card">
@@ -980,8 +980,8 @@
         <ul>
           <li><strong>Historia rozmów</strong> — przechowywana lokalnie w kontenerze aplikacji pod <code>Application Support/LocalLLMClientExample/History/</code>; wyłącznie wiadomości tekstowe</li>
           <li><strong>Wagi modeli</strong> — przechowywane w <code>Documents/.localllmclient/huggingface/models/</code></li>
-          <li><strong>Dziennik diagnostyczny</strong> — <code>Documents/diagnostics.log</code> (limit 512 KB) zawierający wyłącznie znaczniki czasu i zużycie pamięci, nigdy tekst promptów</li>
-          <li>Wszystkie dane możesz usunąć przez <em>Clear Chat</em>, usuwając dane modelu lub usuwając aplikację</li>
+          <li><strong>Dziennik diagnostyczny</strong> — <code>Documents/diagnostics.log</code> (limit 512 KB) zawierający metryki czasu i pamięci, identyfikator aktywnego modelu oraz stan termiczny; nigdy tekst promptów ani odpowiedzi</li>
+          <li>Usuń historię rozmów za pomocą <em>Clear Chat</em>, usuń wagi i historię modelu, usuwając jego dane, albo usuń wszystko, odinstalowując aplikację</li>
           <li>Historia rozmów jest przechowywana, dopóki jej nie usuniesz lub nie odinstalujesz aplikacji</li>
         </ul>
 
@@ -1031,7 +1031,7 @@
       <header>
         <div class="logo">LocalLLMClient</div>
         <h1>Soporte y política de privacidad</h1>
-        <p class="updated">Última actualización: 29 de octubre de 2026 &middot; Entrada en vigor: 29 de octubre de 2026</p>
+        <p class="updated">Última actualización: 30 de octubre de 2026 &middot; Entrada en vigor: 30 de octubre de 2026</p>
       </header>
 
       <section class="card">
@@ -1127,8 +1127,8 @@
         <ul>
           <li><strong>Historial de conversaciones</strong>: se guarda localmente en el contenedor de la aplicación en <code>Application Support/LocalLLMClientExample/History/</code>; solo mensajes de texto</li>
           <li><strong>Pesos del modelo</strong>: se guardan en <code>Documents/.localllmclient/huggingface/models/</code></li>
-          <li><strong>Registro de diagnóstico</strong>: <code>Documents/diagnostics.log</code> (límite de 512 KB) con marcas de tiempo y uso de memoria únicamente, nunca texto de las instrucciones</li>
-          <li>Puedes eliminar todos los datos con <em>Clear Chat</em>, eliminando los datos de un modelo o eliminando la aplicación</li>
+          <li><strong>Registro de diagnóstico</strong>: <code>Documents/diagnostics.log</code> (límite de 512 KB) con métricas de tiempo y memoria, el identificador del modelo activo y el estado térmico; nunca texto de instrucciones ni de respuestas</li>
+          <li>Elimina el historial de conversación con <em>Clear Chat</em>, elimina los pesos y el historial de un modelo borrando sus datos, o elimínalo todo desinstalando la aplicación</li>
           <li>El historial de conversaciones se conserva hasta que lo elimines o desinstales la aplicación</li>
         </ul>
 
