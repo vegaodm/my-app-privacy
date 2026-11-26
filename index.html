@@ -156,12 +156,12 @@
       <header>
         <div class="logo">Pocket LLM Chat</div>
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: November 16, 2026 &middot; Effective date: October 30, 2026</p>
+        <p class="updated">Last updated: November 26, 2026 &middot; Effective date: October 30, 2026</p>
       </header>
 
       <div class="summary">
         <p><strong>In short:</strong> Pocket LLM Chat runs language models entirely on your device and has no accounts, no analytics, and no crash reporting. Your prompts, conversations, and model outputs are never transmitted to us.</p>
-        <p>The app makes network requests in exactly one situation: downloading model files. Those requests go to the model host you select in the app's <em>HF Source</em> menu — <code>hf-mirror.com</code> by default, or <code>huggingface.co</code> if you switch it. Whoever operates that host receives your IP address and standard request metadata, and is an independent party to us. Details in <a href="#network-en">What Leaves Your Device</a> and <a href="#hosts-en">Model Hosts and Third-Party Recipients</a>.</p>
+        <p>The app makes network requests in exactly one situation: downloading model files. Those requests go to the model host you select in the app's <em>HF Source</em> menu — <code>huggingface.co</code> by default, or <code>hf-mirror.com</code> if you switch it. Whoever operates that host receives your IP address and standard request metadata, and is an independent party to us. Details in <a href="#network-en">What Leaves Your Device</a> and <a href="#hosts-en">Model Hosts and Third-Party Recipients</a>.</p>
       </div>
 
       <section class="card">
@@ -250,20 +250,20 @@
             <tbody>
               <tr>
                 <td><strong>Default</strong></td>
-                <td><code>hf-mirror.com</code></td>
-                <td><strong>A third-party mirror operator, not Hugging Face.</strong> It is a separate, independently operated service that proxies requests to model repositories.</td>
+                <td><code>huggingface.co</code></td>
+                <td>Hugging Face, the model hub operator.</td>
               </tr>
               <tr>
                 <td>Optional</td>
-                <td><code>huggingface.co</code></td>
-                <td>Hugging Face, the model hub operator.</td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>A third-party mirror operator, not Hugging Face.</strong> It is a separate, independently operated service that proxies requests to model repositories.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="notice">
-          <p><strong>Who acts as a data controller for downloads.</strong> The operator of the host you select receives your IP address and request metadata and acts as an <strong>independent data controller</strong> for that request. With the default setting, that party is the operator of <code>hf-mirror.com</code>, which is a third party and is <em>not</em> Hugging Face; if you switch the source to <code>huggingface.co</code>, it is Hugging Face. We do not control, own, or store any of this data, and we have no access to it. Those hosts process it under their own terms and privacy policies.</p>
+          <p><strong>Who acts as a data controller for downloads.</strong> The operator of the host you select receives your IP address and request metadata and acts as an <strong>independent data controller</strong> for that request. With the default setting, that party is Hugging Face; if you switch the source to <code>hf-mirror.com</code>, it is the mirror operator, which is a third party and is <em>not</em> Hugging Face. We do not control, own, or store any of this data, and we have no access to it. Those hosts process it under their own terms and privacy policies.</p>
         </div>
 
         <p>We do not send any personal data to a model host beyond what an ordinary file download requires. We do not use a model host as an analytics provider, and we have no visibility into what it logs.</p>
@@ -293,6 +293,11 @@
                 <td>Diagnostics log</td>
                 <td><code>Documents/diagnostics.log</code></td>
                 <td>A capped file (512&nbsp;KB, then rotated) of timing and memory metrics, the active model identifier, and thermal state, used to diagnose app termination and streaming performance. It contains <strong>no prompt or response text</strong> and stays on your device unless you choose to share it. The app asks the system to exclude this file from device backups.</td>
+              </tr>
+              <tr>
+                <td>App system log</td>
+                <td>Apple's unified log, subsystem <code>com.vega.pocketllm</code></td>
+                <td>Short status lines only — model load or save failures, and a one-off hand-off's request id, status, model name and duration. Contains <strong>no prompt or response text</strong>, is rotated by the operating system, and is never uploaded.</td>
               </tr>
               <tr>
                 <td>Exported conversations</td>
@@ -380,12 +385,12 @@
       <header>
         <div class="logo">Pocket LLM Chat</div>
         <h1>Politique de confidentialité</h1>
-        <p class="updated">Dernière mise à jour : 16 novembre 2026 &middot; Date d'entrée en vigueur : 30 octobre 2026</p>
+        <p class="updated">Dernière mise à jour : 26 novembre 2026 &middot; Date d'entrée en vigueur : 30 octobre 2026</p>
       </header>
 
       <div class="summary">
         <p><strong>En bref :</strong> Pocket LLM Chat exécute les modèles de langage entièrement sur votre appareil et ne propose ni comptes, ni analyse d'usage, ni rapport d'incident. Vos invites, vos conversations et les réponses du modèle ne nous sont jamais transmises.</p>
-        <p>L'application effectue des requêtes réseau dans une seule situation : le téléchargement de fichiers de modèle. Ces requêtes sont adressées à l'hôte de modèle que vous sélectionnez dans le menu <em>HF Source</em> de l'application — <code>hf-mirror.com</code> par défaut, ou <code>huggingface.co</code> si vous le changez. L'exploitant de cet hôte reçoit votre adresse IP et les métadonnées standard de la requête, et constitue une partie indépendante de nous. Les détails figurent dans <a href="#network-fr">Ce qui quitte votre appareil</a> et <a href="#hosts-fr">Hôtes de modèles et tiers destinataires</a>.</p>
+        <p>L'application effectue des requêtes réseau dans une seule situation : le téléchargement de fichiers de modèle. Ces requêtes sont adressées à l'hôte de modèle que vous sélectionnez dans le menu <em>HF Source</em> de l'application — <code>huggingface.co</code> par défaut, ou <code>hf-mirror.com</code> si vous le changez. L'exploitant de cet hôte reçoit votre adresse IP et les métadonnées standard de la requête, et constitue une partie indépendante de nous. Les détails figurent dans <a href="#network-fr">Ce qui quitte votre appareil</a> et <a href="#hosts-fr">Hôtes de modèles et tiers destinataires</a>.</p>
       </div>
 
       <section class="card">
@@ -474,20 +479,20 @@
             <tbody>
               <tr>
                 <td><strong>Par défaut</strong></td>
-                <td><code>hf-mirror.com</code></td>
-                <td><strong>Un opérateur de miroir tiers, et non Hugging Face.</strong> Il s'agit d'un service distinct, exploité indépendamment, qui relaie les requêtes vers les dépôts de modèles.</td>
+                <td><code>huggingface.co</code></td>
+                <td>Hugging Face, l'exploitant du hub de modèles.</td>
               </tr>
               <tr>
                 <td>Optionnel</td>
-                <td><code>huggingface.co</code></td>
-                <td>Hugging Face, l'exploitant du hub de modèles.</td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>Un opérateur de miroir tiers, et non Hugging Face.</strong> Il s'agit d'un service distinct, exploité indépendamment, qui relaie les requêtes vers les dépôts de modèles.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="notice">
-          <p><strong>Qui agit comme responsable de traitement pour les téléchargements.</strong> L'exploitant de l'hôte que vous sélectionnez reçoit votre adresse IP et les métadonnées de requête et agit comme <strong>responsable de traitement indépendant</strong> pour cette requête. Avec le réglage par défaut, ce partie est l'opérateur de <code>hf-mirror.com</code>, qui est un tiers et <em>n'est pas</em> Hugging Face ; si vous basculez la source vers <code>huggingface.co</code>, il s'agit de Hugging Face. Nous ne contrôlons, ne détenons et ne stockons aucune de ces données, et nous n'y avons pas accès. Ces hôtes les traitent selon leurs propres conditions et politiques de confidentialité.</p>
+          <p><strong>Qui agit comme responsable de traitement pour les téléchargements.</strong> L'exploitant de l'hôte que vous sélectionnez reçoit votre adresse IP et les métadonnées de requête et agit comme <strong>responsable de traitement indépendant</strong> pour cette requête. Avec le réglage par défaut, il s'agit de Hugging Face ; si vous basculez la source vers <code>hf-mirror.com</code>, il s'agit de l'opérateur du miroir, qui est un tiers et <em>n'est pas</em> Hugging Face. Nous ne contrôlons, ne détenons et ne stockons aucune de ces données, et nous n'y avons pas accès. Ces hôtes les traitent selon leurs propres conditions et politiques de confidentialité.</p>
         </div>
 
         <p>Nous n'envoyons aucune donnée personnelle à un hôte de modèles au-delà de ce qu'exige un téléchargement de fichier ordinaire. Nous n'utilisons pas un hôte de modèles comme fournisseur d'analyse et n'avons aucune visibilité sur ce qu'il journalise.</p>
@@ -517,6 +522,11 @@
                 <td>Journal de diagnostic</td>
                 <td><code>Documents/diagnostics.log</code></td>
                 <td>Un fichier plafonné (512 Ko, puis réinitialisé) contenant des métriques de temporisation et de mémoire, l'identifiant du modèle actif et l'état thermique, utilisé pour diagnostiquer l'arrêt de l'application et les performances de diffusion. Il ne contient <strong>aucun texte d'invite ou de réponse</strong> et reste sur votre appareil, sauf si vous choisissez de le partager. L'application demande au système d'exclure ce fichier des sauvegardes de l'appareil.</td>
+              </tr>
+              <tr>
+                <td>Journal système de l’app</td>
+                <td>Journal unifié d’Apple, sous-système <code>com.vega.pocketllm</code></td>
+                <td>Uniquement de courtes lignes d’état — échecs de chargement ou d’enregistrement, et pour une demande ponctuelle son identifiant, son statut, le nom du modèle et sa durée. Ne contient <strong>aucun texte de prompt ni de réponse</strong>, est géré et purgé par le système, et n’est jamais transmis.</td>
               </tr>
               <tr>
                 <td>Conversations exportées</td>
@@ -603,12 +613,12 @@
       <header>
         <div class="logo">Pocket LLM Chat</div>
         <h1>プライバシーポリシー</h1>
-        <p class="updated">最終更新日：2026年11月16日 &middot; 発効日：2026年10月30日</p>
+        <p class="updated">最終更新日：2026年11月26日 &middot; 発効日：2026年10月30日</p>
       </header>
 
       <div class="summary">
         <p><strong>要点：</strong> Pocket LLM Chat は言語モデルをすべてデバイス上で実行し、アカウント、解析機能、クラッシュレポートのいずれも備えません。プロンプト、会話履歴、モデルの出力が当社に送信されることはありません。</p>
-        <p>アプリがネットワーク通信を行うのは、モデルファイルのダウンロードという 1 つの場合のみです。その通信先は、ツールバーの <em>HF Source</em> メニューで選択したモデルホストです。初期設定は <code>hf-mirror.com</code>、変更すれば <code>huggingface.co</code> になります。そのホストの運営者は、あなたの IP アドレスと標準的なリクエスト情報を受け取り、当社とは独立した当事者です。詳細は「<a href="#network-ja">デバイスの外に出る情報</a>」および「<a href="#hosts-ja">モデルホストと第三者受益者</a>」をご覧ください。</p>
+        <p>アプリがネットワーク通信を行うのは、モデルファイルのダウンロードという 1 つの場合のみです。その通信先は、ツールバーの <em>HF Source</em> メニューで選択したモデルホストです。初期設定は <code>huggingface.co</code>、変更すれば <code>hf-mirror.com</code> になります。そのホストの運営者は、あなたの IP アドレスと標準的なリクエスト情報を受け取り、当社とは独立した当事者です。詳細は「<a href="#network-ja">デバイスの外に出る情報</a>」および「<a href="#hosts-ja">モデルホストと第三者受益者</a>」をご覧ください。</p>
       </div>
 
       <section class="card">
@@ -696,20 +706,20 @@
             <tbody>
               <tr>
                 <td><strong>初期設定</strong></td>
-                <td><code>hf-mirror.com</code></td>
-                <td><strong>第三者のミラー運営者であり、Hugging Face ではありません。</strong>独立して運営される別個のサービスであり、モデルリポジトリへのリクエストを中継します。</td>
+                <td><code>huggingface.co</code></td>
+                <td>モデルハブの運営元である Hugging Face。</td>
               </tr>
               <tr>
                 <td>任意</td>
-                <td><code>huggingface.co</code></td>
-                <td>モデルハブの運営元である Hugging Face。</td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>第三者のミラー運営者であり、Hugging Face ではありません。</strong>独立して運営される別個のサービスであり、モデルリポジトリへのリクエストを中継します。</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="notice">
-          <p><strong>ダウンロードにおけるデータ管理責任者。</strong>選択したホストの運営者は、あなたの IP アドレスとリクエスト情報を受け取り、そのリクエストについては<strong>独立したデータ管理者</strong>として扱われます。初期設定では、その当事者は <code>hf-mirror.com</code> の運営者であり、これは第三者であって Hugging Face <em>ではありません</em>。取得元を <code>huggingface.co</code> に変更した場合、その当事者は Hugging Face になります。当社はこれらのデータを管理、所有、保管せず、アクセスすることもありません。各ホストは自らの利用規約とプライバシーポリシーに基づいて処理を行います。</p>
+          <p><strong>ダウンロードにおけるデータ管理責任者。</strong>選択したホストの運営者は、あなたの IP アドレスとリクエスト情報を受け取り、そのリクエストについては<strong>独立したデータ管理者</strong>として扱われます。初期設定では、その当事者は Hugging Face です。取得元を <code>hf-mirror.com</code> に変更した場合、その当事者はミラーの運営者であり、これは第三者であって Hugging Face <em>ではありません</em>。当社はこれらのデータを管理、所有、保管せず、アクセスすることもありません。各ホストは自らの利用規約とプライバシーポリシーに基づいて処理を行います。</p>
         </div>
 
         <p>当社は、通常のファイルダウンロードに最低限必要な範囲を超えて、モデルホストへ個人データを送信しません。モデルホストを解析機能として利用することも、何が記録されているかを把握することもありません。</p>
@@ -739,6 +749,11 @@
                 <td>診断ログ</td>
                 <td><code>Documents/diagnostics.log</code></td>
                 <td>タイミングとメモリの指標、使用中のモデル識別子、熱状態をまとめたファイル（上限 512&nbsp;KB、到達したら再作成）。アプリの終了原因とストリーミング性能の診断に使用します。<strong>プロンプトや応答のテキストは含まれません</strong>。あなたが共有を選ばない限り、デバイス上に留まります。アプリは、このファイルをデバイスのバックアップ対象から除外するようシステムに要求します。</td>
+              </tr>
+              <tr>
+                <td>アプリのシステムログ</td>
+                <td>Apple の統合ログ（サブシステム <code>com.vega.pocketllm</code>）</td>
+                <td>短い状態行のみ — モデルの読み込み・保存の失敗と、単発リクエストの ID・ステータス・モデル名・所要時間。<strong>プロンプトや応答の本文は含まれません</strong>。OS が管理・ローテーションし、外部に送信されません。</td>
               </tr>
               <tr>
                 <td>エクスポートした会話</td>
@@ -825,12 +840,12 @@
       <header>
         <div class="logo">Pocket LLM Chat</div>
         <h1>Datenschutzerklärung</h1>
-        <p class="updated">Zuletzt aktualisiert: 16. November 2026 &middot; Gültig ab: 30. Oktober 2026</p>
+        <p class="updated">Zuletzt aktualisiert: 26. November 2026 &middot; Gültig ab: 30. Oktober 2026</p>
       </header>
 
       <div class="summary">
         <p><strong>Kurz gesagt:</strong> Pocket LLM Chat führt Sprachmodelle vollständig auf Ihrem Gerät aus und bietet weder Konten noch Analyse- oder Absturzberichte. Ihre Prompts, Unterhaltungen und Modellausgaben werden nie an uns übermittelt.</p>
-        <p>Die App stellt Netzwerkanfragen in genau einer Situation: beim Herunterladen von Modelldateien. Diese Anfragen gehen an den Modell-Host, den Sie im Menü <em>HF Source</em> der App auswählen – standardmäßig <code>hf-mirror.com</code> oder <code>huggingface.co</code>, wenn Sie umstellen. Der Betreiber dieses Hosts erhält Ihre IP-Adresse und standardmäßige Anfrage-Metadaten und ist eine von uns unabhängige Partei. Einzelheiten unter <a href="#network-de">Was Ihr Gerät verlässt</a> und <a href="#hosts-de">Modell-Hosts und Drittanbieter</a>.</p>
+        <p>Die App stellt Netzwerkanfragen in genau einer Situation: beim Herunterladen von Modelldateien. Diese Anfragen gehen an den Modell-Host, den Sie im Menü <em>HF Source</em> der App auswählen – standardmäßig <code>huggingface.co</code> oder <code>hf-mirror.com</code>, wenn Sie umstellen. Der Betreiber dieses Hosts erhält Ihre IP-Adresse und standardmäßige Anfrage-Metadaten und ist eine von uns unabhängige Partei. Einzelheiten unter <a href="#network-de">Was Ihr Gerät verlässt</a> und <a href="#hosts-de">Modell-Hosts und Drittanbieter</a>.</p>
       </div>
 
       <section class="card">
@@ -919,20 +934,20 @@
             <tbody>
               <tr>
                 <td><strong>Standard</strong></td>
-                <td><code>hf-mirror.com</code></td>
-                <td><strong>Ein Drittanbieter-Mirror-Betreiber, nicht Hugging Face.</strong> Es handelt sich um einen eigenständigen, unabhängig betriebenen Dienst, der Anfragen an Modell-Repositories weiterleitet.</td>
+                <td><code>huggingface.co</code></td>
+                <td>Hugging Face, der Betreiber des Modell-Hubs.</td>
               </tr>
               <tr>
                 <td>Optional</td>
-                <td><code>huggingface.co</code></td>
-                <td>Hugging Face, der Betreiber des Modell-Hubs.</td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>Ein Drittanbieter-Mirror-Betreiber, nicht Hugging Face.</strong> Es handelt sich um einen eigenständigen, unabhängig betriebenen Dienst, der Anfragen an Modell-Repositories weiterleitet.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="notice">
-          <p><strong>Wer bei Downloads als Verantwortlicher fungiert.</strong> Der Betreiber des von Ihnen gewählten Hosts erhält Ihre IP-Adresse und die Anfrage-Metadaten und handelt für diese Anfrage als <strong>unabhängiger Verantwortlicher</strong>. In der Standardeinstellung ist dies der Betreiber von <code>hf-mirror.com</code>, ein Dritter, der <em>not</em> Hugging Face ist; stellen Sie die Quelle auf <code>huggingface.co</code> um, ist es Hugging Face. Wir kontrollieren, besitzen und speichern keine dieser Daten und haben keinen Zugriff darauf. Diese Hosts verarbeiten sie nach ihren eigenen Bedingungen und Datenschutzerklärungen.</p>
+          <p><strong>Wer bei Downloads als Verantwortlicher fungiert.</strong> Der Betreiber des von Ihnen gewählten Hosts erhält Ihre IP-Adresse und die Anfrage-Metadaten und handelt für diese Anfrage als <strong>unabhängiger Verantwortlicher</strong>. In der Standardeinstellung ist dies Hugging Face; stellen Sie die Quelle auf <code>hf-mirror.com</code> um, ist es der Betreiber des Mirrors, ein Dritter, der <em>nicht</em> Hugging Face ist. Wir kontrollieren, besitzen und speichern keine dieser Daten und haben keinen Zugriff darauf. Diese Hosts verarbeiten sie nach ihren eigenen Bedingungen und Datenschutzerklärungen.</p>
         </div>
 
         <p>Wir senden über das hinaus, was ein gewöhnlicher Dateidownload erfordert, keine personenbezogenen Daten an einen Modell-Host. Wir nutzen keinen Modell-Host als Analyseanbieter und haben keine Kenntnis davon, was er protokolliert.</p>
@@ -962,6 +977,11 @@
                 <td>Diagnoseprotokoll</td>
                 <td><code>Documents/diagnostics.log</code></td>
                 <td>Eine begrenzte Datei (512&nbsp;KB, danach neu begonnen) mit Timing- und Speichermetriken, der Kennung des aktiven Modells und dem Thermalzustand, zur Diagnose von App-Abbrüchen und der Streaming-Leistung. Sie enthält <strong>keinen Prompt- oder Antworttext</strong> und bleibt auf Ihrem Gerät, es sei denn, Sie entscheiden sich, sie zu teilen. Die App fordert das System auf, diese Datei von Gerätesicherungen auszuschließen.</td>
+              </tr>
+              <tr>
+                <td>Systemprotokoll der App</td>
+                <td>Unified Log von Apple, Subsystem <code>com.vega.pocketllm</code></td>
+                <td>Nur kurze Statuszeilen – Fehler beim Laden oder Speichern sowie Anfrage-ID, Status, Modellname und Dauer einer einmaligen Anfrage. Enthält <strong>keinen Prompt- oder Antworttext</strong>, wird vom System verwaltet und rotiert und niemals hochgeladen.</td>
               </tr>
               <tr>
                 <td>Exportierte Unterhaltungen</td>
@@ -1048,12 +1068,12 @@
       <header>
         <div class="logo">Pocket LLM Chat</div>
         <h1>Privacybeleid</h1>
-        <p class="updated">Laatst bijgewerkt: 16 november 2026 &middot; Ingegaan op: 30 oktober 2026</p>
+        <p class="updated">Laatst bijgewerkt: 26 november 2026 &middot; Ingegaan op: 30 oktober 2026</p>
       </header>
 
       <div class="summary">
         <p><strong>Kort samengevat:</strong> Pocket LLM Chat draait taalmodellen volledig op uw apparaat en heeft geen accounts, geen analytics en geen crashrapportage. Uw prompts, gesprekken en modelantwoorden worden nooit naar ons verstuurd.</p>
-        <p>De app doet in precies één situatie netwerkverzoeken: bij het downloaden van modelbestanden. Die verzoeken gaan naar de modelhost die u in het menu <em>HF Source</em> van de app selecteert — standaard <code>hf-mirror.com</code>, of <code>huggingface.co</code> als u overschakelt. De beheerder van die host ontvangt uw IP-adres en standaardverzoekmetagegevens en is een van ons onafhankelijke partij. Meer hierover in <a href="#network-nl">Wat uw apparaat verlaat</a> en <a href="#hosts-nl">Modelhosts en derden als ontvangers</a>.</p>
+        <p>De app doet in precies één situatie netwerkverzoeken: bij het downloaden van modelbestanden. Die verzoeken gaan naar de modelhost die u in het menu <em>HF Source</em> van de app selecteert — standaard <code>huggingface.co</code>, of <code>hf-mirror.com</code> als u overschakelt. De beheerder van die host ontvangt uw IP-adres en standaardverzoekmetagegevens en is een van ons onafhankelijke partij. Meer hierover in <a href="#network-nl">Wat uw apparaat verlaat</a> en <a href="#hosts-nl">Modelhosts en derden als ontvangers</a>.</p>
       </div>
 
       <section class="card">
@@ -1141,20 +1161,20 @@
             <tbody>
               <tr>
                 <td><strong>Standaard</strong></td>
-                <td><code>hf-mirror.com</code></td>
-                <td><strong>Een spiegelbeheerder van een derde partij, niet Hugging Face.</strong> Het is een afzonderlijke, onafhankelijk geëxploiteerde dienst die verzoeken naar modelrepositories doorgeeft.</td>
+                <td><code>huggingface.co</code></td>
+                <td>Hugging Face, de beheerder van de modelhub.</td>
               </tr>
               <tr>
                 <td>Optioneel</td>
-                <td><code>huggingface.co</code></td>
-                <td>Hugging Face, de beheerder van de modelhub.</td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>Een spiegelbeheerder van een derde partij, niet Hugging Face.</strong> Het is een afzonderlijke, onafhankelijk geëxploiteerde dienst die verzoeken naar modelrepositories doorgeeft.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="notice">
-          <p><strong>Wie bij downloads als verwerkingsverantwoordelijke optreedt.</strong> De beheerder van de door u gekozen host ontvangt uw IP-adres en de verzoekmetagegevens en treedt voor dat verzoek op als <strong>onafhankelijke verwerkingsverantwoordelijke</strong>. Bij de standaardinstelling is dat de beheerder van <code>hf-mirror.com</code>, een derde partij die <em>niet</em> Hugging Face is; schakelt u de bron over naar <code>huggingface.co</code>, dan is het Hugging Face. Wij controleren, bezitten of slaan geen van deze gegevens op en hebben er geen toegang toe. Die hosts verwerken ze volgens hun eigen voorwaarden en privacybeleid.</p>
+          <p><strong>Wie bij downloads als verwerkingsverantwoordelijke optreedt.</strong> De beheerder van de door u gekozen host ontvangt uw IP-adres en de verzoekmetagegevens en treedt voor dat verzoek op als <strong>onafhankelijke verwerkingsverantwoordelijke</strong>. Bij de standaardinstelling is dat Hugging Face; schakelt u de bron over naar <code>hf-mirror.com</code>, dan is het de beheerder van de spiegel, een derde partij die <em>niet</em> Hugging Face is. Wij controleren, bezitten of slaan geen van deze gegevens op en hebben er geen toegang toe. Die hosts verwerken ze volgens hun eigen voorwaarden en privacybeleid.</p>
         </div>
 
         <p>Wij sturen geen persoonsgegevens naar een modelhost die verder gaat dan wat een gewone bestandsdownload vereist. Wij gebruiken een modelhost niet als analyticsaanbieder en hebben geen zicht op wat die logt.</p>
@@ -1184,6 +1204,11 @@
                 <td>Diagnoselogboek</td>
                 <td><code>Documents/diagnostics.log</code></td>
                 <td>Een begrensd bestand (512&nbsp;KB, daarna opnieuw begonnen) met timing- en geheugenmetrieken, de identificator van het actieve model en de thermische status, gebruikt om het beëindigen van de app en de streamingprestaties te diagnosticeren. Het bevat <strong>geen prompt- of antwoordtekst</strong> en blijft op uw apparaat, tenzij u ervoor kiest het te delen. De app vraagt het systeem dit bestand uit te sluiten van apparaatback-ups.</td>
+              </tr>
+              <tr>
+                <td>Systeemlog van de app</td>
+                <td>Unified log van Apple, subsysteem <code>com.vega.pocketllm</code></td>
+                <td>Alleen korte statusregels — fouten bij laden of opslaan, en van een los verzoek de aanvraag-id, status, modelnaam en duur. Bevat <strong>geen prompt- of antwoordtekst</strong>, wordt door het systeem beheerd en geroteerd, en wordt nooit verstuurd.</td>
               </tr>
               <tr>
                 <td>Geëxporteerde gesprekken</td>
@@ -1270,12 +1295,12 @@
       <header>
         <div class="logo">Pocket LLM Chat</div>
         <h1>Polityka prywatności</h1>
-        <p class="updated">Ostatnia aktualizacja: 16 listopada 2026 &middot; Obowiązuje od: 30 października 2026</p>
+        <p class="updated">Ostatnia aktualizacja: 26 listopada 2026 &middot; Obowiązuje od: 30 października 2026</p>
       </header>
 
       <div class="summary">
         <p><strong>Najważniejsze informacje:</strong> Pocket LLM Chat uruchamia modele językowe w całości na Twoim urządzeniu i nie ma kont, analityki ani raportów o awariach. Twoje prompty, rozmowy i odpowiedzi modelu nigdy nie są do nas wysyłane.</p>
-        <p>Aplikacja wykonuje żądania sieciowe w dokładnie jednej sytuacji: podczas pobierania plików modelu. Trafiają one do hosta modeli, który wybierasz w menu <em>HF Source</em> aplikacji — domyślnie <code>hf-mirror.com</code> albo <code>huggingface.co</code>, jeśli zmienisz ustawienie. Operator tego hosta otrzymuje Twój adres IP i standardowe metadane żądania i jest podmiotem niezależnym od nas. Szczegóły znajdziesz w sekcjach <a href="#network-pl">Co opuszcza Twoje urządzenie</a> oraz <a href="#hosts-pl">Hosty modeli i podmioty trzecie</a>.</p>
+        <p>Aplikacja wykonuje żądania sieciowe w dokładnie jednej sytuacji: podczas pobierania plików modelu. Trafiają one do hosta modeli, który wybierasz w menu <em>HF Source</em> aplikacji — domyślnie <code>huggingface.co</code> albo <code>hf-mirror.com</code>, jeśli zmienisz ustawienie. Operator tego hosta otrzymuje Twój adres IP i standardowe metadane żądania i jest podmiotem niezależnym od nas. Szczegóły znajdziesz w sekcjach <a href="#network-pl">Co opuszcza Twoje urządzenie</a> oraz <a href="#hosts-pl">Hosty modeli i podmioty trzecie</a>.</p>
       </div>
 
       <section class="card">
@@ -1364,20 +1389,20 @@
             <tbody>
               <tr>
                 <td><strong>Domyślnie</strong></td>
-                <td><code>hf-mirror.com</code></td>
-                <td><strong>Operator lustrzanego repozytorium będący podmiotem trzecim — nie Hugging Face.</strong> To odrębna, niezależnie prowadzona usługa, która przekazuje żądania do repozytoriów modeli.</td>
+                <td><code>huggingface.co</code></td>
+                <td>Hugging Face, operator centrum modeli.</td>
               </tr>
               <tr>
                 <td>Opcjonalnie</td>
-                <td><code>huggingface.co</code></td>
-                <td>Hugging Face, operator centrum modeli.</td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>Operator lustrzanego repozytorium będący podmiotem trzecim — nie Hugging Face.</strong> To odrębna, niezależnie prowadzona usługa, która przekazuje żądania do repozytoriów modeli.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="notice">
-          <p><strong>Kto jest administratorem danych przy pobieraniu.</strong> Operator wybranego hosta otrzymuje Twój adres IP i metadane żądania oraz pełni w odniesieniu do tego żądania rolę <strong>niezależnego administratora danych</strong>. Przy ustawieniu domyślnym jest to operator <code>hf-mirror.com</code>, czyli podmiot trzeci, który <em>nie jest</em> Hugging Face; jeśli zmienisz źródło na <code>huggingface.co</code>, będzie to Hugging Face. Nie kontrolujemy tych danych, nie posiadamy ich i nie mamy do nich dostępu. Te hosty przetwarzają je na podstawie własnych warunków i polityk prywatności.</p>
+          <p><strong>Kto jest administratorem danych przy pobieraniu.</strong> Operator wybranego hosta otrzymuje Twój adres IP i metadane żądania oraz pełni w odniesieniu do tego żądania rolę <strong>niezależnego administratora danych</strong>. Przy ustawieniu domyślnym jest to Hugging Face; jeśli zmienisz źródło na <code>hf-mirror.com</code>, będzie to operator lustra, czyli podmiot trzeci, który <em>nie jest</em> Hugging Face. Nie kontrolujemy tych danych, nie posiadamy ich i nie mamy do nich dostępu. Te hosty przetwarzają je na podstawie własnych warunków i polityk prywatności.</p>
         </div>
 
         <p>Nie wysyłamy do hosta modeli danych osobowych wykraczających poza to, co wymaga zwykłe pobranie pliku. Nie używamy hosta modeli jako dostawcy analityki i nie mamy wglądu w to, co zapisuje.</p>
@@ -1407,6 +1432,11 @@
                 <td>Dziennik diagnostyczny</td>
                 <td><code>Documents/diagnostics.log</code></td>
                 <td>Plik o ograniczonym rozmiarze (512&nbsp;KB, potem tworzony od nowa) zawierający metryki czasu i pamięci, identyfikator aktywnego modelu oraz stan termiczny, używany do diagnozowania zakończenia działania aplikacji i wydajności strumieniowania. Nie zawiera <strong>tekstu promptów ani odpowiedzi</strong> i pozostaje na Twoim urządzeniu, chyba że zdecydujesz się go udostępnić. Aplikacja prosi system o wyłączenie tego pliku z kopii zapasowych urządzenia.</td>
+              </tr>
+              <tr>
+                <td>Log systemowy aplikacji</td>
+                <td>Ujednolicony log Apple, podsystem <code>com.vega.pocketllm</code></td>
+                <td>Tylko krótkie wiersze stanu — błędy wczytywania lub zapisu oraz identyfikator, status, nazwa modelu i czas trwania jednorazowego żądania. Nie zawiera <strong>treści promptów ani odpowiedzi</strong>, jest zarządzany i rotowany przez system i nigdy nie jest wysyłany.</td>
               </tr>
               <tr>
                 <td>Wyeksportowane rozmowy</td>
@@ -1493,12 +1523,12 @@
       <header>
         <div class="logo">Pocket LLM Chat</div>
         <h1>Política de privacidad</h1>
-        <p class="updated">Última actualización: 16 de noviembre de 2026 &middot; Entrada en vigor: 30 de octubre de 2026</p>
+        <p class="updated">Última actualización: 26 de noviembre de 2026 &middot; Entrada en vigor: 30 de octubre de 2026</p>
       </header>
 
       <div class="summary">
         <p><strong>En resumen:</strong> Pocket LLM Chat ejecuta los modelos de lenguaje íntegramente en tu dispositivo y no tiene cuentas, analítica ni informes de fallos. Tus instrucciones, conversaciones y respuestas del modelo nunca se envían a nosotros.</p>
-        <p>La aplicación hace solicitudes de red en una única situación: al descargar archivos de modelo. Se dirigen al servidor de modelos que elijas en el menú <em>HF Source</em> de la aplicación — <code>hf-mirror.com</code> de forma predeterminada, o <code>huggingface.co</code> si cambias la selección. Quien opere ese servidor recibe tu dirección IP y los metadatos estándar de la solicitud, y es una parte independiente de nosotros. Los detalles están en <a href="#network-es">Qué sale de tu dispositivo</a> y <a href="#hosts-es">Servidores de modelos y terceros destinatarios</a>.</p>
+        <p>La aplicación hace solicitudes de red en una única situación: al descargar archivos de modelo. Se dirigen al servidor de modelos que elijas en el menú <em>HF Source</em> de la aplicación — <code>huggingface.co</code> de forma predeterminada, o <code>hf-mirror.com</code> si cambias la selección. Quien opere ese servidor recibe tu dirección IP y los metadatos estándar de la solicitud, y es una parte independiente de nosotros. Los detalles están en <a href="#network-es">Qué sale de tu dispositivo</a> y <a href="#hosts-es">Servidores de modelos y terceros destinatarios</a>.</p>
       </div>
 
       <section class="card">
@@ -1587,20 +1617,20 @@
             <tbody>
               <tr>
                 <td><strong>Predeterminada</strong></td>
-                <td><code>hf-mirror.com</code></td>
-                <td><strong>Un operador de espejo de terceros, no Hugging Face.</strong> Es un servicio distinto, explotado de forma independiente, que retransmite las solicitudes a los repositorios de modelos.</td>
+                <td><code>huggingface.co</code></td>
+                <td>Hugging Face, el operador del centro de modelos.</td>
               </tr>
               <tr>
                 <td>Opcional</td>
-                <td><code>huggingface.co</code></td>
-                <td>Hugging Face, el operador del centro de modelos.</td>
+                <td><code>hf-mirror.com</code></td>
+                <td><strong>Un operador de espejo de terceros, no Hugging Face.</strong> Es un servicio distinto, explotado de forma independiente, que retransmite las solicitudes a los repositorios de modelos.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="notice">
-          <p><strong>Quién actúa como responsable del tratamiento en las descargas.</strong> El operador del servidor que elijas recibe tu dirección IP y los metadatos de la solicitud y actúa, para esa solicitud, como <strong>responsable del tratamiento independiente</strong>. Con la selección predeterminada, esa parte es el operador de <code>hf-mirror.com</code>, un tercero que <em>no</em> es Hugging Face; si cambias el origen a <code>huggingface.co</code>, es Hugging Face. No controlamos, poseemos ni almacenamos ninguno de estos datos y no tenemos acceso a ellos. Dichos servidores los tratan conforme a sus propias condiciones y políticas de privacidad.</p>
+          <p><strong>Quién actúa como responsable del tratamiento en las descargas.</strong> El operador del servidor que elijas recibe tu dirección IP y los metadatos de la solicitud y actúa, para esa solicitud, como <strong>responsable del tratamiento independiente</strong>. Con la selección predeterminada, esa parte es Hugging Face; si cambias el origen a <code>hf-mirror.com</code>, es el operador del espejo, un tercero que <em>no</em> es Hugging Face. No controlamos, poseemos ni almacenamos ninguno de estos datos y no tenemos acceso a ellos. Dichos servidores los tratan conforme a sus propias condiciones y políticas de privacidad.</p>
         </div>
 
         <p>No enviamos datos personales a un servidor de modelos más allá de lo que exige una descarga de archivos ordinary. No utilizamos un servidor de modelos como proveedor de analítica y no tenemos visibilidad sobre lo que registra.</p>
@@ -1630,6 +1660,11 @@
                 <td>Registro de diagnóstico</td>
                 <td><code>Documents/diagnostics.log</code></td>
                 <td>Un archivo con tamaño limitado (512&nbsp;KB, después se reinicia) con métricas de tiempo y memoria, el identificador del modelo activo y el estado térmico, para diagnosticar la terminación de la aplicación y el rendimiento del streaming. No contiene <strong>texto de instrucciones ni de respuestas</strong> y permanece en tu dispositivo a menos que elijas compartirlo. La aplicación pide al sistema que excluya este archivo de las copias de seguridad del dispositivo.</td>
+              </tr>
+              <tr>
+                <td>Registro del sistema de la app</td>
+                <td>Registro unificado de Apple, subsistema <code>com.vega.pocketllm</code></td>
+                <td>Solo líneas breves de estado: fallos al cargar o guardar, y el identificador, estado, nombre del modelo y duración de una petición puntual. No contiene <strong>texto de instrucciones ni de respuestas</strong>, lo gestiona y rota el sistema y nunca se envía.</td>
               </tr>
               <tr>
                 <td>Conversaciones exportadas</td>
